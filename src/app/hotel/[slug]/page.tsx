@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getHotel } from "@/features/ostrovok/catalog";
-import { OstrovokHotel } from "@/features/ostrovok/hotel";
+import { findCatalogHotel as getHotel } from "@/server/database";
+import { DatabaseHotel } from "@/features/planner/database-hotel";
+
 import type { Query } from "@/features/ostrovok/search-state";
 export async function generateMetadata({
   params,
@@ -22,7 +23,7 @@ export default async function Page({
   if (!hotel) notFound();
   const query = await searchParams;
   return (
-    <OstrovokHotel
+    <DatabaseHotel
       key={hotel.slug + JSON.stringify(query)}
       hotel={hotel}
       query={query}

@@ -12,6 +12,7 @@ import {
   SlidersHorizontal,
   X,
 } from "@phosphor-icons/react";
+import { useCatalog } from "@/features/planner/catalog-provider";
 import { filterHotels, getCity } from "./catalog";
 import {
   defaults,
@@ -48,6 +49,7 @@ export function OstrovokSearch({
   favoritesOnly?: boolean;
 }) {
   const router = useRouter();
+  const catalog = useCatalog();
   const apartmentsOnly = param(query, "property") === "apartments";
   const wish = param(query, "wish").slice(0, 3000);
   const initial = readSearch(query);
@@ -78,15 +80,19 @@ export function OstrovokSearch({
   const [showFilters, setShowFilters] = useState(false);
   const filtered = apartmentsOnly
     ? []
-    : filterHotels({
-        city: favoritesOnly ? undefined : state.city,
-        query: name,
-        maxPrice,
-        stars,
-        amenities: selected,
-        sort,
-        ...(favoritesOnly ? { favorites: ids } : {}),
-      });
+    : filterHotels(
+        {
+          city: favoritesOnly ? undefined : state.city,
+          query: name,
+          maxPrice:
+            maxPrice < 25000 || param(query, "maxPrice") ? maxPrice : undefined,
+          stars,
+          amenities: selected,
+          sort,
+          ...(favoritesOnly ? { favorites: ids } : {}),
+        },
+        catalog,
+      );
   const params = searchParams(state);
   if (wish) params.set("wish", wish);
   if (apartmentsOnly) params.set("property", "apartments");

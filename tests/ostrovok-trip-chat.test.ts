@@ -195,8 +195,8 @@ test("empty profile is safe for independent UI sessions and all new fields are s
     { ...emptyTripChatProfile(), budgetMax: 1000001 },
     { ...emptyTripChatProfile(), adults: 0 },
     { ...emptyTripChatProfile(), adults: 2.5 },
-    { ...emptyTripChatProfile(), children: 5 },
-    { ...emptyTripChatProfile(), rooms: 4 },
+    { ...emptyTripChatProfile(), children: 7 },
+    { ...emptyTripChatProfile(), rooms: 9 },
     { ...emptyTripChatProfile(), tripTypeIds: ["invented"] },
     { ...emptyTripChatProfile(), tripTypeIds: ["spb-food", "spb-food"] },
   ];
@@ -990,7 +990,7 @@ test("bounded route input rejects invalid bodies before accessing provider confi
     body: "x".repeat(65537),
   });
   const large = await POST(oversized);
-  assert.equal(large.status, 400);
+  assert.equal(large.status, 413);
   assert.equal(large.headers.get("cache-control"), "no-store");
   const bad = await POST(
     new Request("http://localhost/api/trip-chat", {

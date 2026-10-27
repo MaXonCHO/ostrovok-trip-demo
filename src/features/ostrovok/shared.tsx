@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { useAccount } from "@/features/planner/account-provider";
+import { HotelPhoto } from "@/features/planner/recommendation-card";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
@@ -57,6 +59,7 @@ function subscribe(callback: () => void) {
   };
 }
 export function useFavorites() {
+  const auth = useAccount();
   const raw = useSyncExternalStore(subscribe, snapshot, () => "[]");
   let ids: string[] = [];
   try {
@@ -66,6 +69,8 @@ export function useFavorites() {
         (value): value is string => typeof value === "string",
       );
   } catch {}
+  if (auth.user?.authenticated)
+    return { ids: auth.favorites, toggle: auth.toggleFavorite };
   const toggle = (id: string) => {
     const next = ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id];
     try {
@@ -146,6 +151,8 @@ export function Modal({
   );
 }
 export function StorefrontShell({ children }: { children: React.ReactNode }) {
+  const auth = useAccount();
+  const router = useRouter();
   const pathname = usePathname();
   const home = pathname === "/" || pathname === "/my-trip";
   const hydrated = useSyncExternalStore(
@@ -217,9 +224,16 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
                 <span className="ov-counter">{ids.length}</span>
               )}
             </Link>
-            <button className="ov-login" onClick={() => setInfo(true)}>
+            <button
+              className="ov-login"
+              onClick={() =>
+                auth.user?.authenticated
+                  ? router.push("/account")
+                  : auth.openLogin()
+              }
+            >
               <User size={19} />
-              Войти
+              {auth.user?.authenticated ? auth.user.name : "Войти"}
             </button>
             <button
               className="ov-mobile-menu"
@@ -265,17 +279,18 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
         onOpenChange={setInfo}
       >
         <p>
-          Здесь можно выбрать направление, найти отель и посмотреть номера.
-          Избранное сохраняется в этом браузере.
+          Здесь можно уточнить пожелания, сохранить поездку и выбрать отель
+          вместе со спутниками. После входа избранное сохраняется в аккаунте.
         </p>
         <p>
-          Названия, адреса и фотографии отелей взяты из локального каталога.
-          Цены, категории номеров и удобства — демо-данные. Рейтинги и отзывы не
-          моделируются.
+          Каталог содержит 300 архивных карточек Петербурга. Цены и наличие
+          отсутствуют; адреса, геоточки и сведения об окружении требуют
+          проверки. Фотографии показаны только там, где есть сопоставленный
+          источник.
         </p>
         <p>
-          Вход в аккаунт и реальное бронирование не подключены. Валюта демо —
-          российский рубль.
+          Вход по телефону демонстрационный, код 0000. Реальное бронирование не
+          подключено. Валюта — российский рубль.
         </p>
         <Link
           className="ov-button"
@@ -791,7 +806,7 @@ export function DemoNote() {
   return (
     <div className="ov-demo-note">
       <span className="ov-demo-dot" />
-      Демо-каталог · цены и условия проживания примерные
+      Архивный каталог · цены и наличие требуют уточнения
     </div>
   );
 }
@@ -806,12 +821,17 @@ export function HotelCard({
 }) {
   const [photo, setPhoto] = useState(0);
   const href = `/hotel/${hotel.slug}?${query || searchParams(state).toString()}`;
-  const total = hotel.price * nights(state) * state.rooms;
+  const total =
+    hotel.price === null ? null : hotel.price * nights(state) * state.rooms;
   return (
     <article className="ov-hotel-card">
       <div className="ov-card-image">
         <Link href={href} aria-label={`Посмотреть ${hotel.name}`}>
-          <img src={hotel.photos[photo]} alt={hotel.name} loading="lazy" />
+          {hotel.photos.length ? (
+            <img src={hotel.photos[photo]} alt={hotel.name} loading="lazy" />
+          ) : (
+            <HotelPhoto photos={[]} name={hotel.name} />
+          )}
         </Link>
         <Favorite hotel={hotel} />
         {hotel.beach && <span className="ov-photo-tag">Пляж рядом</span>}
@@ -867,7 +887,9 @@ export function HotelCard({
           </div>
           <div className="ov-card-source">
             <Check size={15} />
-            Фотографии с сайта отеля
+            {hotel.imported
+              ? "Архивная карточка из базы"
+              : "Фотографии с сайта отеля"}
           </div>
         </div>
         <div className="ov-card-price">
@@ -888,11 +910,17 @@ export function HotelCard({
           )}
           <strong className="ov-total">{money(total)}</strong>
           <small>{money(hotel.price)} за ночь за номер</small>
-          <span className="ov-taxes">Включая налоги и сборы</span>
+          <span className="ov-taxes">
+            {hotel.imported
+              ? "Актуальные тарифы не подключены"
+              : "Включая налоги и сборы"}
+          </span>
           <Link className="ov-button" href={href}>
-            Выбрать номер
+            {hotel.imported ? "Об отеле" : "Выбрать номер"}
           </Link>
-          <span className="ov-cancel">Бесплатная отмена</span>
+          {!hotel.imported && (
+            <span className="ov-cancel">Бесплатная отмена</span>
+          )}
         </div>
       </div>
     </article>

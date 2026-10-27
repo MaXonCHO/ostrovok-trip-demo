@@ -2,12 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowUp, CloudSun, Microphone, Stop } from "@phosphor-icons/react";
-import { cities, filterHotels, getHotel, hotels } from "./catalog";
+import { cities, filterHotels, hotels } from "./catalog";
 import {
   param,
   plural,
   readSearch,
-  searchParams,
   shortDate,
   type Query,
 } from "./search-state";
@@ -21,9 +20,15 @@ import {
   type TripChatStage,
 } from "./trip-chat-contract";
 import { useSpeechInput } from "./use-speech-input";
-import { petersburgCollections } from "./petersburg-collections";
-import { TripHotelCarousel } from "./trip-hotel-carousel";
-import { TripTypeCards } from "./trip-type-cards";
+
+import { LiveSelection } from "@/features/planner/live-selection";
+import { ensureAccount, useAccount } from "@/features/planner/account-provider";
+import type {
+  Selection,
+  TripWorkspace,
+  Expectations,
+} from "@/features/planner/types";
+
 import type { TripWeather } from "./trip-weather";
 
 const storageKey = "ostrovok-trip-conversation-v1";
@@ -40,6 +45,11 @@ interface Conversation {
   stage: TripChatStage;
   ready: boolean;
   error?: string;
+  tripId?: string;
+  tripVersion?: number;
+  selection?: Selection;
+  expectations?: Expectations;
+  requestId?: string;
 }
 function initialCollections(wish: string): string[] {
   const text = wish.toLowerCase().replace(/без детей|без ребёнка/g, "");
@@ -76,11 +86,12 @@ function createConversation(query: Query, seed: string): Conversation {
   const city = cities.find((c) => c.slug === search.city)!;
   const initial =
     context.source === "filters"
-      ? `Подберите ${context.apartmentsOnly ? "апартаменты" : "отель"} ${city.preposition}. ${shortDate(search.checkin)} — ${shortDate(search.checkout)}, ${search.adults} ${plural(search.adults, ["взрослый", "взрослых", "взрослых"])}${search.children ? ` и ${search.children} ${plural(search.children, ["ребёнок", "ребёнка", "детей"])}` : ""}, ${search.rooms} ${plural(search.rooms, ["номер", "номера", "номеров"])}.${wish ? ` Пожелания: ${wish}` : ""}`
+      ? `Подберите ${context.apartmentsOnly ? "апартаменты" : "отель"} ${city.preposition}. ${shortDate(search.checkin)} — ${shortDate(search.checkout)}, ${search.adults} ${plural(search.adults, ["взрослый", "взрослых", "взрослых"])}${search.children ? ` и ${search.children} ${plural(search.children, ["ребёнок", "ребёнка", "детей"])}` : ""}, ${search.rooms} ${plural(search.rooms, ["номер", "номера", "номеров"])}.${context.maxPrice ? ` Бюджет до ${context.maxPrice} рублей за ночь.` : ""}${context.amenities.length ? ` Удобства: ${context.amenities.join(", ")}.` : ""}${wish ? ` Пожелания: ${wish}` : ""}`
       : wish ||
         "Хочу найти подходящий отель в Санкт-Петербурге. Помогите определиться с пожеланиями.";
   return {
     version: 1,
+    requestId: crypto.randomUUID(),
     seed,
     context,
     messages: [{ role: "user", content: initial.slice(0, 3000) }],
@@ -137,20 +148,23 @@ function readSaved(): Conversation | null {
       context: s.context,
       messages: [{ role: "user", content: "Проверка параметров" }],
     });
-    parseTripChatReply({
-      message: "Проверка ответа",
-      suggestions: s.suggestions,
-      hotelSlugs: s.hotelSlugs,
-      collectionIds: s.collectionIds || [],
-      profile: { ...emptyTripChatProfile(), ...s.profile },
-      stage: s.stage || "basics",
-      candidateHotelSlugs:
-        s.candidateHotelSlugs ||
-        hotels
-          .filter((h) => h.citySlug === "saint-petersburg")
-          .map((h) => h.slug),
-      ready: s.ready,
-    });
+    parseTripChatReply(
+      {
+        message: "Проверка ответа",
+        suggestions: s.suggestions,
+        hotelSlugs: s.hotelSlugs,
+        collectionIds: s.collectionIds || [],
+        profile: { ...emptyTripChatProfile(), ...s.profile },
+        stage: s.stage || "basics",
+        candidateHotelSlugs:
+          s.candidateHotelSlugs ||
+          hotels
+            .filter((h) => h.citySlug === "saint-petersburg")
+            .map((h) => h.slug),
+        ready: s.ready,
+      },
+      { dynamicSelection: typeof s.tripId === "string" && !!s.selection },
+    );
     if (s.error !== undefined && typeof s.error !== "string") return null;
     return {
       ...s,
@@ -226,6 +240,7 @@ function AssistantText({
 }
 
 export function TripChat({ query }: { query: Query }) {
+  const auth = useAccount();
   const seed = JSON.stringify(query);
   const [conversation, setConversation] = useState<Conversation | null>(null);
   const [pending, setPending] = useState(false);
@@ -240,14 +255,72 @@ export function TripChat({ query }: { query: Query }) {
   const end = useRef<HTMLDivElement>(null);
   const speech = useSpeechInput(draft, setDraft);
   useEffect(() => {
-    const saved = readSaved();
-    const next =
-      saved && (saved.seed === seed || !Object.keys(query).length)
-        ? saved
-        : createConversation(query, seed);
-    setConversation(next);
-    setPending(next.messages.at(-1)?.role === "user" && !next.error);
-    // The route is keyed by query, so each new request gets its own initial session.
+    let mounted = true;
+    async function restore() {
+      await ensureAccount();
+      const saved = readSaved();
+      const explicit = param(query, "trip");
+      const next =
+        saved &&
+        !param(query, "new") &&
+        (saved.seed === seed || !Object.keys(query).length)
+          ? saved
+          : createConversation(query, seed);
+      const id = explicit || next.tripId;
+      if (id) {
+        const response = await fetch(
+          "/api/planner/trips/" + encodeURIComponent(id),
+          { cache: "no-store" },
+        );
+        const workspace = await response.json();
+        if (response.ok) {
+          const w = workspace as TripWorkspace;
+          if (mounted) {
+            setConversation({
+              ...next,
+              tripId: w.id,
+              tripVersion: w.version,
+              ready:
+                !!w.profile.city &&
+                w.profile.adults !== null &&
+                ((!!w.profile.checkin && !!w.profile.checkout) ||
+                  w.profile.datesFlexible) &&
+                (w.profile.budgetMax !== null || w.profile.budgetFlexible),
+              context: w.context,
+              profile: w.profile,
+              expectations: w.expectations,
+              selection: w.selection,
+              messages: w.messages.length ? w.messages : next.messages,
+              requestId: crypto.randomUUID(),
+              error: undefined,
+            });
+            setPending(w.messages.length === 0);
+          }
+          return;
+        }
+        if (explicit)
+          throw new Error(workspace.error || "Нет доступа к поездке.");
+      }
+      if (mounted) {
+        const fresh = id ? createConversation(query, seed) : next;
+        setConversation({
+          ...fresh,
+          requestId: fresh.requestId || crypto.randomUUID(),
+        });
+        setPending(fresh.messages.at(-1)?.role === "user" && !fresh.error);
+      }
+    }
+    void restore().catch((error) => {
+      if (mounted) {
+        const next = createConversation(query, seed);
+        setConversation({ ...next, error: error.message });
+        setPending(false);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+    // This route is keyed by the query; profile restoration belongs to that route.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [seed]);
   useEffect(() => {
@@ -259,7 +332,7 @@ export function TripChat({ query }: { query: Query }) {
     }
   }, [conversation]);
   useEffect(() => {
-    if (!pending || !conversation) return;
+    if (!pending || !conversation || !auth.ready) return;
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort("timeout"), 35000);
     let mounted = true;
@@ -271,6 +344,13 @@ export function TripChat({ query }: { query: Query }) {
           body: JSON.stringify({
             context: conversation.context,
             messages: recentMessages(conversation.messages),
+            requestId: conversation.requestId,
+            ...(conversation.tripId
+              ? {
+                  tripId: conversation.tripId,
+                  tripVersion: conversation.tripVersion,
+                }
+              : {}),
           }),
           signal: controller.signal,
         });
@@ -285,13 +365,26 @@ export function TripChat({ query }: { query: Query }) {
               : "Помощник пока не ответил. Попробуйте ещё раз.";
           throw new Error(message);
         }
-        const reply = parseTripChatReply(data);
+        const packet = data as Record<string, unknown>;
+        const { tripId, tripVersion, selection, expectations, ...rawReply } =
+          packet;
+        const reply = parseTripChatReply(rawReply, {
+          dynamicSelection: typeof tripId === "string" && !!selection,
+        });
         if (mounted) setTypingIndex(conversation.messages.length);
         if (mounted)
           setConversation((current) =>
             current
               ? {
                   ...current,
+                  ...(typeof tripId === "string"
+                    ? {
+                        tripId,
+                        tripVersion: tripVersion as number,
+                        selection: selection as Selection,
+                        expectations: expectations as Expectations,
+                      }
+                    : {}),
                   messages: [
                     ...current.messages,
                     { role: "assistant", content: reply.message },
@@ -334,7 +427,7 @@ export function TripChat({ query }: { query: Query }) {
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [pending, conversation]);
+  }, [pending, conversation, auth.ready]);
   useEffect(() => {
     const log = end.current?.parentElement;
     if (log && log.scrollHeight > log.clientHeight)
@@ -386,6 +479,7 @@ export function TripChat({ query }: { query: Query }) {
       return;
     setConversation({
       ...conversation,
+      requestId: crypto.randomUUID(),
       messages: [...conversation.messages, { role: "user", content }],
       suggestions: [],
       error: undefined,
@@ -395,31 +489,6 @@ export function TripChat({ query }: { query: Query }) {
     speech.clearError();
     setPending(true);
   };
-  const context = conversation?.context;
-  const catalogQuery = context
-    ? searchParams({
-        ...context.search,
-        ...(checkin && checkout ? { checkin, checkout } : {}),
-        ...(conversation?.profile.adults
-          ? { adults: conversation.profile.adults }
-          : {}),
-        ...(conversation?.profile.children !== null &&
-        conversation?.profile.children !== undefined
-          ? { children: conversation.profile.children }
-          : {}),
-        ...(conversation?.profile.rooms
-          ? { rooms: conversation.profile.rooms }
-          : {}),
-      })
-    : new URLSearchParams({ city: "saint-petersburg" });
-  if (context?.wish) catalogQuery.set("wish", context.wish);
-  if (context?.amenities.length)
-    catalogQuery.set("amenities", context.amenities.join(","));
-  if (context?.maxPrice) catalogQuery.set("maxPrice", String(context.maxPrice));
-  if (context?.apartmentsOnly) catalogQuery.set("property", "apartments");
-  const visibleCollections = conversation?.collectionIds.length
-    ? conversation.collectionIds
-    : initialCollections(conversation?.context.wish || "");
   return (
     <div className="ov-trip-page">
       <div
@@ -657,94 +726,26 @@ export function TripChat({ query }: { query: Query }) {
         </div>
       </div>
       {!!conversation && (
-        <section
-          className="ov-trip-collections"
-          aria-label="Подборки по вашему запросу"
-        >
-          <div className="ov-container">
-            {conversation.stage === "trip-types" && (
-              <section className="ov-trip-type-stage" aria-label="Тип отдыха">
-                <TripTypeCards
-                  disabled={pending || speech.phase !== "idle"}
-                  onSelect={(ids) => {
-                    send(
-                      `Выбираю тип отдыха: ${ids
-                        .map(
-                          (id) =>
-                            petersburgCollections.find((c) => c.id === id)
-                              ?.title,
-                        )
-                        .filter(Boolean)
-                        .join(", ")}.`,
-                    );
-                    window.scrollTo({
-                      top: 0,
-                      behavior: window.matchMedia(
-                        "(prefers-reduced-motion: reduce)",
-                      ).matches
-                        ? "instant"
-                        : "smooth",
-                    });
-                  }}
-                />
-              </section>
-            )}
-
-            <div className="ov-trip-collections-heading">
-              <h2>Идеи для вашей поездки</h2>
-              <span>
-                {visibleCollections.length}{" "}
-                {plural(visibleCollections.length, [
-                  "подборка",
-                  "подборки",
-                  "подборок",
-                ])}
-              </span>
-            </div>
-            {visibleCollections.flatMap((id) => {
-              const collection = petersburgCollections.find((c) => c.id === id);
-              if (!collection) return [];
-              const options = conversation.candidateHotelSlugs.flatMap(
-                (slug) => {
-                  const h = getHotel(slug);
-                  return h ? [h] : [];
-                },
-              );
-              return [
-                <section
-                  key={id}
-                  className="ov-trip-collection"
-                  data-collection-id={id}
-                  aria-labelledby={`title-${id}`}
-                >
-                  <div className="ov-trip-collection-heading">
-                    <div>
-                      <h3 id={`title-${id}`}>{collection.title}</h3>
-                      <p>{collection.description}</p>
-                    </div>
-                  </div>
-                  <TripHotelCarousel
-                    options={options}
-                    query={catalogQuery.toString()}
-                    label={collection.title}
-                  />
-                  <a
-                    className="ov-trip-editorial-source"
-                    href={collection.href}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Идея для поездки — О!Блог ↗
-                  </a>
-                </section>,
-              ];
-            })}
-            <p className="ov-trip-collection-note">
-              Цены и удобства демонстрационные. Особые пожелания нужно
-              подтвердить у отеля.
-            </p>
-          </div>
-        </section>
+        <LiveSelection
+          selection={conversation.selection}
+          tripId={conversation.tripId}
+          version={conversation.tripVersion}
+          pending={pending}
+          ready={conversation.ready}
+          onUpdate={(w) =>
+            setConversation((current) =>
+              current
+                ? {
+                    ...current,
+                    tripVersion: w.version,
+                    profile: w.profile,
+                    selection: w.selection,
+                    expectations: w.expectations,
+                  }
+                : current,
+            )
+          }
+        />
       )}
     </div>
   );

@@ -9,7 +9,11 @@ export interface Hotel {
   address: string;
   stars: number;
   photos: string[];
-  price: number;
+  price: number | null;
+  imported?: boolean;
+  ratingSnapshot?: number | null;
+  identityVerified?: boolean;
+  coordinates?: { lat: number; lon: number };
   oldPrice?: number;
   distance: string;
   beach?: string;
@@ -254,8 +258,11 @@ export const hotels: Hotel[] = realHotels.map((hotel) => {
   };
 });
 
-export function getHotel(slug: string): Hotel | undefined {
-  return hotels.find((hotel) => hotel.slug === slug);
+export function getHotel(
+  slug: string,
+  catalog: Hotel[] = hotels,
+): Hotel | undefined {
+  return catalog.find((hotel) => hotel.slug === slug);
 }
 
 export function getCity(slug: string) {
@@ -275,13 +282,19 @@ export interface HotelFilters {
 const normalize = (value: string) =>
   value.trim().toLocaleLowerCase("ru").replaceAll("ё", "е");
 
-export function filterHotels(filters: HotelFilters = {}): Hotel[] {
+export function filterHotels(
+  filters: HotelFilters = {},
+  catalog: Hotel[] = hotels,
+): Hotel[] {
   const query = normalize(filters.query ?? "");
-  const result = hotels.filter((hotel) => {
+  const result = catalog.filter((hotel) => {
     if (filters.city && hotel.citySlug !== filters.city) return false;
     if (query && !normalize(`${hotel.name} ${hotel.address}`).includes(query))
       return false;
-    if (filters.maxPrice !== undefined && hotel.price > filters.maxPrice)
+    if (
+      filters.maxPrice !== undefined &&
+      (hotel.price === null || hotel.price > filters.maxPrice)
+    )
       return false;
     if (filters.stars?.length && !filters.stars.includes(hotel.stars))
       return false;
@@ -297,11 +310,18 @@ export function filterHotels(filters: HotelFilters = {}): Hotel[] {
 
   switch (filters.sort) {
     case "price":
-      return result.sort((a, b) => a.price - b.price);
+      return result.sort(
+        (a, b) => (a.price ?? Infinity) - (b.price ?? Infinity),
+      );
     case "price-desc":
-      return result.sort((a, b) => b.price - a.price);
+      return result.sort(
+        (a, b) => (b.price ?? -Infinity) - (a.price ?? -Infinity),
+      );
     case "stars":
-      return result.sort((a, b) => b.stars - a.stars || a.price - b.price);
+      return result.sort(
+        (a, b) =>
+          b.stars - a.stars || (a.price ?? Infinity) - (b.price ?? Infinity),
+      );
     default:
       return result;
   }

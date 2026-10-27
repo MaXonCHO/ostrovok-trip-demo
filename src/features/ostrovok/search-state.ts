@@ -66,8 +66,10 @@ export function plural(n: number, forms: [string, string, string]) {
     ? forms[2]
     : forms[n % 10 === 1 ? 0 : n % 10 >= 2 && n % 10 <= 4 ? 1 : 2];
 }
-export const money = (amount: number) =>
-  new Intl.NumberFormat("ru-RU").format(amount) + " ₽";
+export const money = (amount: number | null) =>
+  amount === null
+    ? "Цена уточняется"
+    : new Intl.NumberFormat("ru-RU").format(amount) + " ₽";
 export const shortDate = (value: string) =>
   new Date(value + "T12:00:00")
     .toLocaleDateString("ru-RU", { day: "numeric", month: "short" })

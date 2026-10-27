@@ -199,7 +199,10 @@ export function parseTripChatRequest(value: unknown): TripChatRequest {
   };
 }
 
-export function parseTripChatReply(value: unknown): TripChatReply {
+export function parseTripChatReply(
+  value: unknown,
+  options: { dynamicSelection?: boolean } = {},
+): TripChatReply {
   const bad = () =>
     new TripChatError(
       502,
@@ -256,7 +259,10 @@ export function parseTripChatReply(value: unknown): TripChatReply {
     ) ||
     new Set(value.candidateHotelSlugs).size !==
       value.candidateHotelSlugs.length ||
-    (value.ready ? value.hotelSlugs.length === 0 : value.hotelSlugs.length > 0)
+    (!options.dynamicSelection &&
+      (value.ready
+        ? value.hotelSlugs.length === 0
+        : value.hotelSlugs.length > 0))
   )
     throw bad();
   const profile = value.profile;
@@ -284,9 +290,9 @@ export function parseTripChatReply(value: unknown): TripChatReply {
         !Number.isFinite(profile.budgetMax) ||
         profile.budgetMax <= 0 ||
         profile.budgetMax > 1000000)) ||
-    (profile.adults !== null && !count(profile.adults, 1, 6)) ||
-    (profile.children !== null && !count(profile.children, 0, 4)) ||
-    (profile.rooms !== null && !count(profile.rooms, 1, 3)) ||
+    (profile.adults !== null && !count(profile.adults, 1, 12)) ||
+    (profile.children !== null && !count(profile.children, 0, 6)) ||
+    (profile.rooms !== null && !count(profile.rooms, 1, 8)) ||
     !Array.isArray(profile.tripTypeIds) ||
     profile.tripTypeIds.length > petersburgCollections.length ||
     !profile.tripTypeIds.every(

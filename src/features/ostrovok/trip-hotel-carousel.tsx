@@ -99,7 +99,11 @@ export function TripHotelCarousel({
               <div className="ov-trip-hotel-info">
                 <h4>{h.name}</h4>
                 <p>{h.city}</p>
-                <strong>от {money(h.price)}</strong>
+                <strong>
+                  {h.price === null
+                    ? "Цена уточняется"
+                    : `от ${money(h.price)}`}
+                </strong>
               </div>
             </Link>
           ))}

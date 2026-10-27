@@ -1,17 +1,25 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight, CaretRight, X } from "@phosphor-icons/react";
-import { hotels } from "./catalog";
+import type { Hotel } from "./catalog";
+import { useCatalog } from "@/features/planner/catalog-provider";
+import { useAccount } from "@/features/planner/account-provider";
+import { HotelPhoto } from "@/features/planner/recommendation-card";
 import { money } from "./search-state";
 import { Modal } from "./shared";
 
 export function AutumnOffers() {
+  const hotels = useCatalog();
+  const auth = useAccount();
   const [guru, setGuru] = useState(false);
-  const picks = [hotels[0], hotels[2], hotels[1]];
-  const hotelCard = (hotel: (typeof hotels)[number]) => (
+  const picks = [
+    ...hotels.filter((h) => h.photos.length),
+    ...hotels.filter((h) => !h.photos.length),
+  ].slice(0, 3);
+  const hotelCard = (hotel: Hotel) => (
     <article className="ov-autumn-hotel" key={hotel.id}>
       <div className="ov-image-window">
-        <img src={hotel.photos[0]} alt={hotel.name} loading="lazy" />
+        <HotelPhoto photos={hotel.photos} name={hotel.name} />
       </div>
       <div className="ov-autumn-caption">
         <span
@@ -22,7 +30,9 @@ export function AutumnOffers() {
         </span>
         <h3>{hotel.name}</h3>
         <p>{hotel.city}</p>
-        <strong>от {money(hotel.price)}</strong>
+        <strong>
+          {hotel.price === null ? money(null) : `от ${money(hotel.price)}`}
+        </strong>
       </div>
     </article>
   );
@@ -32,23 +42,23 @@ export function AutumnOffers() {
       aria-labelledby="autumn-title"
     >
       <div className="ov-editorial-heading">
-        <h2 id="autumn-title">Время осенних скидок</h2>
-        <p>Успейте забронировать до 31 октября со скидкой до 34%</p>
+        <h2 id="autumn-title">Отели для осенней поездки</h2>
+        <p>300 карточек Петербурга с описаниями и сведениями об окружении</p>
       </div>
       <div className="ov-autumn-grid">
-        {hotelCard(picks[0])}
+        {picks[0] && hotelCard(picks[0])}
         <article className="ov-guru-promo">
-          <h3>Можно забронировать дешевле с ГУРУ</h3>
+          <h3>Сохраните планы на поездку</h3>
           <p>
-            Авторизуйтесь
-            <br />и получайте скидки
+            Войдите в аккаунт
+            <br />и выбирайте отель вместе
           </p>
           <img
             src="/ostrovok/guru-suitcase-original.webp"
             alt=""
             loading="lazy"
           />
-          <button onClick={() => setGuru(true)}>
+          <button onClick={() => auth.openLogin()}>
             Авторизоваться <ArrowRight size={17} />
           </button>
         </article>
@@ -137,6 +147,7 @@ const halloweenHotels = [
   },
 ];
 export function HalloweenStays() {
+  const auth = useAccount();
   const [guru, setGuru] = useState(false);
   return (
     <section className="ov-halloween" aria-labelledby="halloween-title">
@@ -154,7 +165,11 @@ export function HalloweenStays() {
               <div className="ov-halloween-caption">
                 <h3>{hotel.name}</h3>
                 <p>{hotel.city}</p>
-                <strong>от {money(hotel.price)}</strong>
+                <strong>
+                  {hotel.price === null
+                    ? money(null)
+                    : `от ${money(hotel.price)}`}
+                </strong>
               </div>
             </article>
           ))}
@@ -166,7 +181,7 @@ export function HalloweenStays() {
               alt=""
               loading="lazy"
             />
-            <button onClick={() => setGuru(true)}>
+            <button onClick={() => auth.openLogin()}>
               Авторизоваться <ArrowRight size={17} />
             </button>
           </article>
@@ -182,7 +197,7 @@ export function HalloweenStays() {
           от завтраков до дополнительных услуг в отеле.
         </p>
         <p>
-          В локальном прототипе показан пример такой подборки. Вход и настоящее
+          В локальном прототипе показан пример такой подборки. Настоящее
           бронирование не подключены.
         </p>
         <button className="ov-button" onClick={() => setGuru(false)}>

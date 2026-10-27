@@ -14,6 +14,44 @@ export function DemoMap({
   mini?: boolean;
   onOpen?: () => void;
 }) {
+  if (hotels.some((h) => h.imported))
+    return (
+      <div className={`ov-map ov-source-map ${mini ? "ov-map-mini" : ""}`}>
+        <MapPin size={32} />
+        {mini ? (
+          <button onClick={onOpen}>
+            <MapPin size={19} />
+            Проверить геоточки
+          </button>
+        ) : (
+          <>
+            <h3>Расположение требует проверки</h3>
+            <p>
+              В архиве есть координаты, но они не сопоставлены с адресами
+              отелей. Пешие маршруты не рассчитаны.
+            </p>
+            <div>
+              {hotels.slice(0, 8).map(
+                (h) =>
+                  h.coordinates && (
+                    <a
+                      key={h.id}
+                      target="_blank"
+                      rel="noreferrer"
+                      href={`https://www.openstreetmap.org/?mlat=${h.coordinates.lat}&mlon=${h.coordinates.lon}#map=17/${h.coordinates.lat}/${h.coordinates.lon}`}
+                    >
+                      {h.name} ↗
+                    </a>
+                  ),
+              )}
+            </div>
+          </>
+        )}
+        <span className="ov-map-caption">
+          Источник: архив OSM · геоточки не подтверждены
+        </span>
+      </div>
+    );
   return (
     <div className={`ov-map ${mini ? "ov-map-mini" : ""}`}>
       <svg

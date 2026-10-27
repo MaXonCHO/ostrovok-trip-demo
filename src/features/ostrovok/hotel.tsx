@@ -92,7 +92,7 @@ export function OstrovokHotel({
     },
   ];
   const roomPrice = (index: number) =>
-    hotel.price +
+    (hotel.price ?? 0) +
     roomTypes[index].delta +
     (breakfast ? (1100 * state.adults) / state.rooms : 0);
   const total = (index: number) => roomPrice(index) * count * state.rooms;
@@ -426,7 +426,7 @@ export function OstrovokHotel({
               </span>
               <hr />
               <div>
-                от <b>{money(hotel.price * count * state.rooms)}</b>
+                от <b>{money((hotel.price ?? 0) * count * state.rooms)}</b>
               </div>
               <small>за всё проживание</small>
               <a className="ov-button" href="#rooms">

@@ -1,3 +1,6 @@
+import { catalogHotels } from "@/server/database";
+import { CatalogProvider } from "@/features/planner/catalog-provider";
+import { AccountProvider } from "@/features/planner/account-provider";
 import type { Metadata } from "next";
 import { StorefrontShell } from "@/features/ostrovok/shared";
 import "@/styles/globals.css";
@@ -10,6 +13,8 @@ import "@/styles/ostrovok-prompt.css";
 import "@/styles/ostrovok-trip.css";
 import "@/styles/ostrovok-footer.css";
 import "@/styles/ostrovok-trip-types.css";
+import "@/styles/ostrovok-planner.css";
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: {
     default: "Островок — отели и апартаменты",
@@ -27,7 +32,11 @@ export default function RootLayout({
   return (
     <html lang="ru" data-scroll-behavior="smooth" data-theme="light">
       <body>
-        <StorefrontShell>{children}</StorefrontShell>
+        <CatalogProvider hotels={catalogHotels()}>
+          <AccountProvider>
+            <StorefrontShell>{children}</StorefrontShell>
+          </AccountProvider>
+        </CatalogProvider>
       </body>
     </html>
   );

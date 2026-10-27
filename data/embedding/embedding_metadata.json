@@ -1,0 +1,12 @@
+{
+  "model": "intfloat/multilingual-e5-small",
+  "dimension": 384,
+  "count": 300,
+  "normalized": true,
+  "passage_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "text_file_sha256": "37f6aab276aead62ccc5cefcbc476ea0add7ff7e819094fbb949d1d3220966d6",
+  "created_at_utc": "2026-10-27T18:00:09.785604+00:00",
+  "truncated_documents": 0,
+  "warning": "Сырые координаты требуют независимой проверки; сходство не является фактическим подтверждением"
+}

@@ -1,0 +1,21 @@
+import type { CriterionKey } from "./types";
+export const labels: Record<CriterionKey, string> = {
+  quiet: "Тихий отдых",
+  beach: "Пляж",
+  walks: "Прогулки",
+  shopping: "Шоппинг",
+  malls: "Торговые центры",
+  brands: "Конкретные бренды",
+  localShops: "Локальные магазины",
+  restaurants: "Рестораны",
+  children: "С ребёнком",
+  playground: "Детская площадка",
+  groceries: "Продуктовые магазины",
+  pharmacy: "Аптека",
+  culture: "Музеи и архитектура",
+  wifi: "Wi-Fi",
+  parking: "Парковка",
+  breakfast: "Завтрак",
+  pets: "С питомцем",
+  accessible: "Безбарьерная среда",
+};

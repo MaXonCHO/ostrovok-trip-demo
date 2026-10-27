@@ -9,7 +9,11 @@ for (const name of [".env.local", ".env"]) {
     if (error.code !== "ENOENT") throw error;
   }
 }
-process.env.PORT = "8080";
+process.env.PORT ||= "8080";
+process.env.DATABASE_PATH = resolve(
+  root,
+  process.env.DATABASE_PATH || ".data/ostrovok.sqlite",
+);
 process.env.HOSTNAME = "0.0.0.0";
 await mkdir(resolve(root, ".next/standalone/.next"), { recursive: true });
 await cp(resolve(root, "public"), resolve(root, ".next/standalone/public"), {

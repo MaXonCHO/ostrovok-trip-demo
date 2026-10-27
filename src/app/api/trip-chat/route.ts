@@ -1,37 +1,36 @@
-import { getTripChatReply } from "@/features/ostrovok/trip-chat-service";
+import { NextResponse } from "next/server";
+import { account } from "@/server/auth";
+import { chatCommand } from "@/server/chat";
+import { failure, jsonBody } from "@/server/http";
 import {
-  parseTripChatRequest,
-  readTripChatJson,
   TripChatError,
+  parseTripChatRequest,
 } from "@/features/ostrovok/trip-chat-contract";
-
 export const runtime = "nodejs";
 export const maxDuration = 30;
-
-export async function POST(request: Request) {
-  const headers = { "Cache-Control": "no-store" };
+export async function POST(req: Request) {
   try {
-    if (
-      !request.headers
-        .get("content-type")
-        ?.toLowerCase()
-        .includes("application/json")
-    )
-      throw new TripChatError(400, "Отправьте сообщение в формате JSON.");
-    const input = parseTripChatRequest(await readTripChatJson(request));
-    return Response.json(
-      await getTripChatReply(input, { signal: request.signal }),
-      { headers },
+    const input = await jsonBody(req);
+    const core = { messages: input.messages, context: input.context };
+    parseTripChatRequest(core);
+    const user = await account(true);
+    const packet = await chatCommand(input, user!, req.signal);
+    return NextResponse.json(
+      {
+        ...packet.reply,
+        tripId: packet.tripId,
+        tripVersion: packet.tripVersion,
+        selection: packet.selection,
+        expectations: packet.expectations,
+      },
+      { headers: { "Cache-Control": "no-store" } },
     );
-  } catch (error) {
-    if (error instanceof TripChatError)
-      return Response.json(
-        { error: error.message },
-        { status: error.status, headers },
+  } catch (e) {
+    if (e instanceof TripChatError)
+      return NextResponse.json(
+        { error: e.message },
+        { status: e.status, headers: { "Cache-Control": "no-store" } },
       );
-    return Response.json(
-      { error: "Не удалось обработать сообщение. Попробуйте ещё раз." },
-      { status: 500, headers },
-    );
+    return failure(e);
   }
 }

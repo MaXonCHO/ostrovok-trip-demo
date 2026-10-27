@@ -1,0 +1,33 @@
+name: Planner checks
+on:
+  push:
+  pull_request:
+jobs:
+  planner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck && npm run lint && npm test && npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Start application and test shared trip
+        run: |
+          npm start > /tmp/ostrovok-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8080/health; then break; fi
+            sleep 1
+          done
+          E2E_SERVER=1 npx playwright test tests/e2e/planner.spec.ts
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: planner-diagnostics
+          path: |
+            test-results/
+            playwright-report/
+            /tmp/ostrovok-server.log
