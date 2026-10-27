@@ -6,7 +6,6 @@ import {
   Check,
   Info,
   MapPin,
-  ArrowUpRight,
 } from "@phosphor-icons/react";
 import type { RankedHotel } from "./types";
 export function HotelPhoto({
@@ -32,13 +31,19 @@ export function HotelPhoto({
 export function RecommendationCard({
   item,
   children,
+  actions,
 }: {
   item: RankedHotel;
   children?: React.ReactNode;
+  actions?: React.ReactNode;
 }) {
   const h = item.hotel;
   return (
-    <article className="ov-recommendation" data-hotel-id={h.id}>
+    <article
+      className={`ov-recommendation ${h.photos.length ? "has-photo" : "without-photo"}`}
+      data-hotel-id={h.id}
+    >
+      {actions && <div className="ov-card-actions">{actions}</div>}
       <div className="ov-recommendation-main">
         <Link
           href={"/hotel/" + h.slug}
@@ -68,7 +73,7 @@ export function RecommendationCard({
               : "Подходит по данным архива"}
           </span>
           <ul className="ov-reasons">
-            {item.reasons.map((r) => (
+            {item.reasons.slice(0, 2).map((r) => (
               <li key={r}>
                 <Check size={15} />
                 <span>{r}</span>
@@ -76,26 +81,35 @@ export function RecommendationCard({
             ))}
           </ul>
           <p className="ov-price-unknown">Цена и наличие уточняются у отеля</p>
-          <Link className="ov-inline-button" href={"/hotel/" + h.slug}>
-            О карточке отеля <ArrowUpRight size={16} />
-          </Link>
         </div>
       </div>
-      {item.unknowns.length > 0 && (
-        <div className="ov-condition-notice">
-          <strong>Что нужно подтвердить</strong>
-          <ul>
-            {item.unknowns.map((u) => (
-              <li key={u}>{u}</li>
-            ))}
-          </ul>
-        </div>
-      )}
       <details className="ov-recommendation-evidence">
         <summary>
-          Окружение, источники и компромиссы <CaretDown size={17} />
+          Почему этот отель
+          {item.unknowns.length ? " · есть вопросы к условиям" : ""}{" "}
+          <CaretDown size={17} />
         </summary>
         <div>
+          {item.unknowns.length > 0 && (
+            <div className="ov-condition-notice">
+              <strong>Что нужно подтвердить</strong>
+              <ul>
+                {item.unknowns.map((u) => (
+                  <li key={u}>{u}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {item.reasons.length > 2 && (
+            <ul className="ov-reasons">
+              {item.reasons.slice(2).map((r) => (
+                <li key={r}>
+                  <Check size={15} />
+                  <span>{r}</span>
+                </li>
+              ))}
+            </ul>
+          )}
           {item.nearby.length ? (
             item.nearby.map((p, i) => (
               <div className="ov-evidence-item" key={p.label + i}>

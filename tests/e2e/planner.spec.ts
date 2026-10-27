@@ -83,6 +83,13 @@ test("demo login claims draft, shared choices respect membership and unanimous v
   await expect(
     page.getByRole("button", { name: "Создать профиль поездки" }),
   ).toBeEnabled();
+  await expect(page.locator(".ov-live-hotels .ov-recommendation")).toHaveCount(
+    4,
+  );
+  await page.getByRole("button", { name: /^Показать ещё/ }).click();
+  await expect(page.locator(".ov-live-hotels .ov-recommendation")).toHaveCount(
+    8,
+  );
   await page.goto("/my-trip");
   await expect(
     page.getByRole("button", { name: "Создать профиль поездки" }),
@@ -194,6 +201,44 @@ test("demo login claims draft, shared choices respect membership and unanimous v
     member.id,
   );
   await page.reload();
+  await expect(
+    page.getByRole("heading", { name: "Выбираем вместе" }),
+  ).toBeVisible();
+  await expect(page.locator("main textarea:visible")).toHaveCount(0);
+  const firstHotel = page.locator(".ov-recommendation").first();
+  await expect(
+    firstHotel.getByRole("button", { name: /^Нравится/ }),
+  ).toBeVisible();
+  await expect(
+    firstHotel.getByRole("button", { name: "Не подходит", exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Закрепить общий выбор", exact: true }),
+  ).not.toBeVisible();
+  await firstHotel
+    .getByRole("button", { name: "Не подходит", exact: true })
+    .click();
+  await expect(
+    firstHotel.getByRole("button", { name: "Не подходит", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await firstHotel.getByRole("button", { name: /^Нравится/ }).click();
+  await expect(
+    firstHotel.getByRole("button", { name: /^Нравится/ }),
+  ).toHaveAttribute("aria-pressed", "true");
+  const more = firstHotel.getByRole("button", { name: /^Действия с отелем/ });
+  await more.click();
+  await expect(page.locator("[popover]:popover-open")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.locator("[popover]:popover-open")).toHaveCount(0);
+  await more.click();
+  await page
+    .locator("[popover]:popover-open")
+    .getByRole("button", { name: "Закрепить общий выбор", exact: true })
+    .click();
+  await expect(
+    page.getByText("Выбрали вместе:", { exact: false }),
+  ).toBeVisible();
+  await firstHotel.getByRole("button", { name: /^Обсуждение/ }).click();
   await expect(page.getByText(injection, { exact: true })).toBeVisible();
   expect(await page.evaluate(() => "hacked" in window)).toBe(false);
   await page.screenshot({

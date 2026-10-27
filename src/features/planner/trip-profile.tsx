@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useId } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -8,6 +8,7 @@ import {
   ChatCircle,
   Copy,
   Heart,
+  XCircle,
   MapPin,
   PaperPlaneTilt,
   PushPin,
@@ -15,6 +16,8 @@ import {
   SlidersHorizontal,
 } from "@phosphor-icons/react";
 import { useAccount, postPlanner } from "./account-provider";
+import { plural } from "@/features/ostrovok/search-state";
+import { ActionMenu } from "./action-menu";
 import { RecommendationCard } from "./recommendation-card";
 import { labels } from "./criteria";
 import type {
@@ -126,17 +129,22 @@ export function TripProfile({ id }: { id: string }) {
             {p.checkin && p.checkout
               ? `${p.checkin} → ${p.checkout}`
               : "Даты пока открыты"}{" "}
-            · {p.adults ?? "Уточняем"} взрослых
-            {p.children ? `, ${p.children} детей` : ""} · {p.rooms ?? 1} номер
+            · {p.adults ?? "Уточняем"}{" "}
+            {plural(p.adults ?? 2, ["взрослый", "взрослых", "взрослых"])}
+            {p.children
+              ? `, ${p.children} ${plural(p.children, ["ребёнок", "ребёнка", "детей"])}`
+              : ""}{" "}
+            · {p.rooms ?? 1}{" "}
+            {plural(p.rooms ?? 1, ["номер", "номера", "номеров"])}
           </p>
         </div>
         {owner && (
           <button
-            className="ov-button ov-button-white"
+            className="ov-inline-button ov-profile-edit"
             onClick={() => setEditing(!editing)}
           >
             <SlidersHorizontal size={18} />
-            {editing ? "Закрыть параметры" : "Изменить параметры"}
+            {editing ? "Закрыть" : "Изменить планы"}
           </button>
         )}
       </header>
@@ -238,51 +246,57 @@ export function TripProfile({ id }: { id: string }) {
               </li>
             ))}
           </ul>
-          {owner &&
-            (trip.inviteUrl ? (
-              <div className="ov-invite-copy">
-                <label htmlFor="invite-url">Ссылка для спутников</label>
-                <input
-                  id="invite-url"
-                  readOnly
-                  value={trip.inviteUrl}
-                  onFocus={(e) => e.target.select()}
-                />
+          {owner && (
+            <details className="ov-invite-details">
+              <summary>
+                Пригласить спутников <Users size={17} />
+              </summary>
+              {trip.inviteUrl ? (
+                <div className="ov-invite-copy">
+                  <label htmlFor="invite-url">Ссылка для спутников</label>
+                  <input
+                    id="invite-url"
+                    readOnly
+                    value={trip.inviteUrl}
+                    onFocus={(e) => e.target.select()}
+                  />
+                  <button
+                    className="ov-button ov-button-white"
+                    onClick={async () => {
+                      try {
+                        await navigator.clipboard.writeText(trip.inviteUrl!);
+                        setCopied(true);
+                      } catch {
+                        setCopied(false);
+                      }
+                    }}
+                  >
+                    <Copy size={17} />
+                    {copied ? "Скопировано" : "Скопировать"}
+                  </button>
+                  <button
+                    className="ov-inline-button"
+                    disabled={busy}
+                    onClick={() => command({ type: "invite" })}
+                  >
+                    Обновить ссылку
+                  </button>
+                  <small>
+                    Новая ссылка отменяет предыдущую. Уже вступившие участники
+                    сохраняют доступ.
+                  </small>
+                </div>
+              ) : (
                 <button
-                  className="ov-button ov-button-white"
-                  onClick={async () => {
-                    try {
-                      await navigator.clipboard.writeText(trip.inviteUrl!);
-                      setCopied(true);
-                    } catch {
-                      setCopied(false);
-                    }
-                  }}
-                >
-                  <Copy size={17} />
-                  {copied ? "Скопировано" : "Скопировать"}
-                </button>
-                <button
-                  className="ov-inline-button"
+                  className="ov-button"
                   disabled={busy}
                   onClick={() => command({ type: "invite" })}
                 >
-                  Создать новую ссылку
+                  Создать приглашение <Users size={18} />
                 </button>
-                <small>
-                  Новая ссылка отменяет предыдущую. Уже вступившие участники
-                  сохраняют доступ.
-                </small>
-              </div>
-            ) : (
-              <button
-                className="ov-button"
-                disabled={busy}
-                onClick={() => command({ type: "invite" })}
-              >
-                Пригласить спутников <Users size={18} />
-              </button>
-            ))}
+              )}
+            </details>
+          )}
         </aside>
         <section className="ov-profile-results">
           <div className="ov-live-heading">
@@ -290,8 +304,8 @@ export function TripProfile({ id }: { id: string }) {
               <h2>Выбираем вместе</h2>
               <p>
                 {candidates.length}{" "}
-                {candidates.length === 1 ? "вариант" : "вариантов"} из текущей
-                версии подбора. Комментарии и голоса видны всем участникам.
+                {plural(candidates.length, ["отель", "отеля", "отелей"])} для
+                вашей поездки. Выберите то, что понравится всем.
               </p>
             </div>
             <span className="ov-selection-caption">Версия {trip.revision}</span>
@@ -367,6 +381,8 @@ function SharedOption({
   command: (body: Record<string, unknown>) => Promise<boolean>;
 }) {
   const [text, setText] = useState("");
+  const [discussionOpen, setDiscussionOpen] = useState(false);
+  const discussionId = useId();
   const votes = trip.votes.filter((v) => v.hotelId === item.hotel.id);
   const liked = votes.filter((v) => v.liked);
   const mine = votes.find((v) => v.userId === currentUser);
@@ -374,46 +390,13 @@ function SharedOption({
   const allLiked = trip.members.every((m) =>
     liked.some((v) => v.userId === m.id),
   );
-  return (
-    <RecommendationCard item={item}>
-      <div className="ov-option-social">
-        <div className="ov-vote-row">
-          <button
-            className={"ov-vote-button " + (mine?.liked ? "is-liked" : "")}
-            aria-pressed={mine?.liked === true}
-            disabled={busy}
-            onClick={() =>
-              command({
-                type: "vote",
-                revision: trip.revision,
-                hotelId: item.hotel.id,
-                liked: true,
-              })
-            }
-          >
-            <Heart size={19} weight={mine?.liked ? "fill" : "regular"} />
-            Нравится <span>{liked.length}</span>
-          </button>
-          <button
-            className={
-              "ov-vote-button " + (mine?.liked === false ? "is-rejected" : "")
-            }
-            aria-pressed={mine?.liked === false}
-            disabled={busy}
-            onClick={() =>
-              command({
-                type: "vote",
-                revision: trip.revision,
-                hotelId: item.hotel.id,
-                liked: false,
-              })
-            }
-          >
-            Не подходит
-          </button>
-          {trip.myRole === "owner" && (
+  const extraActions =
+    trip.myRole === "owner" ? (
+      <ActionMenu label={"Действия с отелем «" + item.hotel.name + "»"}>
+        {trip.myRole === "owner" && (
+          <>
             <button
-              className="ov-pin-button"
+              type="button"
               disabled={
                 busy || !allLiked || trip.pinnedHotelId === item.hotel.id
               }
@@ -430,17 +413,83 @@ function SharedOption({
                 ? "Закреплён"
                 : "Закрепить общий выбор"}
             </button>
-          )}
+            {!allLiked && (
+              <small>
+                Закрепление доступно, когда отель понравится всем участникам.
+              </small>
+            )}
+          </>
+        )}
+      </ActionMenu>
+    ) : null;
+  return (
+    <RecommendationCard item={item} actions={extraActions}>
+      <div className="ov-option-social">
+        <div className="ov-vote-row">
+          <button
+            className={"ov-vote-button " + (mine?.liked ? "is-liked" : "")}
+            aria-pressed={mine?.liked === true}
+            disabled={busy}
+            onClick={() =>
+              command({
+                type: "vote",
+                revision: trip.revision,
+                hotelId: item.hotel.id,
+                liked: !mine?.liked,
+              })
+            }
+          >
+            <Heart size={19} weight={mine?.liked ? "fill" : "regular"} />
+            Нравится <span>{liked.length}</span>
+          </button>
+          <button
+            type="button"
+            className={
+              "ov-vote-button ov-reject-button " +
+              (mine?.liked === false ? "is-rejected" : "")
+            }
+            aria-pressed={mine?.liked === false}
+            disabled={busy}
+            onClick={() =>
+              command({
+                type: "vote",
+                revision: trip.revision,
+                hotelId: item.hotel.id,
+                liked: false,
+              })
+            }
+          >
+            <XCircle
+              size={19}
+              weight={mine?.liked === false ? "fill" : "regular"}
+            />
+            Не подходит
+          </button>
+          <button
+            className="ov-discussion-toggle"
+            aria-expanded={discussionOpen}
+            aria-controls={discussionId}
+            onClick={() => setDiscussionOpen(!discussionOpen)}
+          >
+            <ChatCircle size={19} />
+            Обсуждение <span>{comments.length}</span>
+          </button>
         </div>
         <p className="ov-voter-names">
           {liked.length
             ? `Нравится: ${liked.map((v) => v.name).join(", ")}`
             : "Пока никто не голосовал."}{" "}
-          {!allLiked
-            ? "Для общего выбора нужны голоса всех спутников."
-            : "Этот вариант нравится всем."}
+          {allLiked
+            ? "Можно закрепить общий выбор."
+            : mine?.liked === false
+              ? "Вы отметили, что вариант не подходит."
+              : ""}
         </p>
-        <div className="ov-discussion">
+        <div
+          id={discussionId}
+          className="ov-discussion"
+          hidden={!discussionOpen}
+        >
           <h4>
             <ChatCircle size={18} />
             Обсуждение ({comments.length})

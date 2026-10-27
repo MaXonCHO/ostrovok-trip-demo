@@ -1,12 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import {
-  ArrowRight,
-  Check,
-  SlidersHorizontal,
-  Info,
-} from "@phosphor-icons/react";
+import { ArrowRight, Check, Info } from "@phosphor-icons/react";
 import { useAccount, postPlanner } from "./account-provider";
 import type { Selection, TripWorkspace } from "./types";
 import { RecommendationCard } from "./recommendation-card";
@@ -30,6 +25,7 @@ export function LiveSelection({
   const [initial, setInitial] = useState<Selection | null>(null);
   const [showUnknown, setShowUnknown] = useState(false);
   const [busy, setBusy] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(4);
   const [error, setError] = useState("");
   useEffect(() => {
     if (selection) return;
@@ -100,14 +96,10 @@ export function LiveSelection({
       <div className="ov-container">
         <header className="ov-live-heading">
           <div>
-            <span className="ov-selection-caption">
-              <SlidersHorizontal size={17} />
-              Подбор меняется вместе с вашими ответами
-            </span>
             <h2>Отели под ваши планы</h2>
             <p>
-              Изучаем 300 карточек Петербурга и сведения об окружении.
-              Обязательные условия отделены от пожеланий.
+              Отели Петербурга с учётом того, что важно именно вам. Подбор
+              обновляется после каждого ответа.
             </p>
           </div>
           <span className="ov-update-status" role="status" aria-live="polite">
@@ -143,49 +135,59 @@ export function LiveSelection({
           <button
             className={!showUnknown ? "is-active" : ""}
             aria-pressed={!showUnknown}
-            onClick={() => setShowUnknown(false)}
+            onClick={() => {
+              setShowUnknown(false);
+              setVisibleCount(4);
+            }}
           >
-            По данным архива ({current?.matchingCount ?? 0})
+            Подходят по данным ({current?.matchingCount ?? 0})
           </button>
           <button
             className={showUnknown ? "is-active" : ""}
             aria-pressed={showUnknown}
-            onClick={() => setShowUnknown(true)}
+            onClick={() => {
+              setShowUnknown(true);
+              setVisibleCount(4);
+            }}
           >
-            Нужна проверка ({current?.unverifiedCount ?? 0})
+            Нужно уточнить ({current?.unverifiedCount ?? 0})
           </button>
         </div>
         {showUnknown && (
           <p className="ov-selection-explanation">
-            <Info size={18} />
-            Эти варианты не подтверждают все обязательные условия. Лимит бюджета
-            сохраняется, но актуальных цен в базе нет. Их можно сохранить
-            отдельно для проверки.
+            <Info size={18} />У этих вариантов есть неподтверждённые условия. Их
+            можно сохранить для дальнейшей проверки.
           </p>
         )}
         {current && current.matchingCount < 3 && (
-          <div className="ov-selection-compromise">
-            <strong>
-              {current.matchingCount
-                ? "Под все условия пока мало вариантов"
-                : "Все обязательные условия пока не подтверждены"}
-            </strong>
-            <p>
-              Не ослабляем запрос автоматически. Можно уточнить данные,
-              посмотреть варианты для проверки или изменить конкретное
-              требование.
-            </p>
-            {current.suggestions.map((s) => (
-              <button
-                key={s.key}
-                className="ov-inline-button"
-                disabled={busy || pending}
-                onClick={() => relax(s.key)}
-              >
-                {s.label} <ArrowRight size={16} />
-              </button>
-            ))}
-          </div>
+          <details className="ov-selection-compromise">
+            <summary>
+              <Info size={17} />
+              Как получить больше подходящих вариантов <span>+</span>
+            </summary>
+            <div>
+              <strong>
+                {current.matchingCount
+                  ? "Под все условия пока мало вариантов"
+                  : "Все обязательные условия пока не подтверждены"}
+              </strong>
+              <p>
+                Не ослабляем запрос автоматически. Можно уточнить данные,
+                посмотреть варианты для проверки или изменить конкретное
+                требование.
+              </p>
+              {current.suggestions.map((s) => (
+                <button
+                  key={s.key}
+                  className="ov-inline-button"
+                  disabled={busy || pending}
+                  onClick={() => relax(s.key)}
+                >
+                  {s.label} <ArrowRight size={16} />
+                </button>
+              ))}
+            </div>
+          </details>
         )}
         {!current ? (
           <div
@@ -194,7 +196,7 @@ export function LiveSelection({
           />
         ) : shown.length ? (
           <div className="ov-live-hotels" aria-busy={pending}>
-            {shown.map((h) => (
+            {shown.slice(0, visibleCount).map((h) => (
               <RecommendationCard key={h.hotel.id} item={h} />
             ))}
           </div>
@@ -204,9 +206,18 @@ export function LiveSelection({
             <p>
               {showUnknown
                 ? "Даже для проверки не осталось вариантов. Измените условия в диалоге."
-                : "Откройте список «Нужна проверка», чтобы видеть варианты с отсутствующими сведениями. Они не считаются подтверждённым совпадением."}
+                : "Откройте список «Нужно уточнить», чтобы видеть варианты с отсутствующими сведениями. Они не считаются подтверждённым совпадением."}
             </p>
           </div>
+        )}
+        {shown.length > visibleCount && (
+          <button
+            className="ov-inline-button ov-show-more"
+            onClick={() => setVisibleCount(shown.length)}
+          >
+            Показать ещё {shown.length - visibleCount} варианта{" "}
+            <ArrowRight size={16} />
+          </button>
         )}
         <div className="ov-selection-finish">
           <div>

@@ -45,7 +45,7 @@ export function AccountPage() {
           </p>
         </div>
         {auth.user?.authenticated ? (
-          <button className="ov-button ov-button-white" onClick={auth.logout}>
+          <button className="ov-inline-button" onClick={auth.logout}>
             <SignOut size={18} />
             Выйти
           </button>

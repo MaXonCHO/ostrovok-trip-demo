@@ -1,13 +1,13 @@
 /* Existing Ostrovok typography and palette extend to account and trip workspaces. */
 .ov .ov-profile-page {
-  padding-top: 38px;
-  padding-bottom: 72px;
+  padding-top: 32px;
+  padding-bottom: 80px;
 }
 .ov .ov-back {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--ov-blue, #0e41d2);
+  color: var(--ov-blue, var(--ov-blue, #0c41cf));
   font-size: 14px;
   margin-bottom: 24px;
   min-height: 44px;
@@ -16,14 +16,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 32px;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--ov-border);
+  margin-bottom: 36px;
 }
 .ov .ov-profile-heading h1 {
   margin: 10px 0 14px;
 }
 .ov .ov-profile-heading p {
-  color: #5b677b;
+  color: var(--ov-grey);
   margin: 0;
   font-size: 16px;
 }
@@ -34,21 +36,21 @@
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #5a667a;
+  color: var(--ov-grey);
   font-size: 13px;
   line-height: 1.6;
 }
 .ov .ov-profile-columns {
   display: grid;
-  grid-template-columns: 310px minmax(0, 1fr);
-  gap: 40px;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 64px;
   align-items: start;
 }
 .ov .ov-trip-passport {
-  padding: 26px;
-  background: #f4f7fc;
-  border: 1px solid #e2e8f2;
-  border-radius: 20px;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  border-radius: 0;
   min-width: 0;
 }
 .ov .ov-trip-passport h2 {
@@ -70,7 +72,7 @@
 }
 .ov .ov-trip-passport dt {
   font-size: 12px;
-  color: #59667a;
+  color: var(--ov-grey);
   margin-bottom: 6px;
 }
 .ov .ov-trip-passport dd {
@@ -99,7 +101,7 @@
 .ov .ov-passport-criteria small {
   display: block;
   font-size: 12px;
-  color: #59667a;
+  color: var(--ov-grey);
   margin-top: 3px;
 }
 .ov .ov-inline-button {
@@ -109,7 +111,7 @@
   min-height: 44px;
   border: 0;
   background: transparent;
-  color: #0e41d2;
+  color: var(--ov-blue, #0c41cf);
   font-size: 14px;
   font-weight: 500;
   padding: 8px 0;
@@ -120,26 +122,26 @@
 }
 .ov .ov-live-heading {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 26px;
+  gap: 24px;
+  margin-bottom: 24px;
 }
 .ov .ov-live-heading h2 {
-  font-size: 30px;
-  margin: 10px 0 14px;
+  font-size: 28px;
+  margin: 0 0 10px;
 }
 .ov .ov-live-heading p {
-  max-width: 66ch;
-  font-size: 16px;
+  max-width: 60ch;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0;
-  color: #566278;
+  color: var(--ov-grey);
 }
 .ov .ov-update-status {
   display: block;
   font-size: 13px;
-  color: #52627d;
+  color: var(--ov-grey);
   flex-shrink: 0;
   font-variant-numeric: tabular-nums;
 }
@@ -152,16 +154,16 @@
 .ov .ov-criteria-row > span {
   display: flex;
   align-items: center;
-  gap: 7px;
-  border-radius: 9px;
-  border: 1px solid #e0e7f2;
-  background: #f7f9fc;
-  padding: 9px 12px;
-  font-size: 14px;
+  gap: 6px;
+  border-radius: 6px;
+  border: 0;
+  background: #f5f5f5;
+  padding: 7px 10px;
+  font-size: 13px;
 }
 .ov .ov-criteria-row > span.is-required {
-  border-color: #c6d5fc;
-  background: #edf3ff;
+  background: #f0f4ff;
+  color: var(--ov-blue);
 }
 .ov .ov-criteria-row small {
   font-size: 11px;
@@ -169,31 +171,37 @@
 }
 .ov .ov-selection-tabs {
   display: flex;
-  gap: 8px;
+  gap: 28px;
   flex-wrap: wrap;
-  margin-bottom: 23px;
+  border-bottom: 1px solid var(--ov-border);
+  margin: 24px 0;
 }
 .ov .ov-selection-tabs button {
-  min-height: 46px;
-  background: #eef2f8;
-  color: #35496c;
-  padding: 12px 18px;
-  border-radius: 24px;
-  font-size: 14px;
+  min-height: 48px;
+  background: transparent;
+  color: var(--ov-grey);
+  padding: 12px 0;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-bottom: -1px;
 }
 .ov .ov-selection-tabs button.is-active {
-  background: #0e41d2;
-  color: white;
+  background: transparent;
+  color: var(--ov-blue);
+  border-bottom-color: var(--ov-blue);
+  font-weight: 500;
 }
 .ov .ov-selection-explanation {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  background: #f0f5ff;
-  padding: 18px 20px;
-  border-radius: 14px;
+  gap: 8px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: var(--ov-grey);
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 24px;
 }
 .ov .ov-selection-explanation svg {
@@ -201,17 +209,16 @@
   flex-shrink: 0;
 }
 .ov .ov-selection-compromise {
-  padding: 22px 0;
-  border-top: 1px solid #dce3ef;
-  border-bottom: 1px solid #dce3ef;
-  margin: 0 0 30px;
+  padding: 0;
+  border: 0;
+  margin: 0 0 24px;
 }
 .ov .ov-selection-compromise strong {
   font-size: 18px;
 }
 .ov .ov-selection-compromise p {
   font-size: 14px;
-  color: #52627b;
+  color: var(--ov-grey);
   margin: 10px 0;
 }
 .ov .ov-selection-compromise .ov-inline-button {
@@ -224,23 +231,23 @@
   align-items: start;
 }
 .ov .ov-recommendation {
-  border: 1px solid #dfe6f1;
-  border-radius: 18px;
-  overflow: hidden;
-  background: white;
+  border: 1px solid var(--ov-border);
+  border-radius: 12px;
+  overflow: visible;
+  background: #fff;
   min-width: 0;
 }
 .ov .ov-recommendation-main {
   display: grid;
-  grid-template-columns: 160px minmax(0, 1fr);
-  gap: 23px;
-  padding: 20px;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 22px;
+  padding: 24px;
 }
 .ov .ov-recommendation-photo {
-  min-height: 185px;
-  max-height: 250px;
+  min-height: 150px;
+  max-height: 210px;
   display: block;
-  border-radius: 13px;
+  border-radius: 8px;
   overflow: hidden;
 }
 .ov .ov-recommendation-photo > img {
@@ -253,13 +260,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
   min-height: 100%;
   height: 100%;
-  padding: 22px;
+  padding: 20px;
   text-align: center;
-  background: #eef3fa;
-  color: #5d6f8d;
+  background: #f4f4f4;
+  color: var(--ov-grey);
 }
 .ov .ov-planner-no-photo span {
   font-size: 12px;
@@ -271,61 +278,62 @@
   align-items: center;
   gap: 5px;
   font-size: 12px;
-  color: #53627a;
+  color: var(--ov-grey);
 }
 .ov .ov-recommendation-copy h3 {
-  font-size: 20px;
-  line-height: 1.25;
-  margin: 11px 0 13px;
+  font-size: 21px;
+  line-height: 1.3;
+  margin: 7px 0 10px;
 }
 .ov .ov-match-status {
   font-size: 12px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  color: #166b54;
-  background: #eff8f4;
-  padding: 6px 9px;
-  border-radius: 8px;
+  color: var(--ov-blue);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 .ov .ov-match-status.is-unverified {
-  color: #775118;
-  background: #fff6e7;
+  color: #765117;
+  background: transparent;
 }
 .ov .ov-reasons {
   list-style: none;
-  margin: 16px 0;
+  margin: 12px 0;
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 6px;
 }
 .ov .ov-reasons li {
   display: flex;
   align-items: flex-start;
   gap: 7px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #3f526f;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ov-grey);
 }
 .ov .ov-reasons svg {
   margin-top: 3px;
-  color: #0b7765;
+  color: var(--ov-blue);
   flex-shrink: 0;
 }
 .ov .ov-price-unknown {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 18px 0 4px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ov-grey);
+  margin: 14px 0 0;
 }
 .ov .ov-condition-notice {
   display: block;
-  padding: 16px 20px;
-  background: #fff7e9;
-  border: 1px solid #f2e1c3;
-  border-radius: 12px;
+  padding: 14px 16px;
+  background: #faf8f3;
+  border: 0;
+  border-radius: 8px;
   color: #624f30;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 22px;
 }
 .ov-recommendation > .ov-condition-notice {
@@ -344,7 +352,7 @@
   margin: 0;
 }
 .ov .ov-recommendation-evidence {
-  border-top: 1px solid #e2e8f1;
+  border-top: 1px solid var(--ov-border);
 }
 .ov .ov-recommendation-evidence > summary {
   list-style: none;
@@ -352,21 +360,21 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  min-height: 50px;
-  padding: 15px 20px;
+  min-height: 48px;
+  padding: 12px 24px;
   font-size: 13px;
-  color: #314d7c;
+  color: var(--ov-grey);
   cursor: pointer;
 }
 .ov .ov-recommendation-evidence[open] > summary svg {
   transform: rotate(180deg);
 }
 .ov .ov-recommendation-evidence > div {
-  padding: 5px 20px 20px;
-  background: #fafbfe;
+  padding: 8px 24px 24px;
+  background: #fafafa;
 }
 .ov .ov-evidence-item {
-  border-bottom: 1px solid #e1e7f0;
+  border-bottom: 1px solid var(--ov-border);
   padding: 15px 0;
 }
 .ov .ov-evidence-item strong {
@@ -380,7 +388,7 @@
 .ov .ov-evidence-item small {
   display: block;
   font-size: 12px;
-  color: #596780;
+  color: var(--ov-grey);
   line-height: 1.7;
   margin-top: 5px;
   overflow-wrap: anywhere;
@@ -389,7 +397,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: #0e41d2;
+  color: var(--ov-blue, #0c41cf);
   font-size: 13px;
 }
 .ov .ov-tradeoff {
@@ -408,19 +416,21 @@
 .ov .ov-selection-finish {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 24px;
   align-items: center;
-  border-top: 1px solid #dbe4f3;
-  padding: 28px 0 15px;
-  margin-top: 35px;
+  border: 0;
+  border-radius: 12px;
+  background: #f4f5f7;
+  padding: 28px;
+  margin: 32px 0 20px;
 }
 .ov .ov-selection-finish h3 {
-  font-size: 23px;
-  margin: 0 0 12px;
+  font-size: 22px;
+  margin: 0 0 8px;
 }
 .ov .ov-selection-finish p {
   font-size: 14px;
-  color: #52627a;
+  color: var(--ov-grey);
   margin: 0;
 }
 .ov .ov-selection-finish .ov-button {
@@ -450,7 +460,7 @@
 .ov .ov-planner-empty p {
   font-size: 15px;
   line-height: 1.7;
-  color: #52637c;
+  color: var(--ov-grey);
   margin: 0 0 15px;
 }
 .ov .ov-planner-skeleton {
@@ -474,13 +484,13 @@
 .ov .ov-member-avatar {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: #dfe9ff;
-  color: #214d9e;
-  font-size: 15px;
+  background: #f0f4ff;
+  color: var(--ov-blue);
+  font-size: 14px;
 }
 .ov .ov-member-list li > span:last-child {
   font-size: 14px;
@@ -488,7 +498,7 @@
 .ov .ov-member-list small {
   display: block;
   font-size: 11px;
-  color: #596b86;
+  color: var(--ov-grey);
 }
 .ov .ov-invite-copy {
   display: grid;
@@ -507,7 +517,7 @@
 .ov .ov-invite-copy small {
   font-size: 11px;
   line-height: 1.7;
-  color: #596b84;
+  color: var(--ov-grey);
 }
 .ov .ov-profile-results {
   min-width: 0;
@@ -520,13 +530,13 @@
 }
 .ov .ov-pinned-hotel {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   padding: 20px;
-  background: #edf7f2;
-  border: 1px solid #c6e4d4;
-  border-radius: 14px;
-  margin-bottom: 25px;
-  color: #185c48;
+  background: #f0f4ff;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  color: var(--ov-blue);
 }
 .ov .ov-pinned-hotel strong {
   font-size: 16px;
@@ -537,42 +547,44 @@
   line-height: 1.6;
 }
 .ov .ov-option-social {
-  padding: 20px;
-  border-top: 1px solid #e2e8f1;
+  padding: 12px 24px 18px;
+  border-top: 1px solid var(--ov-border);
 }
 .ov .ov-vote-row {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
   flex-wrap: wrap;
 }
 .ov .ov-vote-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border: 1px solid #dbe4f2;
-  background: #f8faff;
-  border-radius: 9px;
+  gap: 7px;
+  border: 1px solid var(--ov-border);
+  background: white;
+  color: var(--ov-ink);
+  border-radius: 8px;
   min-height: 44px;
-  padding: 10px 14px;
+  padding: 9px 12px;
   font-size: 13px;
+  cursor: pointer;
 }
 .ov .ov-vote-button.is-liked {
-  background: #e5eeff;
-  color: #0e41d2;
-  border-color: #9ab7fc;
+  background: #f0f4ff;
+  color: var(--ov-blue);
+  border-color: var(--ov-blue);
 }
 .ov .ov-vote-button.is-rejected {
-  background: #fff1ef;
-  color: #8c382c;
-  border-color: #f1c1b8;
+  background: #f1f2f4;
+  color: var(--ov-ink);
+  border-color: #727980;
 }
 .ov .ov-pin-button {
   display: flex;
   align-items: center;
   gap: 7px;
-  background: #0e41d2;
+  background: var(--ov-blue, #0c41cf);
   color: white;
   padding: 12px 14px;
   border-radius: 9px;
@@ -582,9 +594,9 @@
 }
 .ov .ov-voter-names {
   font-size: 12px;
-  color: #536681;
-  margin: 13px 0 22px;
-  line-height: 1.6;
+  color: var(--ov-grey);
+  margin: 8px 0 0;
+  line-height: 1.5;
 }
 .ov .ov-discussion h4 {
   display: flex;
@@ -625,7 +637,7 @@
   margin-bottom: 8px;
 }
 .ov .ov-discussion textarea {
-  border: 1px solid #dbe3f1;
+  border: 1px solid var(--ov-border);
   border-radius: 10px;
   padding: 12px 14px;
   min-height: 74px;
@@ -642,7 +654,7 @@
 .ov .ov-profile-editor {
   padding: 28px;
   background: #f6f8fc;
-  border: 1px solid #e1e8f3;
+  border: 1px solid var(--ov-border);
   border-radius: 18px;
   margin-bottom: 30px;
 }
@@ -652,7 +664,7 @@
 }
 .ov .ov-profile-editor > p {
   font-size: 14px;
-  color: #536780;
+  color: var(--ov-grey);
   margin: 0 0 24px;
 }
 .ov .ov-profile-fields {
@@ -668,7 +680,7 @@
 .ov .ov-profile-fields input,
 .ov .ov-edit-criteria select {
   min-height: 46px;
-  border: 1px solid #cfdaec;
+  border: 1px solid var(--ov-border);
   border-radius: 9px;
   background: white;
   font: inherit;
@@ -688,7 +700,7 @@
   height: 19px;
   min-height: 19px;
   flex-shrink: 0;
-  accent-color: #0e41d2;
+  accent-color: var(--ov-blue, #0c41cf);
   padding: 0;
 }
 .ov .ov-edit-criteria {
@@ -720,7 +732,7 @@
   align-items: center;
   gap: 20px;
   padding: 22px;
-  border: 1px solid #dfe6f1;
+  border: 1px solid var(--ov-border);
   border-radius: 15px;
 }
 .ov .ov-account-trips > a:hover {
@@ -733,7 +745,7 @@
   height: 52px;
   border-radius: 13px;
   background: #ecf2ff;
-  color: #0e41d2;
+  color: var(--ov-blue, #0c41cf);
   flex-shrink: 0;
 }
 .ov .ov-account-trips h2 {
@@ -742,7 +754,7 @@
 }
 .ov .ov-account-trips p {
   font-size: 13px;
-  color: #566b89;
+  color: var(--ov-grey);
   margin: 0;
 }
 .ov .ov-account-trips > a > svg:last-child {
@@ -761,7 +773,7 @@
   width: 90px;
   height: 90px;
   background: #edf3ff;
-  color: #0e41d2;
+  color: var(--ov-blue, #0c41cf);
   border-radius: 24px;
   margin: 0 auto 28px;
 }
@@ -784,7 +796,7 @@
 .ov-account-description {
   font-size: 14px;
   line-height: 1.7;
-  color: #53647c;
+  color: var(--ov-grey);
   margin: 15px 0 26px;
 }
 .ov-account-form {
@@ -799,7 +811,7 @@
   margin-bottom: 9px;
 }
 .ov-account-form input {
-  border: 1px solid #d3deed;
+  border: 1px solid var(--ov-border);
   width: 100%;
   min-height: 50px;
   border-radius: 10px;
@@ -811,7 +823,7 @@
 .ov-account-form > p {
   font-size: 12px;
   line-height: 1.7;
-  color: #536782;
+  color: var(--ov-grey);
 }
 .ov-account-form > .ov-button {
   min-height: 50px;
@@ -819,7 +831,7 @@
 .ov-account-form .ov-inline-button {
   border: 0;
   background: transparent;
-  color: #0e41d2;
+  color: var(--ov-blue, #0c41cf);
   min-height: 44px;
   text-align: left;
   padding: 8px 0;
@@ -868,7 +880,7 @@
   justify-content: space-between;
   gap: 20px;
   padding: 13px 0;
-  border-bottom: 1px solid #e1e7f1;
+  border-bottom: 1px solid var(--ov-border);
 }
 .ov .ov-source-metrics dt {
   font-size: 14px;
@@ -947,7 +959,8 @@
     gap: 30px;
   }
   .ov .ov-trip-passport {
-    padding: 22px;
+    padding: 0 0 24px;
+    border-bottom: 1px solid var(--ov-border);
   }
   .ov .ov-trip-passport dl {
     display: grid;
@@ -1148,4 +1161,303 @@
   border-radius: 12px;
   padding: 10px 14px;
   color: var(--ov-blue);
+}
+
+/* Progressive controls keep the hotel itself in focus. */
+.ov .ov-profile-edit {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ov .ov-trip-passport hr {
+  border: 0;
+  border-top: 1px solid var(--ov-border);
+  margin: 26px 0;
+}
+.ov .ov-trip-passport h2 {
+  font-size: 22px;
+}
+.ov .ov-trip-passport dt {
+  font-size: 13px;
+}
+.ov .ov-invite-details > summary,
+.ov .ov-selection-compromise > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--ov-blue);
+  font-size: 14px;
+  cursor: pointer;
+}
+.ov .ov-invite-details > summary::-webkit-details-marker,
+.ov .ov-selection-compromise > summary::-webkit-details-marker,
+.ov .ov-recommendation-evidence > summary::-webkit-details-marker {
+  display: none;
+}
+.ov .ov-invite-details > summary svg {
+  margin-left: auto;
+}
+.ov .ov-invite-details[open] > summary {
+  margin-bottom: 12px;
+}
+.ov .ov-selection-compromise > summary > span {
+  margin-left: auto;
+  font-size: 20px;
+}
+.ov .ov-selection-compromise[open] > summary > span {
+  transform: rotate(45deg);
+}
+.ov .ov-selection-compromise > div {
+  padding: 14px 0;
+  max-width: 70ch;
+}
+.ov .ov-profile-results .ov-recommendation-main {
+  grid-template-columns: 150px minmax(0, 1fr);
+}
+.ov .ov-recommendation.without-photo .ov-recommendation-main {
+  grid-template-columns: 68px minmax(0, 1fr);
+}
+.ov .ov-recommendation.without-photo .ov-recommendation-photo {
+  min-height: 68px;
+  max-height: 68px;
+}
+.ov .without-photo .ov-recommendation-photo .ov-planner-no-photo {
+  padding: 12px;
+}
+.ov .without-photo .ov-recommendation-photo .ov-planner-no-photo svg {
+  width: 30px;
+  height: 30px;
+}
+.ov .without-photo .ov-recommendation-photo .ov-planner-no-photo span {
+  display: none;
+}
+.ov .ov-discussion-toggle,
+.ov .ov-more-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  background: transparent;
+  color: var(--ov-grey);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ov .ov-discussion-toggle {
+  margin-left: auto;
+}
+.ov .ov-more-actions {
+  width: 44px;
+  padding: 8px;
+  flex-shrink: 0;
+}
+.ov .ov-discussion-toggle[aria-expanded="true"] {
+  color: var(--ov-blue);
+  background: #f0f4ff;
+}
+.ov .ov-discussion-toggle:hover,
+.ov .ov-more-actions:hover,
+.ov .ov-vote-button:hover {
+  background: #f4f5f7;
+}
+.ov .ov-vote-button.is-liked:hover {
+  background: #e6edff;
+}
+.ov .ov-discussion:not([hidden]) {
+  padding-top: 24px;
+  margin-top: 16px;
+  border-top: 1px solid var(--ov-border);
+}
+.ov .ov-discussion[hidden] {
+  display: none;
+}
+.ov .ov-discussion form {
+  position: relative;
+}
+.ov .ov-discussion textarea {
+  min-height: 88px;
+  padding-bottom: 20px;
+  background: white;
+}
+.ov .ov-discussion .ov-button {
+  min-height: 40px;
+  font-size: 13px;
+  background: var(--ov-blue);
+  color: white;
+}
+.ov .ov-planner-popover {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  width: 240px;
+  padding: 6px;
+  border: 1px solid var(--ov-border);
+  border-radius: 10px;
+  background: white;
+  color: var(--ov-ink);
+  box-shadow: 0 3px 8px #00000012;
+}
+.ov .ov-planner-popover:popover-open {
+  display: grid;
+}
+.ov .ov-planner-popover::backdrop {
+  background: transparent;
+}
+.ov .ov-planner-popover button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: left;
+  color: var(--ov-ink);
+  background: white;
+  font-size: 13px;
+}
+.ov .ov-planner-popover button:not(:disabled):hover {
+  background: #f4f5f7;
+}
+.ov .ov-planner-popover small {
+  padding: 8px 10px;
+  color: var(--ov-grey);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ov .ov-show-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 18px auto 0;
+  min-height: 44px;
+}
+.ov .ov-criteria-row small {
+  color: var(--ov-grey);
+}
+.ov .ov-recommendation-evidence summary:hover {
+  color: var(--ov-blue);
+}
+.ov .ov-live-selection {
+  background: white;
+}
+.ov .ov-vote-row button {
+  transition:
+    background-color 150ms ease-out,
+    color 150ms ease-out;
+}
+.ov .ov-invite-copy .ov-button {
+  background: white;
+  color: var(--ov-blue);
+  border: 1px solid var(--ov-border);
+}
+@media (max-width: 760px) {
+  .ov .ov-profile-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ov .ov-profile-heading h1 {
+    font-size: 28px;
+  }
+  .ov .ov-profile-heading > .ov-inline-button {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+  .ov .ov-profile-columns {
+    gap: 28px;
+  }
+  .ov .ov-recommendation-main,
+  .ov .ov-profile-results .ov-recommendation-main {
+    padding: 18px;
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .ov .ov-recommendation.without-photo .ov-recommendation-main {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .ov .ov-recommendation.without-photo .ov-recommendation-photo {
+    min-height: 48px;
+    max-height: 48px;
+  }
+  .ov .ov-recommendation-copy h3 {
+    font-size: 18px;
+  }
+  .ov .ov-recommendation-evidence > summary {
+    padding: 12px 18px;
+  }
+  .ov .ov-option-social {
+    padding: 12px 16px 16px;
+  }
+  .ov .ov-vote-row {
+    gap: 6px;
+  }
+  .ov .ov-vote-button {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+  .ov .ov-discussion-toggle {
+    font-size: 0;
+    gap: 5px;
+    padding: 8px;
+  }
+  .ov .ov-discussion-toggle > span {
+    font-size: 12px;
+  }
+  .ov .ov-more-actions {
+    width: 36px;
+  }
+  .ov .ov-live-heading {
+    gap: 14px;
+  }
+  .ov .ov-live-heading h2 {
+    font-size: 25px;
+  }
+  .ov .ov-live-heading p {
+    font-size: 14px;
+  }
+  .ov .ov-selection-tabs {
+    gap: 20px;
+  }
+  .ov .ov-selection-tabs button {
+    font-size: 13px;
+  }
+  .ov .ov-selection-finish {
+    padding: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ov .ov-vote-row button {
+    transition: none;
+  }
+}
+
+.ov .ov-recommendation {
+  position: relative;
+}
+.ov .ov-card-actions {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.ov .ov-profile-results .ov-recommendation-copy {
+  padding-right: 30px;
+}
+@media (max-width: 760px) {
+  .ov .ov-card-actions {
+    top: 10px;
+    right: 8px;
+  }
+  .ov .ov-card-actions .ov-more-actions {
+    width: 44px;
+  }
+  .ov .ov-profile-results .ov-recommendation-copy {
+    padding-right: 28px;
+  }
+  .ov .ov-discussion-toggle {
+    min-width: 44px;
+  }
 }
