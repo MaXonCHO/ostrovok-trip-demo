@@ -1,0 +1,461 @@
+[
+  {
+    "assetId": "nature",
+    "path": "/demo/nature.jpg",
+    "source": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "food",
+    "path": "/demo/food.jpg",
+    "source": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "italian",
+    "path": "/demo/italian.jpg",
+    "source": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "exterior-1",
+    "path": "/demo/exterior-1.jpg",
+    "source": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h1"
+    ]
+  },
+  {
+    "assetId": "exterior-2",
+    "path": "/demo/exterior-2.jpg",
+    "source": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h2"
+    ]
+  },
+  {
+    "assetId": "exterior-4",
+    "path": "/demo/exterior-4.jpg",
+    "source": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h4",
+      "spb-0",
+      "kazan-0"
+    ]
+  },
+  {
+    "assetId": "exterior-5",
+    "path": "/demo/exterior-5.jpg",
+    "source": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h5",
+      "spb-1",
+      "kazan-1"
+    ]
+  },
+  {
+    "assetId": "exterior-6",
+    "path": "/demo/exterior-6.jpg",
+    "source": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h6",
+      "spb-2",
+      "kazan-2"
+    ]
+  },
+  {
+    "assetId": "exterior-7",
+    "path": "/demo/exterior-7.jpg",
+    "source": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h7"
+    ]
+  },
+  {
+    "assetId": "exterior-8",
+    "path": "/demo/exterior-8.jpg",
+    "source": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h8"
+    ]
+  },
+  {
+    "assetId": "exterior-9",
+    "path": "/demo/exterior-9.jpg",
+    "source": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h9"
+    ]
+  },
+  {
+    "assetId": "exterior-11",
+    "path": "/demo/exterior-11.jpg",
+    "source": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h11"
+    ]
+  },
+  {
+    "assetId": "exterior-12",
+    "path": "/demo/exterior-12.jpg",
+    "source": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h12"
+    ]
+  },
+  {
+    "assetId": "room-1",
+    "path": "/demo/room-1.jpg",
+    "source": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h1"
+    ]
+  },
+  {
+    "assetId": "room-2",
+    "path": "/demo/room-2.jpg",
+    "source": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h2"
+    ]
+  },
+  {
+    "assetId": "room-4",
+    "path": "/demo/room-4.jpg",
+    "source": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h4",
+      "spb-0",
+      "kazan-0"
+    ]
+  },
+  {
+    "assetId": "room-5",
+    "path": "/demo/room-5.jpg",
+    "source": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h5",
+      "spb-1",
+      "kazan-1"
+    ]
+  },
+  {
+    "assetId": "room-6",
+    "path": "/demo/room-6.jpg",
+    "source": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h6",
+      "spb-2",
+      "kazan-2"
+    ]
+  },
+  {
+    "assetId": "room-8",
+    "path": "/demo/room-8.jpg",
+    "source": "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h8"
+    ]
+  },
+  {
+    "assetId": "room-9",
+    "path": "/demo/room-9.jpg",
+    "source": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h9"
+    ]
+  },
+  {
+    "assetId": "room-10",
+    "path": "/demo/room-10.jpg",
+    "source": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h10"
+    ]
+  },
+  {
+    "assetId": "room-11",
+    "path": "/demo/room-11.jpg",
+    "source": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h11"
+    ]
+  },
+  {
+    "assetId": "room-12",
+    "path": "/demo/room-12.jpg",
+    "source": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h12"
+    ]
+  },
+  {
+    "assetId": "detail-1",
+    "path": "/demo/detail-1.jpg",
+    "source": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h1",
+      "h5",
+      "h9",
+      "spb-1",
+      "kazan-1"
+    ]
+  },
+  {
+    "assetId": "detail-2",
+    "path": "/demo/detail-2.jpg",
+    "source": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h2",
+      "h6",
+      "h10",
+      "spb-2",
+      "kazan-2"
+    ]
+  },
+  {
+    "assetId": "detail-3",
+    "path": "/demo/detail-3.jpg",
+    "source": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h3",
+      "h7",
+      "h11"
+    ]
+  },
+  {
+    "assetId": "detail-4",
+    "path": "/demo/detail-4.jpg",
+    "source": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h4",
+      "h8",
+      "h12",
+      "spb-0",
+      "kazan-0"
+    ]
+  },
+  {
+    "assetId": "city",
+    "path": "/demo/city.jpg",
+    "source": "https://unsplash.com/photos/a-bunch-of-boats-that-are-in-the-water-FnBRPxmYUuE",
+    "author": "Alexey Elfimov",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "type": "area photograph in Sochi",
+    "illustrative": false,
+    "downloadUrl": "https://images.unsplash.com/photo-1713678849006-502832508bcc?auto=format&fit=crop&w=1600&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "coast",
+    "path": "/demo/coast.jpg",
+    "source": "https://unsplash.com/photos/a-couple-of-umbrellas-sitting-on-top-of-a-beach-ImiEoox5WBo",
+    "author": "Sergey Beschastnykh",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "type": "area photograph in Sochi",
+    "illustrative": false,
+    "downloadUrl": "https://images.unsplash.com/photo-1722259038066-539cdb043330?auto=format&fit=crop&w=1600&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "sea",
+    "path": "/demo/sea.jpg",
+    "source": "https://unsplash.com/photos/a-rocky-beach-with-waves-crashing-9kzq_qsSIjo",
+    "author": "Mihail Tregubov",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "type": "area photograph in Sochi",
+    "illustrative": false,
+    "downloadUrl": "https://images.unsplash.com/photo-1667720074648-fbdc101a7c3b?auto=format&fit=crop&w=1600&q=85",
+    "hotelIds": []
+  },
+  {
+    "assetId": "room-3",
+    "path": "/demo/room-3.jpg",
+    "source": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h3"
+    ]
+  },
+  {
+    "assetId": "room-7",
+    "path": "/demo/room-7.jpg",
+    "source": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h7"
+    ]
+  },
+  {
+    "assetId": "exterior-3",
+    "path": "/demo/exterior-3.jpg",
+    "source": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h3"
+    ]
+  },
+  {
+    "assetId": "exterior-10",
+    "path": "/demo/exterior-10.jpg",
+    "source": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=1400&q=85",
+    "author": null,
+    "license": "Unsplash License, https://unsplash.com/license",
+    "type": "illustrative photograph",
+    "illustrative": true,
+    "downloadUrl": "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=1400&q=85",
+    "hotelIds": [
+      "h10"
+    ]
+  }
+]

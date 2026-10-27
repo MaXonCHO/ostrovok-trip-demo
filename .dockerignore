@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.env
+.env.local
+.env.*
+!.env.example
+.data
+.tools
+.playwright-mcp
+playwright-report
+test-results
+*.tsbuildinfo
+docs/references

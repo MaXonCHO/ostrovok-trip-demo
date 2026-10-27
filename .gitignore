@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.env
+.env.local
+.env.*
+!.env.example
+.tools/
+.data/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.DS_Store
+.playwright-mcp/
+
+__pycache__/
+*.pyc
