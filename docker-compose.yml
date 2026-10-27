@@ -5,15 +5,12 @@ services:
     platform: linux/amd64
     ports:
       - "8080:8080"
-    env_file:
-      - .env
     environment:
       NODE_ENV: production
       PORT: "8080"
       HOSTNAME: 0.0.0.0
-      TRIP_DATA_DIR: /app/data
-    volumes:
-      - trip-data:/app/data
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-flash}
     restart: unless-stopped
     healthcheck:
       test:
@@ -27,5 +24,3 @@ services:
       timeout: 5s
       start_period: 20s
       retries: 3
-volumes:
-  trip-data:

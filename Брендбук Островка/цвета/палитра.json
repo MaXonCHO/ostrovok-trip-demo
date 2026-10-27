@@ -1,0 +1,59 @@
+{
+  "source": "https://theclients.ru/projects/ostrovok-re-branding",
+  "method": "Наиболее частые точные RGB в исходных PNG; без цветокоррекции. Значения для рабочего воспроизведения, не официальные HEX/Pantone/CMYK.",
+  "colors": [
+    {
+      "name": "Мохито",
+      "token": "mojito",
+      "hex": "#ACEF81",
+      "rgb": [
+        172,
+        239,
+        129
+      ],
+      "role": "основной брендовый цвет",
+      "evidence": "референсы/01-логотип.png; референсы/04-предметы-и-круги.png",
+      "status": "sampled_from_reference",
+      "note": "На слайде типографики близкий оттенок #ABEF81; официальная числовая спецификация не найдена."
+    },
+    {
+      "name": "Ультрамарин",
+      "token": "ultramarine",
+      "hex": "#0C41CF",
+      "rgb": [
+        12,
+        65,
+        207
+      ],
+      "role": "дополнительный брендовый цвет",
+      "evidence": "референсы/01-логотип.png; референсы/03-типографика-spoof.png",
+      "status": "sampled_from_reference"
+    },
+    {
+      "name": "Тёмный из референса",
+      "token": "ink",
+      "hex": "#231F20",
+      "rgb": [
+        35,
+        31,
+        32
+      ],
+      "role": "текст в типографическом образце",
+      "evidence": "референсы/03-типографика-spoof.png",
+      "status": "sampled_from_reference"
+    },
+    {
+      "name": "Белый из референса",
+      "token": "white",
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "role": "круглые подложки",
+      "evidence": "референсы/04-предметы-и-круги.png",
+      "status": "sampled_from_reference"
+    }
+  ]
+}

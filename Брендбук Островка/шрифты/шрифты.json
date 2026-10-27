@@ -1,0 +1,39 @@
+{
+  "brand": [
+    {
+      "family": "Spoof",
+      "style": "Medium",
+      "role": "фирменная типографика на слайде кейса",
+      "evidence": "референсы/03-типографика-spoof.png",
+      "files_included": false,
+      "vendor": "Polytype",
+      "vendor_url": "https://www.polytype.co.uk/",
+      "purchase_reference": "https://type-department.com/products/spoof",
+      "note": "В кейсе показана кириллица. Соответствие конкретной продаваемой версии этому набору не подтверждено."
+    },
+    {
+      "family": "Nagel",
+      "style": "Medium, доработанный для логотипа",
+      "role": "основа логотипа",
+      "evidence": "https://theclients.ru/projects/ostrovok-re-branding",
+      "files_included": false,
+      "vendor": "Paratype",
+      "vendor_url": "https://www.paratype.com/fonts/pt/nagel"
+    }
+  ],
+  "prototype_fallback": {
+    "family": "Golos Text",
+    "status": "project_alternative_not_brand_font",
+    "file": "альтернатива-для-прототипа/GolosText.ttf",
+    "license": "SIL OFL 1.1",
+    "origin": "public/demo/golos.ttf текущего проекта",
+    "variation_axes": [
+      {
+        "tag": "wght",
+        "min": 400.0,
+        "default": 400.0,
+        "max": 900.0
+      }
+    ]
+  }
+}

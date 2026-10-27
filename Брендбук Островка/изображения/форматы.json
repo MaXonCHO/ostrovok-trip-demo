@@ -1,0 +1,73 @@
+{
+  "status": "project_recommendations_not_official_brand_spec",
+  "note": "Все шесть скачанных референсов имеют размер 1920×1080. Остальные размеры ниже — предложенные пресеты экспорта для проекта.",
+  "presets": [
+    {
+      "usage": "Обложка / hero",
+      "ratio": "16:9",
+      "width": 1920,
+      "height": 1080,
+      "formats": [
+        "AVIF",
+        "WebP",
+        "JPEG"
+      ]
+    },
+    {
+      "usage": "Карточка отеля",
+      "ratio": "4:3",
+      "width": 1200,
+      "height": 900,
+      "formats": [
+        "AVIF",
+        "WebP",
+        "JPEG"
+      ]
+    },
+    {
+      "usage": "Квадрат / соцсети",
+      "ratio": "1:1",
+      "width": 1080,
+      "height": 1080,
+      "formats": [
+        "WebP",
+        "JPEG",
+        "PNG"
+      ]
+    },
+    {
+      "usage": "Вертикальный пост",
+      "ratio": "4:5",
+      "width": 1080,
+      "height": 1350,
+      "formats": [
+        "WebP",
+        "JPEG",
+        "PNG"
+      ]
+    },
+    {
+      "usage": "Stories / вертикальный экран",
+      "ratio": "9:16",
+      "width": 1080,
+      "height": 1920,
+      "formats": [
+        "WebP",
+        "JPEG",
+        "PNG"
+      ]
+    }
+  ],
+  "vector": [
+    "SVG"
+  ],
+  "transparent_raster": [
+    "PNG",
+    "WebP"
+  ],
+  "motion": [
+    "MP4",
+    "WebM"
+  ],
+  "source_motion": "GIF"
+}

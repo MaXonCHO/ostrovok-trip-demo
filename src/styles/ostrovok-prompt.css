@@ -1,0 +1,908 @@
+/* Conversational entry point over the landscape. */
+.ov .ov-travel-prompt {
+  width: 100%;
+  padding: 24px;
+  color: #fff;
+  background: #102b3970;
+  border: 1px solid #ffffff66;
+  border-radius: 28px;
+  backdrop-filter: blur(24px) saturate(125%);
+  -webkit-backdrop-filter: blur(24px) saturate(125%);
+  box-shadow:
+    0 16px 48px #05172130,
+    inset 0 1px #ffffff20;
+}
+.ov .ov-prompt-label {
+  display: block;
+  font-family: var(--ov-font-display);
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-wrap: balance;
+}
+.ov-prompt-input {
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 3px 12px #05172112;
+}
+.ov-prompt-input:focus-within {
+  border-color: #acef81;
+}
+.ov-prompt-input.is-listening {
+  border-color: #acef81;
+}
+.ov .ov-prompt-input textarea {
+  display: block;
+  min-height: 104px;
+  width: 100%;
+  padding: 16px 18px 8px;
+  resize: vertical;
+  max-height: 260px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #2d3137;
+  font-family: var(--ov-font-body);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.ov .ov-prompt-input textarea::placeholder {
+  color: #727d8a;
+  opacity: 1;
+}
+.ov-prompt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 12px 10px 18px;
+}
+.ov-prompt-toolbar > span {
+  color: #637080;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ov .ov-voice-button {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #e9efff;
+  color: #0c41cf;
+  border-radius: 50%;
+}
+.ov .ov-voice-button:hover {
+  background: #dae5ff;
+}
+.ov .ov-voice-button.is-recording {
+  background: #e7f7de;
+  color: #345b27;
+}
+.ov-prompt-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.ov .ov-prompt-examples button {
+  padding: 8px 12px;
+  color: #fff;
+  background: #ffffff19;
+  border: 1px solid #ffffff33;
+  border-radius: 30px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.ov .ov-prompt-examples button:hover {
+  background: #ffffff2c;
+}
+.ov-prompt-status {
+  min-height: 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 12px;
+  color: #f3f7fa;
+}
+.ov-prompt-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-top: 18px;
+}
+.ov-prompt-bottom > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 9px;
+}
+.ov .ov-prompt-filters {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  min-height: 42px;
+  color: #fff;
+  background: #ffffff16;
+  border: 1px solid #ffffff59;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.ov .ov-prompt-filters:hover {
+  background: #ffffff2c;
+}
+.ov .ov-prompt-submit {
+  min-height: 52px;
+  padding-inline: 25px;
+  border-radius: 28px;
+}
+.ov-filter-dialog-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 18px;
+}
+.ov-filter-dialog-bottom .ov-apartments-switch {
+  margin-top: 0;
+}
+.ov .ov-wish-banner {
+  padding: 18px 20px;
+  margin: 20px 0 12px;
+  border: 1px solid #dbe4f6;
+  border-radius: 12px;
+  background: #f3f7ff;
+}
+.ov-wish-banner > span {
+  font-size: 12px;
+  color: #65728b;
+}
+.ov .ov-wish-banner > p {
+  font-size: 17px;
+  margin: 6px 0 8px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.ov-wish-banner > small {
+  color: #65728b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+/* A closing scene under the rounded white editorial sheet. */
+.ov-home-lower {
+  border-radius: 40px;
+  margin-bottom: -40px;
+  padding-bottom: 28px;
+}
+.ov-final-cta {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  clip-path: inset(0);
+  background: #253c3d;
+  color: #fff;
+  min-height: 680px;
+  padding: 170px 32px 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ov-final-cta-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(#112b3b88, #112b3baa),
+    url("/demo/real/hero.jpg") center / cover;
+}
+.ov-final-cta-content {
+  max-width: 900px;
+  position: relative;
+}
+.ov .ov-final-cta-content > p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 26px;
+  color: #f1f5f6;
+}
+.ov .ov-final-cta h2 {
+  font-family: var(--ov-font-display);
+  font-size: clamp(54px, 6vw, 80px);
+  font-weight: 500;
+  line-height: 1.08;
+  color: #fff;
+  letter-spacing: -0.025em;
+  margin-bottom: 36px;
+  text-shadow: 0 2px 20px #0002;
+}
+.ov .ov-final-cta .ov-button {
+  border-radius: 40px;
+  font-size: 18px;
+  min-height: 60px;
+  padding: 18px 28px;
+  gap: 24px;
+}
+.ov:has(.ov-final-cta) > .ov-footer {
+  position: relative;
+  z-index: 1;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+}
+@media (max-width: 680px) {
+  .ov .ov-travel-prompt {
+    padding: 16px;
+    border-radius: 24px;
+  }
+  .ov .ov-prompt-label {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+  .ov .ov-prompt-input textarea {
+    font-size: 16px;
+    min-height: 118px;
+    padding: 14px 14px 8px;
+  }
+  .ov-prompt-input {
+    border-radius: 16px;
+  }
+  .ov-prompt-toolbar {
+    padding: 0 10px 10px 14px;
+    gap: 8px;
+  }
+  .ov-prompt-toolbar > span {
+    font-size: 12px;
+  }
+  .ov-prompt-examples {
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .ov .ov-prompt-examples button {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+  .ov-prompt-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  .ov .ov-prompt-submit {
+    width: 100%;
+    min-height: 48px;
+    font-size: 15px;
+  }
+  .ov-filter-dialog-bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 17px;
+  }
+  .ov-home-lower {
+    border-radius: 24px;
+    margin-bottom: -24px;
+    padding-bottom: 16px;
+  }
+  .ov-final-cta {
+    min-height: 520px;
+    padding: 100px 20px 110px;
+  }
+  .ov .ov-final-cta h2 {
+    font-size: 46px;
+    line-height: 1.1;
+    margin-bottom: 28px;
+  }
+  .ov .ov-final-cta-content > p {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  .ov .ov-final-cta .ov-button {
+    font-size: 16px;
+    min-height: 54px;
+    padding: 15px 23px;
+    gap: 18px;
+  }
+  .ov:has(.ov-final-cta) > .ov-footer {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ov-final-cta-backdrop {
+    position: absolute;
+  }
+}
+
+/* Carry the Mojito accent upward from the edge of the blog sheet. */
+.ov .ov-home-lower {
+  background: linear-gradient(
+    0deg,
+    #acef81 0%,
+    #e0f8cf 18%,
+    #f3fced 36%,
+    #fff 58%
+  );
+}
+
+/* The request is composed directly on the photograph, without a card shell. */
+.ov .ov-travel-prompt {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.ov .ov-prompt-label {
+  margin-bottom: 9px;
+}
+.ov .ov-prompt-input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ffffff80;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+.ov .ov-prompt-input:focus-within,
+.ov .ov-prompt-input.is-listening {
+  border-bottom-color: #acef81;
+}
+.ov .ov-prompt-input textarea {
+  min-height: 82px;
+  padding: 10px 0 8px;
+  color: #fff;
+  background: transparent;
+  resize: none;
+  font-size: 20px;
+  line-height: 1.5;
+  text-shadow: 0 1px 5px #071c3150;
+}
+.ov .ov-prompt-input textarea::placeholder {
+  color: #f0f4f6;
+  opacity: 1;
+}
+.ov .ov-prompt-input textarea:focus-visible {
+  outline: none;
+}
+.ov .ov-prompt-toolbar {
+  padding: 0 0 12px;
+}
+.ov .ov-prompt-toolbar > span {
+  color: #f2f6f7;
+}
+.ov .ov-voice-button {
+  border: 1px solid #ffffff80;
+  color: #fff;
+  background: #ffffff17;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.ov .ov-voice-button:hover {
+  background: #ffffff30;
+}
+.ov .ov-voice-button.is-recording {
+  background: #acef81;
+  color: #1640aa;
+  border-color: #acef81;
+}
+.ov .ov-prompt-examples {
+  margin-top: 16px;
+}
+.ov .ov-prompt-status {
+  color: #f0f4f5;
+}
+@media (max-width: 680px) {
+  .ov .ov-travel-prompt {
+    padding: 0;
+    border-radius: 0;
+  }
+  .ov .ov-prompt-input {
+    border-radius: 0;
+  }
+  .ov .ov-prompt-input textarea {
+    font-size: 17px;
+    min-height: 112px;
+    padding: 9px 0;
+  }
+  .ov .ov-prompt-toolbar {
+    padding: 0 0 11px;
+  }
+}
+
+/* Keep the whole introduction within one viewport and remove repeated copy. */
+.ov .ov-hero {
+  height: 100svh;
+  min-height: 0;
+  max-height: 100svh;
+}
+.ov .ov-hero-content {
+  height: 100%;
+  max-height: 100%;
+  padding-top: calc(var(--ov-header-size) + 20px);
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+}
+.ov .ov-hero-content > h1 {
+  flex-shrink: 0;
+  margin-bottom: 26px;
+}
+.ov .ov-travel-prompt {
+  flex-shrink: 0;
+}
+.ov .ov-prompt-label {
+  font-size: 22px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+.ov .ov-prompt-input {
+  position: relative;
+  padding-right: 60px;
+}
+.ov .ov-prompt-input textarea {
+  height: 72px;
+  min-height: 72px;
+  max-height: 72px;
+  padding-block: 8px;
+  overflow-y: auto;
+  font-size: 19px;
+  line-height: 1.45;
+}
+.ov .ov-prompt-toolbar {
+  position: absolute;
+  right: 0;
+  bottom: 11px;
+  padding: 0;
+}
+.ov .ov-prompt-status:empty {
+  min-height: 0;
+  margin: 0;
+}
+.ov .ov-prompt-bottom {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px 18px;
+  margin-top: 18px;
+}
+.ov .ov-prompt-bottom > div {
+  display: contents;
+}
+.ov .ov-prompt-filters {
+  grid-column: 1;
+  grid-row: 1;
+}
+.ov .ov-prompt-submit {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+}
+.ov-prompt-submit-mobile {
+  display: none;
+}
+.ov .ov-header-actions > .ov-login {
+  border-radius: 24px;
+}
+@media (max-width: 680px) {
+  .ov .ov-hero-content {
+    padding-top: calc(var(--ov-header-size) + 22px);
+    padding-bottom: 48px;
+  }
+  .ov .ov-hero-content > h1 {
+    margin-bottom: 19px;
+  }
+  .ov .ov-prompt-label {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+  .ov .ov-prompt-input {
+    padding-right: 51px;
+  }
+  .ov .ov-prompt-input textarea {
+    height: 68px;
+    min-height: 68px;
+    max-height: 68px;
+    font-size: 16px;
+    padding-block: 6px;
+  }
+  .ov .ov-prompt-toolbar {
+    bottom: 10px;
+  }
+  .ov .ov-voice-button {
+    width: 40px;
+    height: 40px;
+  }
+  .ov .ov-prompt-examples {
+    display: none;
+  }
+  .ov .ov-prompt-bottom {
+    gap: 9px 12px;
+    margin-top: 16px;
+  }
+  .ov .ov-prompt-submit {
+    width: auto;
+    padding: 12px 17px;
+    gap: 9px;
+    min-height: 46px;
+  }
+  .ov .ov-prompt-filters {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .ov .ov-prompt-submit-desktop {
+    display: none;
+  }
+  .ov .ov-prompt-submit-mobile {
+    display: inline;
+  }
+}
+@media (max-height: 650px) {
+  .ov .ov-hero-content {
+    padding-top: calc(var(--ov-header-size) + 12px);
+    padding-bottom: 35px;
+  }
+  .ov .ov-hero h1 {
+    font-size: 32px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .ov .ov-prompt-examples {
+    display: none;
+  }
+  .ov .ov-prompt-label {
+    font-size: 19px;
+  }
+}
+
+/* Let wheel/touch scrolling reach the page instead of trapping it in hero. */
+.ov .ov-hero-content {
+  overflow: visible;
+  overscroll-behavior: auto;
+  justify-content: safe center;
+}
+.ov .ov-prompt-input {
+  min-height: 48px;
+  padding-right: 58px;
+}
+.ov .ov-prompt-input > input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding: 4px 0 3px;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  font-family: var(--ov-font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+}
+.ov .ov-prompt-input > input::placeholder {
+  color: #f0f4f6;
+  opacity: 1;
+}
+.ov .ov-prompt-input > input:focus-visible {
+  outline: none;
+}
+.ov .ov-prompt-toolbar {
+  bottom: 4px;
+}
+.ov .ov-prompt-bottom {
+  grid-template-columns: auto 1fr;
+}
+.ov-inline-filters {
+  width: 100%;
+  flex-shrink: 0;
+}
+.ov-inline-filter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+.ov .ov-inline-filter-heading h2 {
+  font-family: var(--ov-font-display);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0;
+}
+.ov .ov-inline-filter-heading > button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff18;
+  border: 1px solid #ffffff66;
+  border-radius: 24px;
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.ov .ov-inline-filters .ov-hero-form {
+  background: #102b3940;
+}
+@media (max-width: 680px) {
+  .ov .ov-prompt-input {
+    min-height: 46px;
+    padding-right: 50px;
+  }
+  .ov .ov-prompt-input > input {
+    font-size: 16px;
+    height: 46px;
+    line-height: 1.4;
+  }
+  .ov .ov-prompt-toolbar {
+    bottom: 3px;
+  }
+  .ov .ov-inline-filter-heading {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .ov .ov-inline-filter-heading h2 {
+    font-size: 22px;
+  }
+  .ov .ov-inline-filter-heading > button {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+}
+@media (max-height: 520px) {
+  .ov .ov-hero h1 {
+    font-size: 28px;
+  }
+  .ov .ov-hero-content {
+    padding-bottom: 28px;
+  }
+}
+
+/* Both modes share their heading, action row and natural layout footprint. */
+.ov-trip-composer {
+  width: 100%;
+  flex-shrink: 0;
+}
+.ov .ov-trip-composer > .ov-prompt-label {
+  color: #fff;
+  margin: 0 0 14px;
+}
+.ov-trip-panels {
+  display: grid;
+  align-items: start;
+  min-width: 0;
+}
+.ov-trip-panel {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.ov-trip-panel[data-active="false"] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.ov-trip-composer .ov-search-original {
+  grid-template-columns: minmax(0, 2.6fr) minmax(0, 1.6fr) minmax(0, 0.9fr);
+}
+.ov .ov-trip-composer .ov-prompt-submit {
+  width: 232px;
+  min-height: 52px;
+  padding: 14px 20px;
+  border-radius: 28px;
+  font-size: 18px;
+  line-height: 1.3;
+  gap: 12px;
+  white-space: nowrap;
+}
+.ov-mode-back-short {
+  display: none;
+}
+@media (max-width: 1074px) {
+  .ov-trip-composer .ov-search-original {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ov-trip-composer .ov-search-original .ov-guests {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 680px) {
+  .ov .ov-trip-composer > .ov-prompt-label {
+    margin-bottom: 12px;
+  }
+  .ov .ov-trip-composer .ov-prompt-bottom {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .ov .ov-trip-composer .ov-prompt-filters {
+    min-height: 46px;
+    font-size: 14px;
+    padding-inline: 12px;
+  }
+  .ov .ov-trip-composer .ov-prompt-submit {
+    width: auto;
+    min-height: 46px;
+    padding: 12px;
+    font-size: 14px;
+    gap: 6px;
+  }
+  .ov-mode-back-long {
+    display: none;
+  }
+  .ov-mode-back-short {
+    display: inline;
+  }
+}
+@media (max-height: 700px) {
+  .ov .ov-hero-content > h1 {
+    margin-bottom: 12px;
+  }
+  .ov .ov-trip-composer > .ov-prompt-label {
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+  .ov-trip-composer .ov-search-service-tabs {
+    display: none;
+  }
+  .ov .ov-trip-composer .ov-hero-form {
+    padding: 10px;
+  }
+  .ov-trip-composer .ov-search-original .ov-field-button {
+    min-height: 48px;
+    padding-block: 6px;
+  }
+  .ov-trip-composer .ov-filter-dialog-bottom {
+    margin-top: 10px;
+  }
+  .ov .ov-trip-composer .ov-prompt-bottom {
+    margin-top: 12px;
+  }
+}
+@media (max-height: 520px) and (min-width: 681px) {
+  .ov-trip-composer .ov-search-original {
+    grid-template-columns: minmax(0, 2.6fr) minmax(0, 1.8fr) minmax(0, 1fr);
+  }
+  .ov-trip-composer .ov-search-original .ov-destination,
+  .ov-trip-composer .ov-search-original .ov-dates,
+  .ov-trip-composer .ov-search-original .ov-guests {
+    grid-column: auto;
+  }
+}
+/* Give the request line more breathing room below its fixed heading. */
+.ov .ov-trip-composer .ov-travel-prompt {
+  padding-top: 16px;
+}
+@media (max-width: 680px) {
+  .ov .ov-trip-composer .ov-travel-prompt {
+    padding-top: 12px;
+  }
+}
+.ov .ov-trip-composer .ov-travel-prompt {
+  align-self: end;
+}
+/* Keep the same example chips available on a narrow screen. */
+.ov .ov-trip-composer .ov-prompt-examples {
+  display: flex;
+}
+@media (max-width: 680px) {
+  .ov .ov-trip-composer .ov-prompt-examples {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    gap: 7px;
+    padding-bottom: 2px;
+    margin-top: 12px;
+    scrollbar-width: thin;
+  }
+  .ov .ov-trip-composer .ov-prompt-examples button {
+    flex: 0 0 auto;
+    min-height: 36px;
+  }
+}
+.ov-hero-media,
+.ov-trip-backdrop {
+  view-transition-name: trip-landscape;
+}
+.ov-hero-content > h1 {
+  view-transition-name: trip-hero-title;
+}
+.ov-trip-composer > .ov-prompt-label {
+  view-transition-name: trip-hero-invitation;
+}
+.ov-trip-composer .ov-prompt-input {
+  view-transition-name: trip-request;
+}
+::view-transition-group(trip-request) {
+  animation-duration: 560ms;
+  animation-timing-function: cubic-bezier(0.2, 0.75, 0.2, 1);
+}
+::view-transition-group(trip-landscape) {
+  animation-duration: 560ms;
+}
+::view-transition-old(trip-hero-title),
+::view-transition-old(trip-hero-invitation) {
+  animation: ov-trip-heading-away 350ms ease-in both;
+}
+@keyframes ov-trip-heading-away {
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+.ov-hero.is-entering-trip h1,
+.ov-hero.is-entering-trip .ov-prompt-label {
+  animation: ov-trip-heading-away 240ms ease-in both;
+}
+.ov-hero.is-entering-trip .ov-prompt-input {
+  animation: ov-trip-heading-away 300ms ease-in both;
+}
+/* A short upward dissolve keeps text at its natural size during navigation. */
+.ov-trip-composer .ov-prompt-input {
+  view-transition-name: trip-composer;
+}
+::view-transition-group(trip-composer),
+::view-transition-group(trip-user-message) {
+  animation-duration: 440ms;
+}
+::view-transition-old(trip-composer) {
+  animation: ov-trip-request-away 240ms ease-out both;
+}
+::view-transition-new(trip-user-message) {
+  animation: ov-trip-user-arrive 440ms cubic-bezier(0.2, 0.75, 0.2, 1) both;
+}
+::view-transition-old(trip-hero-title),
+::view-transition-old(trip-hero-invitation) {
+  animation: ov-trip-request-away 280ms ease-out both;
+}
+@keyframes ov-trip-request-away {
+  to {
+    opacity: 0;
+    transform: translateY(-36px);
+  }
+}
+@keyframes ov-trip-user-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-height: 520px) and (min-width: 681px) {
+  .ov .ov-hero-content {
+    padding-top: calc(var(--ov-header-size) + 4px);
+    padding-bottom: 40px;
+  }
+  .ov .ov-trip-composer .ov-travel-prompt {
+    padding-top: 6px;
+  }
+  .ov .ov-trip-composer .ov-prompt-examples {
+    margin-top: 8px;
+  }
+  .ov .ov-trip-composer .ov-prompt-submit {
+    min-height: 44px;
+    padding-block: 10px;
+    font-size: 16px;
+  }
+  .ov-home-upper {
+    margin-top: -16px;
+  }
+}

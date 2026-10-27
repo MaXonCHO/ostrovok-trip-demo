@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Shell } from "@/components/ui/shell";
+import { StorefrontShell } from "@/features/ostrovok/shared";
 import "@/styles/globals.css";
-import "@/styles/redesign.css";
-const golos = localFont({
-  src: "../../public/demo/golos.ttf",
-  variable: "--font-golos",
-  display: "swap",
-});
+import "@/styles/ostrovok.css";
+import "@/styles/ostrovok-blocks.css";
+import "@/styles/ostrovok-type.css";
+import "@/styles/ostrovok-motion.css";
+import "@/styles/ostrovok-search-original.css";
+import "@/styles/ostrovok-prompt.css";
+import "@/styles/ostrovok-trip.css";
+import "@/styles/ostrovok-footer.css";
+import "@/styles/ostrovok-trip-types.css";
 export const metadata: Metadata = {
-  title: { default: "Островок! Моя поездка", template: "%s · Моя поездка" },
+  title: {
+    default: "Островок — отели и апартаменты",
+    template: "%s · Островок",
+  },
   icons: { icon: "/favicon.svg" },
   description:
-    "Выберите отдых по своим желаниям, найдите общий сценарий и подходящее проживание.",
+    "Расскажите о желаемом отдыхе и найдите подходящий отель. Локальный прототип Островка.",
 };
 export default function RootLayout({
   children,
@@ -20,21 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="ru"
-      data-scroll-behavior="smooth"
-      className={golos.variable}
-      suppressHydrationWarning
-    >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.dataset.theme='light'`,
-          }}
-        />
-      </head>
+    <html lang="ru" data-scroll-behavior="smooth" data-theme="light">
       <body>
-        <Shell>{children}</Shell>
+        <StorefrontShell>{children}</StorefrontShell>
       </body>
     </html>
   );

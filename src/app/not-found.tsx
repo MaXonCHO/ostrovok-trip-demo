@@ -1,10 +1,10 @@
 import Link from "next/link";
 export default function NotFound() {
   return (
-    <div className="page-width empty-state">
+    <div className="ov-container ov-route-message">
       <h1>Такой страницы нет</h1>
-      <p>Вернитесь к своим поездкам или начните новую.</p>
-      <Link className="button primary" href="/">
+      <p>Вернитесь на главную и найдите отель для следующей поездки.</p>
+      <Link className="ov-button" href="/">
         На главную
       </Link>
     </div>

@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-10-27",
+  "sourcePage": "https://ostrovok.ru/",
+  "referenceStylesheet": "https://mpf.fastrovok.net/branch/b173060/_next/static/css/d561bc272b62b8dd.css",
+  "purpose": "Original footer brand, store, social and payment artwork for local hackathon interface reproduction. Copyright remains with the respective rights holders; no open license is asserted.",
+  "appLinks": "App Store and Google Play use the official store destinations present in the original onelink af_web_dp parameters, without snapshot-specific site_uid or search dates. AppGallery retains the original URL.",
+  "assets": [
+    {
+      "file": "/ostrovok/footer/logo.svg",
+      "source": "https://ost.fastrovok.net/ostrota/theme/ostrovok_v2/logo-20240322100815.svg"
+    },
+    {
+      "file": "/ostrovok/footer/app-store.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/ru.9eefdc6b.svg"
+    },
+    {
+      "file": "/ostrovok/footer/google-play.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/ru.5de3965d.svg"
+    },
+    {
+      "file": "/ostrovok/footer/app-gallery.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/ru.4d3b24fc.svg"
+    },
+    {
+      "file": "/ostrovok/footer/social-max.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/Max.728fc127.svg"
+    },
+    {
+      "file": "/ostrovok/footer/social-telegram.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/Telegram.eb0a9a3c.svg"
+    },
+    {
+      "file": "/ostrovok/footer/social-dzen.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/Dzen.bbf72328.svg"
+    },
+    {
+      "file": "/ostrovok/footer/social-vk.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/Vkontakte.0d761395.svg"
+    },
+    {
+      "file": "/ostrovok/footer/social-ok.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/Odnoklassniki.aaf198b4.svg"
+    },
+    {
+      "file": "/ostrovok/footer/payment-visa-secure.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/visa.16f4e62d.svg"
+    },
+    {
+      "file": "/ostrovok/footer/payment-mastercard.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/mastercard.851e11bb.svg"
+    },
+    {
+      "file": "/ostrovok/footer/payment-mir.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/mir.a352f68e.svg"
+    },
+    {
+      "file": "/ostrovok/footer/payment-thawte.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/thawte.64a5a854.svg"
+    },
+    {
+      "file": "/ostrovok/footer/payment-pci-dss.svg",
+      "source": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/dss.89d8b3e3.svg"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-.PHONY: up down logs check seed
+.PHONY: up down logs check
 up:
 	docker compose up --build
 down:
@@ -9,5 +9,3 @@ check:
 	npm run typecheck
 	npm run lint
 	npm test
-seed:
-	npx tsx scripts/seed.ts

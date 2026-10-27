@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-27",
+  "method": "WOFF2 directory + built-in Node Brotli decompression; name, OS/2 and cmap tables inspected. Browser FontFace loading independently verified by typography E2E.",
+  "sourceCss": "https://mpf.fastrovok.net/branch/b173060/_next/static/css/d561bc272b62b8dd.css",
+  "fonts": [
+    {
+      "file": "public/ostrovok/pt-root-regular.woff2",
+      "family": "PT Root UI Web",
+      "subfamily": "Regular",
+      "fullName": "PT Root UI Web",
+      "postscript": "PTRootUIWeb-Regular",
+      "weight": 400,
+      "variable": false,
+      "cyrillicSample": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя₽0123456789",
+      "missingCharacters": [],
+      "decodedBytes": 150651
+    },
+    {
+      "file": "public/ostrovok/pt-root-medium.woff2",
+      "family": "PT Root UI Web",
+      "subfamily": "Medium",
+      "fullName": "PT Root UI Web Medium",
+      "postscript": "PTRootUIWeb-Medium",
+      "typographicFamily": "PT Root UI Web",
+      "typographicSubfamily": "Medium",
+      "weight": 500,
+      "variable": false,
+      "cyrillicSample": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя₽0123456789",
+      "missingCharacters": [],
+      "decodedBytes": 150559
+    },
+    {
+      "file": "public/ostrovok/pt-root-bold.woff2",
+      "family": "PT Root UI Web",
+      "subfamily": "Bold",
+      "fullName": "PT Root UI Web Bold",
+      "postscript": "PTRootUIWeb-Bold",
+      "typographicFamily": "PT Root UI Web",
+      "typographicSubfamily": "Bold",
+      "weight": 700,
+      "variable": false,
+      "cyrillicSample": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя₽0123456789",
+      "missingCharacters": [],
+      "decodedBytes": 150279
+    },
+    {
+      "file": "public/ostrovok/spoof-medium.woff2",
+      "family": "Spoof Light",
+      "subfamily": "Regular",
+      "fullName": "Spoof Medium",
+      "postscript": "Spoof-Medium",
+      "typographicFamily": "Spoof",
+      "typographicSubfamily": "Medium",
+      "weight": 500,
+      "variable": false,
+      "cyrillicSample": "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя₽0123456789",
+      "missingCharacters": [
+        "₽"
+      ],
+      "decodedBytes": 65450
+    }
+  ]
+}

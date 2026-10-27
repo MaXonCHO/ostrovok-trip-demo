@@ -1,0 +1,754 @@
+/* Brand typography: Spoof Medium for display, PT Root UI for interface text.
+   Keep this layer after the page/block styles so responsive roles stay coherent. */
+.ov,
+.ov-modal {
+  --ov-font-body: "Ostrovok PT", Arial, sans-serif;
+  --ov-font-display: "Ostrovok Spoof", "Ostrovok PT", Arial, sans-serif;
+  --ov-type-caption: 12px;
+  --ov-type-label: 14px;
+  --ov-type-body: 16px;
+  --ov-type-card-title: 18px;
+  --ov-type-section: 36px;
+  --ov-type-page: 34px;
+  --ov-type-price: 24px;
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-body);
+  line-height: 1.5;
+  /* All used emphasis has a real 400/500/700 face; avoid faux display bold. */
+  font-synthesis: none;
+}
+
+.ov h1,
+.ov h2,
+.ov-modal-title {
+  font-family: var(--ov-font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.ov h1 {
+  font-size: var(--ov-type-page);
+}
+.ov h2 {
+  font-size: var(--ov-type-section);
+}
+.ov h3,
+.ov-modal h3 {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-card-title);
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.ov strong,
+.ov b,
+.ov-modal strong,
+.ov-modal b {
+  font-weight: 700;
+}
+.ov p,
+.ov-modal p {
+  line-height: 1.5;
+}
+.ov a,
+.ov-modal a {
+  text-underline-position: from-font;
+  text-decoration-thickness: from-font;
+  text-decoration-skip-ink: auto;
+}
+.ov .ov-hero h1 {
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.ov .ov-hero-content > p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.ov .ov-editorial-heading h2,
+.ov .ov-halloween-title {
+  font-size: var(--ov-type-section);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.ov .ov-editorial-heading p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+.ov .ov-autumn-hotel h3,
+.ov .ov-halloween-hotel h3 {
+  font-size: var(--ov-type-card-title);
+  line-height: 1.4;
+  font-family: var(--ov-font-body);
+  font-weight: 700;
+}
+.ov .ov-autumn-hotel p,
+.ov .ov-halloween-hotel p {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+.ov .ov-autumn-hotel strong,
+.ov .ov-halloween-hotel strong {
+  font-size: var(--ov-type-price);
+  font-family: var(--ov-font-body);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.ov .ov-guru-promo h3,
+.ov .ov-halloween-guru h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  font-family: var(--ov-font-body);
+  font-weight: 700;
+}
+.ov .ov-guru-promo p,
+.ov .ov-halloween-guru p {
+  font-size: var(--ov-type-body);
+  line-height: 1.5;
+}
+.ov .ov-guru-promo > button,
+.ov .ov-halloween-guru > button {
+  font-size: var(--ov-type-label);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.ov .ov-mystic-card h3,
+.ov .ov-food-caption h3,
+.ov .ov-blog-souvenirs h3 {
+  font-family: var(--ov-font-display);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.ov .ov-mystic-card h3 {
+  font-size: 26px;
+}
+.ov .ov-food-caption h3 {
+  font-size: 24px;
+}
+.ov .ov-food-caption > span {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+.ov .ov-food-categories > button {
+  font-family: var(--ov-font-body);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.ov .ov-blog-caption h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-family: var(--ov-font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+.ov .ov-blog-souvenirs h3 {
+  font-family: var(--ov-font-display);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.ov .ov-blog-caption > div {
+  font-size: var(--ov-type-caption);
+  line-height: 1.5;
+  flex-wrap: wrap;
+}
+.ov .ov-blog-caption > div > time {
+  white-space: nowrap;
+}
+.ov .ov-blog-more {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+/* Changing numbers should retain their column width. */
+.ov
+  :is(
+    .ov-total,
+    .ov-card-price,
+    .ov-room-total,
+    .ov-stepper,
+    .ov-price-inputs,
+    .ov-autumn-hotel strong,
+    .ov-halloween-hotel strong,
+    .ov-food-caption > span,
+    .ov-trip-summary,
+    .ov-calendar-bottom,
+    .ov-night-count
+  ),
+.ov-modal :is(.ov-booking-total, .ov-booking > div, .ov-gallery-thumbs > span) {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Twelve pixels is the floor for readable metadata, on every viewport. */
+.ov
+  :is(
+    .ov-demo-note,
+    .ov-night-count,
+    .ov-search-under,
+    .ov-kicker,
+    .ov-card-source,
+    .ov-price-caption,
+    .ov-rate-label,
+    .ov-card-price > small,
+    .ov-card-price > del,
+    .ov-taxes,
+    .ov-cancel,
+    .ov-amenity-chips > span,
+    .ov-photo-tag,
+    .ov-results-count,
+    .ov-filter-footnote,
+    .ov-map-caption,
+    .ov-editorial-note,
+    .ov-footer-bottom,
+    .ov-footer-bottom > span,
+    .ov-demo-pill,
+    .ov-counter,
+    .ov-room-category,
+    .ov-room-chips,
+    .ov-room-description > span:not(.ov-room-category),
+    .ov-room-rate > div:first-child > small,
+    .ov-room-total > span,
+    .ov-room-total > small,
+    .ov-overview-source p,
+    .ov-overview-amenities > span,
+    .ov-overview-location > div,
+    .ov-overview-price > span,
+    .ov-trip-summary > small,
+    .ov-summary-note,
+    .ov-detail-help a,
+    .ov-room-filters > span,
+    .ov-mosaic-secondary > button > span,
+    .ov-mosaic-main > span,
+    .ov-active-filters > button
+  ),
+.ov-modal
+  :is(.ov-gallery > p, .ov-gallery-thumbs > span, .ov-booking .ov-muted) {
+  font-size: var(--ov-type-caption);
+  line-height: 1.5;
+  font-weight: 400;
+}
+.ov .ov-field-button small,
+.ov .ov-price-inputs small {
+  font-size: var(--ov-type-caption);
+  line-height: 1.4;
+}
+.ov .ov-field-button strong {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-body);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.ov .ov-search-submit,
+.ov .ov-button,
+.ov-modal .ov-button {
+  font-family: var(--ov-font-body);
+  font-weight: 500;
+  line-height: 1.4;
+}
+.ov .ov-hotel-name {
+  font-family: var(--ov-font-body);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+.ov .ov-card-address,
+.ov .ov-distance {
+  font-size: var(--ov-type-caption);
+  line-height: 1.5;
+}
+.ov .ov-total {
+  font-size: 26px;
+  line-height: 1.25;
+}
+.ov .ov-results-title h1,
+.ov .ov-detail-heading h1 {
+  font-family: var(--ov-font-display);
+  font-size: var(--ov-type-page);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.ov .ov-detail-section > h2,
+.ov .ov-detail-section .ov-section-heading h2 {
+  font-family: var(--ov-font-display);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.ov .ov-room-description h3 {
+  font-size: var(--ov-type-card-title);
+  line-height: 1.4;
+}
+.ov .ov-detail-section > h3 {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-card-title);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.ov .ov-detail-section > p {
+  max-width: 70ch;
+  font-size: var(--ov-type-body);
+  line-height: 1.6;
+}
+.ov .ov-detail-section .ov-muted {
+  font-size: var(--ov-type-label);
+  line-height: 1.6;
+}
+.ov .ov-detail-address,
+.ov .ov-detail-address button,
+.ov .ov-location-facts > span {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+.ov .ov-all-amenities > div {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+.ov .ov-booking > div,
+.ov-modal .ov-booking > div {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+.ov-modal p {
+  font-size: var(--ov-type-body);
+  line-height: 1.6;
+}
+.ov .ov-footer-top a:not(.ov-logo),
+.ov .ov-footer-top button {
+  font-size: var(--ov-type-label);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .ov,
+  .ov-modal {
+    --ov-type-section: 30px;
+    --ov-type-page: 30px;
+  }
+  .ov .ov-blog-caption h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 640px) {
+  .ov,
+  .ov-modal {
+    --ov-type-section: clamp(26px, 7.2vw, 28px);
+    --ov-type-page: 28px;
+  }
+  .ov .ov-hero h1 {
+    font-size: clamp(32px, 9.25vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .ov .ov-hero-content > p {
+    font-size: var(--ov-type-body);
+    line-height: 1.5;
+  }
+  .ov .ov-editorial-heading h2,
+  .ov .ov-halloween-title {
+    font-size: var(--ov-type-section);
+    line-height: 1.4;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: var(--ov-type-body);
+    line-height: 1.5;
+  }
+  .ov .ov-autumn-hotel h3,
+  .ov .ov-halloween-hotel h3 {
+    font-size: var(--ov-type-card-title);
+    line-height: 1.4;
+  }
+  .ov .ov-guru-promo h3,
+  .ov .ov-halloween-guru h3 {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  .ov .ov-guru-promo p,
+  .ov .ov-halloween-guru p {
+    font-size: var(--ov-type-body);
+    line-height: 1.5;
+  }
+  .ov .ov-mystic-card h3 {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+  .ov .ov-food-caption h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .ov .ov-food-categories > button {
+    font-size: var(--ov-type-body);
+    line-height: 1.4;
+  }
+  .ov .ov-blog-caption h3,
+  .ov .ov-blog-mongolia h3 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  .ov .ov-blog-more {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ov .ov-blog-grid {
+    grid-template-rows: 310px 190px 190px;
+  }
+  .ov .ov-hero-location {
+    font-size: var(--ov-type-caption);
+    line-height: 1.4;
+  }
+  .ov .ov-hero-location {
+    top: 12px;
+    right: 12px;
+  }
+  .ov .ov-field-button strong,
+  .ov .ov-search-compact .ov-field-button strong {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .ov .ov-field-button small,
+  .ov .ov-search-compact .ov-field-button small {
+    font-size: var(--ov-type-caption);
+    line-height: 1.4;
+  }
+  .ov .ov-sort-row {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .ov .ov-sort-row > label {
+    font-size: var(--ov-type-label);
+    gap: 4px;
+    flex: 1 1 auto;
+  }
+  .ov input:not([type="checkbox"]):not([type="range"]),
+  .ov select,
+  .ov textarea,
+  .ov-modal input:not([type="checkbox"]):not([type="range"]),
+  .ov-modal select,
+  .ov-modal textarea {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ov .ov-sort-row select {
+    font-size: 16px;
+    max-width: 185px;
+  }
+  .ov .ov-sort-row .ov-mobile-filters {
+    font-size: var(--ov-type-label);
+    line-height: 1.4;
+  }
+  .ov .ov-results-title p {
+    font-size: var(--ov-type-label);
+    line-height: 1.5;
+  }
+  .ov .ov-card-price {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+  .ov .ov-card-price > .ov-button {
+    font-size: var(--ov-type-label);
+    line-height: 1.4;
+    white-space: normal;
+    max-width: 136px;
+  }
+  .ov .ov-card-price > .ov-cancel {
+    max-width: 136px;
+    text-align: right;
+  }
+  .ov .ov-amenity-chips > span {
+    white-space: normal;
+  }
+  .ov .ov-hotel-name {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+  .ov .ov-breadcrumbs,
+  .ov .ov-back-link,
+  .ov .ov-hotel-tabs > a {
+    font-size: var(--ov-type-caption);
+    line-height: 1.5;
+  }
+  .ov .ov-detail-heading h1 {
+    font-size: var(--ov-type-page);
+    line-height: 1.4;
+  }
+  .ov .ov-detail-heading > div:first-child {
+    min-width: 0;
+  }
+  .ov .ov-detail-address {
+    line-height: 1.5;
+  }
+  .ov .ov-detail-section > h2,
+  .ov .ov-detail-section .ov-section-heading h2 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+  .ov .ov-detail-section .ov-section-heading p {
+    font-size: var(--ov-type-label);
+    line-height: 1.5;
+  }
+  .ov .ov-detail-section > h3,
+  .ov .ov-room-description h3 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .ov .ov-room-description {
+    min-width: 0;
+  }
+  .ov .ov-room-rate > div:first-child {
+    flex: 1 1 100%;
+  }
+  .ov .ov-room-rate > div:first-child > span {
+    font-size: var(--ov-type-label);
+    line-height: 1.5;
+  }
+  .ov .ov-room-rate .ov-room-meal {
+    font-size: var(--ov-type-label) !important;
+  }
+  .ov .ov-room-total {
+    align-items: flex-start;
+  }
+  .ov .ov-room-total strong {
+    font-size: var(--ov-type-price);
+    line-height: 1.25;
+  }
+  .ov .ov-room-rate > .ov-button {
+    font-size: var(--ov-type-label);
+    line-height: 1.4;
+  }
+  .ov .ov-detail-help p {
+    font-size: var(--ov-type-label);
+    line-height: 1.5;
+  }
+  .ov .ov-modal-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  .ov-modal .ov-gallery > p {
+    font-size: var(--ov-type-caption);
+    line-height: 1.5;
+  }
+  .ov .ov-search-bottom {
+    font-size: var(--ov-type-caption);
+    line-height: 1.5;
+  }
+  .ov .ov-footer-bottom > span:first-child {
+    max-width: none;
+  }
+}
+
+.ov .ov-blog-title-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-wrap: inherit;
+  cursor: pointer;
+}
+.ov .ov-calendar-bottom {
+  font-size: var(--ov-type-caption);
+  line-height: 1.5;
+}
+.ov .ov-calendar-bottom > .ov-button {
+  font-size: var(--ov-type-label);
+}
+
+@media (max-width: 640px) {
+  /* Compact fields share the form as their popup anchor, keeping calendars and
+     guest controls readable instead of squeezing them into a half-width field. */
+  .ov .ov-search-compact .ov-dates,
+  .ov .ov-search-compact .ov-guests {
+    position: static;
+  }
+  .ov .ov-search-compact .ov-calendar {
+    left: 0;
+    width: 100%;
+  }
+  .ov .ov-search-compact .ov-guests-popover {
+    left: 0;
+    width: min(100%, 310px);
+  }
+  .ov .ov-calendar-bottom {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.ov-modal .ov-price-inputs small {
+  font-size: var(--ov-type-caption);
+  line-height: 1.4;
+}
+
+.ov .ov-empty h2 {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.ov .ov-autumn-stars {
+  font-size: var(--ov-type-caption);
+}
+@media (max-width: 640px) {
+  .ov .ov-empty h2 {
+    font-size: 22px;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: clamp(24px, 6.67vw, 26px);
+  }
+}
+
+/* Verified against the current public main-page CSS (branch b173060), rather
+   than estimated from screenshots. Weight 480 resolves to the real PT Medium
+   500 face; Spoof's only supplied face is Medium 500. */
+.ov .ov-hero h1 {
+  font-size: 48px;
+  line-height: 1.0833333333;
+}
+.ov .ov-editorial-heading h2,
+.ov .ov-halloween-title {
+  font-size: 36px;
+  line-height: 1.1111111111;
+}
+.ov .ov-editorial-heading p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+}
+.ov .ov-autumn-hotel h3,
+.ov .ov-halloween-hotel h3 {
+  font-size: 18px;
+  line-height: 1.2222222222;
+}
+.ov .ov-autumn-hotel p,
+.ov .ov-halloween-hotel p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714286;
+}
+.ov .ov-autumn-hotel strong,
+.ov .ov-halloween-hotel strong {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.ov .ov-guru-promo h3,
+.ov .ov-halloween-guru h3 {
+  font-family: var(--ov-font-display);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.2727272727;
+}
+.ov .ov-guru-promo p,
+.ov .ov-halloween-guru p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+}
+.ov .ov-guru-promo > button,
+.ov .ov-halloween-guru > button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+.ov .ov-mystic-card h3 {
+  font-size: 32px;
+  line-height: 1;
+}
+.ov .ov-food-caption h3 {
+  font-size: 24px;
+  line-height: 1.1666666667;
+}
+.ov .ov-food-caption > span {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+}
+.ov .ov-blog-caption h3 {
+  font-family: var(--ov-font-body);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2222222222;
+  -webkit-line-clamp: 2;
+}
+.ov .ov-blog-souvenirs h3 {
+  font-family: var(--ov-font-display);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+}
+.ov .ov-blog-caption > div {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+}
+@media (min-width: 681px) and (max-width: 1074px) {
+  .ov .ov-blog-souvenirs h3,
+  .ov .ov-blog-caption h3 {
+    font-family: var(--ov-font-body);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2222222222;
+  }
+}
+@media (max-width: 680px) {
+  .ov .ov-hero h1 {
+    font-size: clamp(32px, 8.72vw, 34px);
+    line-height: 1.15;
+  }
+  .ov .ov-editorial-heading h2,
+  .ov .ov-halloween-title {
+    font-size: 24px;
+    line-height: 1;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: 16px;
+    line-height: 1.375;
+  }
+  .ov .ov-mystic-card h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .ov .ov-food-caption h3 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .ov .ov-blog-souvenirs h3,
+  .ov .ov-blog-caption h3,
+  .ov .ov-blog-mongolia h3 {
+    font-family: var(--ov-font-body);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .ov .ov-blog-caption > div {
+    font-size: 14px;
+    line-height: 1.4285714286;
+  }
+}

@@ -1,0 +1,253 @@
+/* The trip-type step lives on the white sheet below the landscape conversation. */
+.ov .ov-trip-types {
+  width: 100%;
+  min-width: 0;
+  color: #2d3137;
+  font-family: var(--ov-font-body, "Ostrovok PT", Arial, sans-serif);
+}
+.ov-trip-types-heading {
+  margin-bottom: 26px;
+}
+.ov .ov-trip-types-heading h2 {
+  margin: 0 0 12px;
+  color: #2d3137;
+  font-family: var(--ov-font-display, "Ostrovok Spoof", Arial, sans-serif);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.ov .ov-trip-types-heading p {
+  margin: 0;
+  color: #626d7b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.ov-trip-types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+}
+.ov .ov-trip-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #dce3ec;
+  border-radius: 24px;
+  background: #fff;
+  color: #2d3137;
+  font-family: var(--ov-font-body, "Ostrovok PT", Arial, sans-serif);
+  line-height: 1.5;
+  text-align: left;
+  box-shadow: 0 2px 8px #20344f04;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+.ov .ov-trip-type-card.is-selected {
+  border-color: #0c41cf;
+  background: #f2f6ff;
+  box-shadow: 0 0 0 1px #0c41cf;
+}
+.ov-trip-type-photo {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: #eaf0f5;
+}
+.ov-trip-type-photo > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.ov-trip-type-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffffb3;
+  border-radius: 50%;
+  background: #fffffff0;
+  color: #244f1a;
+  box-shadow: 0 2px 7px #162d4a17;
+}
+.ov-trip-type-card.is-selected .ov-trip-type-check {
+  border-color: #acef81;
+  background: #acef81;
+}
+.ov-trip-type-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 20px;
+}
+.ov-trip-type-title {
+  display: block;
+  color: #2d3137;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.ov-trip-type-description {
+  display: block;
+  color: #626d7b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.ov-trip-types-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 26px;
+}
+.ov-trip-types-count {
+  color: #626d7b;
+  font-size: 14px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+}
+.ov .ov-trip-types-continue {
+  gap: 11px;
+  min-height: 48px;
+  padding: 12px 23px;
+  border: 1px solid transparent;
+  border-radius: 28px;
+  background: #0c41cf;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.ov .ov-trip-types-continue:disabled {
+  opacity: 0.45;
+}
+.ov .ov-trip-type-card:disabled {
+  opacity: 0.6;
+}
+.ov .ov-trip-types :is(button):focus-visible {
+  outline: 3px solid #0c41cf;
+  outline-offset: 4px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .ov .ov-trip-type-card:not(:disabled):hover {
+    border-color: #8eabd9;
+    box-shadow: 0 6px 20px #20344f0f;
+  }
+  .ov .ov-trip-type-card.is-selected:not(:disabled):hover {
+    border-color: #0c41cf;
+    box-shadow:
+      0 0 0 1px #0c41cf,
+      0 6px 20px #20344f0a;
+  }
+  .ov .ov-trip-type-card:not(:disabled):hover .ov-trip-type-photo > img {
+    transform: scale(1.04);
+  }
+  .ov .ov-trip-types-continue:not(:disabled):hover {
+    background: #0636bc;
+  }
+}
+@media (max-width: 980px) {
+  .ov-trip-types-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .ov-trip-type-copy {
+    padding: 18px;
+  }
+}
+@media (max-width: 680px) {
+  .ov-trip-types-heading {
+    margin-bottom: 22px;
+  }
+  .ov .ov-trip-types-heading h2 {
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .ov-trip-types-grid {
+    gap: 16px;
+  }
+  .ov-trip-type-photo {
+    height: 120px;
+  }
+  .ov-trip-type-check {
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  .ov-trip-type-copy {
+    gap: 7px;
+    padding: 16px;
+  }
+  .ov-trip-type-title {
+    font-size: 18px;
+  }
+  .ov-trip-type-description {
+    font-size: 16px;
+  }
+  .ov-trip-types-actions {
+    gap: 16px;
+    padding-top: 22px;
+  }
+  .ov-trip-types-count {
+    font-size: 12px;
+  }
+  .ov .ov-trip-types-continue {
+    min-height: 46px;
+    padding: 11px 19px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 520px) {
+  .ov-trip-types-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ov .ov-trip-types-heading h2 {
+    font-size: 24px;
+  }
+  .ov-trip-types-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ov-trip-types-count {
+    width: 100%;
+    text-align: center;
+  }
+  .ov .ov-trip-types-continue {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ov-trip-types *,
+  .ov-trip-types *::before,
+  .ov-trip-types *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

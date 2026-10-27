@@ -1,0 +1,1252 @@
+/* The conversation stays inside the home page's continuous landscape scene. */
+.ov .ov-trip-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  padding: 132px 32px 76px;
+  background: #203a41;
+  color: #fff;
+}
+.ov-trip-backdrop {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, #102a40ad 0%, #15353c8c 35%, #112c35c9 100%),
+    url("/ostrovok/home-cover.png") center / cover no-repeat;
+}
+.ov-trip-layout {
+  width: 100%;
+  max-width: 1216px;
+  min-width: 0;
+  margin-inline: auto;
+}
+.ov .ov-trip-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.ov-trip-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  align-items: start;
+  gap: 48px;
+}
+.ov-trip-columns > *,
+.ov-trip-sidebar > * {
+  min-width: 0;
+}
+.ov-chat {
+  min-width: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+.ov-chat-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  min-height: 310px;
+  padding: 0 0 32px;
+}
+.ov-chat-message {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  animation: ov-trip-message-rise 350ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.ov-chat-message.is-user {
+  align-self: flex-end;
+  width: fit-content;
+  max-width: 90%;
+  padding: 18px 22px;
+  border: 1px solid #ffffff59;
+  border-radius: 22px 22px 6px 22px;
+  background: #ffffff1f;
+  color: #fff;
+  box-shadow: 0 6px 24px #061b2712;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.ov-chat-author {
+  display: block;
+  margin-bottom: 8px;
+  color: #e8f0f4;
+  font-family: var(--ov-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.ov .ov-chat-message p {
+  margin: 0;
+  font-family: var(--ov-font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5556;
+  text-wrap: pretty;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.ov .ov-chat-message.is-assistant p {
+  max-width: 64ch;
+  font-size: 20px;
+  line-height: 1.6;
+}
+.ov-chat-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 30px;
+  padding: 4px 0;
+  color: #edf4f7;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.ov-chat-loading::before {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #acef81;
+  content: "";
+  animation: ov-trip-thinking 1.3s ease-in-out infinite;
+}
+.ov-chat-loading p {
+  margin: 0;
+}
+.ov-chat-error {
+  width: 100%;
+  padding: 16px 18px;
+  border: 1px solid #f5b6a573;
+  border-radius: 14px;
+  background: #60291c80;
+  color: #fff4ed;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.ov .ov-chat-error p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.ov .ov-chat-error button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid #ffffff8c;
+  border-radius: 24px;
+  background: #ffffff1f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ov-chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 0 22px;
+}
+.ov .ov-chat-suggestions button {
+  min-height: 38px;
+  max-width: 100%;
+  padding: 8px 13px;
+  border: 1px solid #ffffff66;
+  border-radius: 24px;
+  background: #ffffff14;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+.ov .ov-chat-suggestions button:hover {
+  border-color: #ffffffb3;
+  background: #ffffff2b;
+}
+.ov-chat-composer {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.ov-chat-composer > label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.ov .ov-chat-composer textarea {
+  display: block;
+  width: 100%;
+  min-height: 94px;
+  max-height: 320px;
+  padding: 16px 0 14px;
+  border: 0;
+  border-bottom: 1px solid #ffffff66;
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-family: var(--ov-font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5556;
+  resize: vertical;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+}
+.ov .ov-chat-composer textarea::placeholder {
+  color: #e8f0f4;
+  opacity: 0.9;
+}
+.ov .ov-chat-composer textarea:focus-visible {
+  border-color: #acef81;
+  outline: 0;
+  box-shadow: 0 1px 0 #acef81;
+}
+.ov-chat-composer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  margin-top: 16px;
+}
+.ov-chat-composer-actions > span {
+  min-width: 0;
+  margin-right: auto;
+  color: #edf3f5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ov .ov-chat-mic {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 1px solid #ffffff66;
+  border-radius: 50%;
+  background: #ffffff1a;
+  color: #fff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 150ms ease;
+}
+.ov .ov-chat-mic:hover {
+  background: #ffffff30;
+}
+.ov .ov-chat-mic.is-recording,
+.ov .ov-chat-mic[aria-pressed="true"] {
+  border-color: #acef81;
+  background: #acef81;
+  color: #244f1a;
+}
+.ov .ov-chat-send {
+  flex-shrink: 0;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 20px;
+  border-radius: 24px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.ov .ov-chat-send:disabled {
+  opacity: 0.5;
+}
+.ov-trip-sidebar {
+  display: grid;
+  gap: 24px;
+  color: #fff;
+}
+.ov-trip-tools {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+.ov .ov-trip-tools > a,
+.ov .ov-trip-tools > button,
+.ov .ov-trip-catalog,
+.ov .ov-trip-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 15px;
+  margin: 0;
+  border: 1px solid #ffffff66;
+  border-radius: 24px;
+  background: #ffffff1a;
+  color: #fff;
+  font-family: var(--ov-font-body);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+.ov .ov-trip-tools > a:hover,
+.ov .ov-trip-tools > button:hover,
+.ov .ov-trip-catalog:hover,
+.ov .ov-trip-reset:hover {
+  border-color: #ffffffa6;
+  background: #ffffff2e;
+}
+.ov-trip-picks {
+  padding: 22px;
+  border: 1px solid #ffffff59;
+  border-radius: 22px;
+  background: #ffffff1f;
+  box-shadow: 0 8px 28px #071d3012;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.ov .ov-trip-picks h2 {
+  margin: 0 0 9px;
+  color: #fff;
+  font-family: var(--ov-font-display);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.ov-trip-pick {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 17px 0;
+}
+.ov-trip-pick + .ov-trip-pick {
+  border-top: 1px solid #ffffff33;
+}
+.ov-trip-pick > .ov-image-window {
+  width: 80px;
+  height: 86px;
+  border-radius: 12px;
+}
+.ov-trip-pick > .ov-image-window > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ov-trip-pick > div:last-child {
+  min-width: 0;
+}
+.ov .ov-trip-pick h3 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-family: var(--ov-font-body);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.ov .ov-trip-pick p {
+  display: -webkit-box;
+  margin: 0 0 8px;
+  overflow: hidden;
+  color: #edf3f5;
+  font-size: 12px;
+  line-height: 1.5;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ov-trip-pick strong {
+  display: block;
+  color: #d8f6c3;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+.ov-trip-picks > small {
+  display: block;
+  padding-top: 12px;
+  border-top: 1px solid #ffffff33;
+  color: #edf3f5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.ov-trip-page :is(a, button):focus-visible {
+  outline: 3px solid #acef81;
+  outline-offset: 4px;
+}
+@keyframes ov-trip-message-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes ov-trip-thinking {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .ov-trip-pick:hover h3 {
+    color: #d8f6c3;
+  }
+  .ov-trip-pick:hover > .ov-image-window > img {
+    transform: scale(1.06);
+  }
+}
+@media (max-width: 1100px) {
+  .ov .ov-trip-page {
+    padding-inline: 28px;
+  }
+  .ov-trip-columns {
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 32px;
+  }
+  .ov-chat-composer-actions {
+    flex-wrap: wrap;
+  }
+  .ov-chat-composer-actions > span {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+  .ov .ov-chat-mic {
+    margin-left: auto;
+  }
+  .ov-trip-picks {
+    padding: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .ov .ov-trip-page {
+    padding: 112px 24px 56px;
+  }
+  .ov-trip-layout {
+    max-width: 760px;
+  }
+  .ov-trip-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+  .ov-chat-messages {
+    min-height: 290px;
+  }
+  .ov-chat-composer-actions {
+    flex-wrap: nowrap;
+  }
+  .ov-chat-composer-actions > span {
+    flex-basis: auto;
+    margin-right: auto;
+  }
+  .ov .ov-chat-mic {
+    margin-left: 0;
+  }
+  .ov-trip-tools {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ov .ov-trip-tools > a,
+  .ov .ov-trip-tools > button {
+    flex: 1 1 220px;
+  }
+  .ov-trip-picks {
+    max-width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .ov .ov-trip-page {
+    padding: 102px 16px 44px;
+  }
+  .ov-trip-columns {
+    gap: 28px;
+  }
+  .ov-chat-messages {
+    gap: 27px;
+    min-height: 270px;
+    padding-bottom: 27px;
+  }
+  .ov-chat-message.is-user {
+    max-width: 96%;
+    padding: 16px 18px;
+    border-radius: 20px 20px 5px 20px;
+  }
+  .ov-chat-author {
+    margin-bottom: 7px;
+    font-size: 12px;
+  }
+  .ov .ov-chat-message p,
+  .ov .ov-chat-message.is-assistant p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ov-chat-loading {
+    font-size: 13px;
+  }
+  .ov-chat-error {
+    padding: 14px;
+  }
+  .ov .ov-chat-error p {
+    font-size: 16px;
+  }
+  .ov-chat-suggestions {
+    gap: 7px;
+    padding-bottom: 20px;
+  }
+  .ov .ov-chat-suggestions button {
+    min-height: 36px;
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+  .ov .ov-chat-composer textarea {
+    min-height: 96px;
+    padding: 14px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ov-chat-composer-actions {
+    flex-wrap: wrap;
+    gap: 12px 9px;
+    margin-top: 14px;
+  }
+  .ov-chat-composer-actions > span {
+    flex-basis: 100%;
+    font-size: 12px;
+  }
+  .ov .ov-chat-mic {
+    margin-left: auto;
+  }
+  .ov .ov-chat-send {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+  .ov-trip-sidebar {
+    gap: 20px;
+  }
+  .ov-trip-tools {
+    gap: 9px;
+  }
+  .ov .ov-trip-tools > a,
+  .ov .ov-trip-tools > button {
+    flex-basis: 100%;
+    font-size: 14px;
+  }
+  .ov-trip-picks {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .ov .ov-trip-picks h2 {
+    font-size: 22px;
+  }
+  .ov-trip-pick {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 13px;
+  }
+  .ov-trip-pick > .ov-image-window {
+    width: 84px;
+    height: 88px;
+  }
+  .ov .ov-trip-pick h3,
+  .ov-trip-pick strong {
+    font-size: 16px;
+  }
+}
+@media (max-width: 360px) {
+  .ov-chat-message.is-user {
+    max-width: 100%;
+    padding-inline: 16px;
+  }
+  .ov .ov-chat-send {
+    padding-inline: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ov-chat-message {
+    animation: none;
+  }
+  .ov-chat-loading::before {
+    animation: none;
+    opacity: 0.7;
+  }
+  .ov-trip-page *,
+  .ov-trip-page *::before,
+  .ov-trip-page *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* The whole dialogue and its narrowing selections share one landscape. */
+.ov-trip-columns {
+  grid-template-columns: minmax(0, 1fr);
+}
+.ov-trip-sidebar:empty {
+  display: none;
+}
+.ov-trip-backdrop {
+  background:
+    linear-gradient(90deg, rgba(14, 40, 37, 0.56), rgba(14, 40, 37, 0.05) 75%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.26), transparent 65%),
+    url("/ostrovok/home-cover.png") center / cover no-repeat;
+}
+.ov-ai-text {
+  display: grid;
+}
+.ov-ai-text-space,
+.ov-ai-text-visible {
+  grid-area: 1 / 1;
+}
+.ov-ai-text-space {
+  visibility: hidden;
+}
+.ov-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.ov-trip-collections-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.ov .ov-trip-collections-heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 30px;
+}
+.ov-trip-collections-heading > span {
+  font-size: 14px;
+  white-space: nowrap;
+}
+.ov-trip-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 16px;
+}
+.ov-trip-collection {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 290px;
+  border: 1px solid #ffffff50;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #16383b;
+  color: #fff;
+  isolation: isolate;
+  animation: ov-trip-message-rise 350ms ease both;
+}
+.ov-trip-collection > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+.ov-trip-collection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(transparent, #071d29bb 48%, #071d29ef);
+}
+.ov-trip-collection > div {
+  padding: 22px;
+}
+.ov .ov-trip-collection h3 {
+  color: #fff;
+  font-family: var(--ov-font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.ov .ov-trip-collection p {
+  margin: 0;
+  color: #edf4f5;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.ov-trip-picks {
+  max-width: 100%;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .ov-trip-collection:hover > img {
+    transform: scale(1.05);
+  }
+}
+@media (max-width: 680px) {
+  .ov-trip-collections-heading {
+    align-items: start;
+  }
+  .ov .ov-trip-collections-heading h2 {
+    font-size: 24px;
+  }
+  .ov-trip-collections-heading > span {
+    font-size: 12px;
+  }
+  .ov-trip-collection {
+    min-height: 260px;
+  }
+  .ov .ov-trip-collection h3 {
+    font-size: 22px;
+  }
+}
+/* A white foreground curtain carries the hotel collections, like the home page. */
+.ov .ov-trip-page {
+  padding: 0;
+}
+.ov-trip-layout {
+  max-width: 1380px;
+  min-height: 100svh;
+  padding: 132px 30px 96px;
+}
+.ov-trip-collections {
+  position: relative;
+  z-index: 1;
+  margin-top: -40px;
+  padding: 56px 0 64px;
+  border-radius: 40px 40px 0 0;
+  background: #fff;
+  color: #2d3137;
+}
+.ov-trip-collections > .ov-container {
+  max-width: 1380px;
+  padding-inline: 30px;
+}
+.ov-trip-collections-heading {
+  color: #2d3137;
+  margin-bottom: 36px;
+}
+.ov .ov-trip-collections-heading h2 {
+  color: #191c21;
+  font-size: 36px;
+}
+.ov-trip-collection {
+  display: block;
+  min-height: 0;
+  margin-bottom: 44px;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  background: transparent;
+  color: #2d3137;
+  isolation: auto;
+}
+.ov-trip-collection::after {
+  display: none;
+}
+.ov-trip-collection > div {
+  padding: 0;
+}
+.ov-trip-collection-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.ov .ov-trip-collection h3 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  color: #191c21;
+}
+.ov .ov-trip-collection-heading p {
+  margin: 0;
+  color: #626d7b;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.ov-trip-carousel-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.ov .ov-trip-carousel-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e4e6e8;
+  border-radius: 50%;
+  background: #fff;
+  color: #0c41cf;
+  box-shadow: 0 2px 8px #0000000c;
+}
+.ov-trip-hotel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  padding-bottom: 8px !important;
+}
+.ov-trip-hotel-card {
+  flex: 0 0 calc((100% - 32px) / 3);
+  min-width: 260px;
+  scroll-snap-align: start;
+  border-radius: 24px;
+  background: #f5f5f5;
+  color: #2d3137;
+  overflow: hidden;
+}
+.ov-trip-hotel-card > .ov-image-window {
+  width: 100%;
+  height: 176px;
+  border-radius: 24px;
+}
+.ov-trip-hotel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ov-trip-hotel-info {
+  padding: 18px 16px 20px;
+}
+.ov .ov-trip-hotel-info h4 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+.ov .ov-trip-hotel-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #626d7b;
+  line-height: 1.4;
+}
+.ov-trip-hotel-info strong {
+  display: block;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+.ov-trip-editorial-source {
+  display: inline-block;
+  margin-top: 12px;
+  color: #0c41cf;
+  font-size: 12px;
+}
+.ov .ov-trip-collection-note,
+.ov .ov-trip-empty-pool {
+  color: #626d7b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .ov-trip-layout {
+    padding: 112px 32px 80px;
+  }
+  .ov-trip-hotel-card {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 680px) {
+  .ov-trip-layout {
+    padding: 102px 16px 72px;
+  }
+  .ov-trip-collections {
+    margin-top: -24px;
+    border-radius: 24px 24px 0 0;
+    padding-block: 32px 40px;
+  }
+  .ov-trip-collections > .ov-container {
+    padding-inline: 16px;
+  }
+  .ov-trip-collections-heading {
+    margin-bottom: 28px;
+  }
+  .ov .ov-trip-collections-heading h2 {
+    font-size: 24px;
+  }
+  .ov .ov-trip-collection h3 {
+    font-size: 24px;
+  }
+  .ov .ov-trip-collection-heading p {
+    font-size: 16px;
+  }
+  .ov-trip-collection-heading {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .ov-trip-carousel-controls {
+    display: none;
+  }
+  .ov-trip-hotel-card {
+    flex-basis: 84%;
+    min-width: 240px;
+  }
+  .ov-trip-hotel-info strong {
+    font-size: 24px;
+  }
+}
+/* Clip the pinned landscape to this route so the footer can cover it. */
+.ov .ov-trip-page {
+  clip-path: inset(0);
+}
+.ov:has(.ov-trip-page) > .ov-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  background: #f5f6f7;
+}
+.ov .ov-chat-composer textarea {
+  min-height: 48px;
+  height: 48px;
+  max-height: 160px;
+  padding: 8px 0 7px;
+  line-height: 1.5;
+  resize: none;
+}
+.ov-trip-carousel {
+  position: relative;
+}
+.ov-trip-carousel > .ov-trip-carousel-controls {
+  position: absolute;
+  z-index: 2;
+  top: 88px;
+  left: -22px;
+  right: -22px;
+  transform: translateY(-50%);
+  justify-content: space-between;
+  pointer-events: none;
+}
+.ov .ov-trip-carousel-controls button {
+  pointer-events: auto;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 3px 12px #0002;
+}
+.ov-chat-message:first-child {
+  animation: none;
+}
+@media (max-width: 680px) {
+  .ov-trip-carousel > .ov-trip-carousel-controls {
+    display: none;
+  }
+}
+.ov .ov-chat-message.is-user {
+  padding: 10px 14px;
+  max-width: min(70%, 620px);
+  border-radius: 20px 20px 6px 20px;
+}
+.ov-chat-message.is-user .ov-chat-author {
+  margin-bottom: 3px;
+  font-size: 11px;
+}
+.ov .ov-chat-message.is-user p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+.ov-trip-carousel-controls .ov-trip-carousel-prev {
+  margin-right: auto;
+}
+.ov-trip-carousel-controls .ov-trip-carousel-next {
+  margin-left: auto;
+}
+.ov-trip-backdrop[data-city="saint-petersburg"] {
+  background:
+    linear-gradient(90deg, #102a3a9c, #102a3a3b 75%),
+    linear-gradient(0deg, #071d2966, transparent 70%),
+    url("/ostrovok/petersburg-background.jpg") center / cover no-repeat;
+}
+@media (max-width: 680px) {
+  .ov .ov-chat-message.is-user {
+    max-width: 92%;
+    padding: 10px 14px;
+  }
+}
+/* Stable composer; the history scrolls within the photographic first screen. */
+.ov-trip-layout {
+  height: 100svh;
+  min-height: 100svh;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.ov-trip-columns {
+  flex: 1;
+  min-height: 0;
+  display: block;
+}
+.ov-chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.ov-chat-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+  scrollbar-width: thin;
+  padding-bottom: 24px;
+}
+.ov-chat-suggestions {
+  flex: 0 0 52px;
+  height: 52px;
+  min-width: 0;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+.ov .ov-chat-suggestions button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.ov-chat-composer {
+  flex-shrink: 0;
+}
+.ov-trip-weather {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 72px;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  border: 1px solid #ffffff50;
+  border-radius: 18px;
+  background: #ffffff18;
+  color: #fff;
+  backdrop-filter: blur(14px);
+}
+.ov-trip-weather span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.9;
+}
+.ov-trip-weather strong {
+  display: block;
+  font-size: 16px;
+  margin-block: 3px;
+}
+.ov .ov-trip-weather p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.ov-trip-weather a {
+  text-decoration: underline;
+}
+.ov .ov-trip-weather button {
+  background: #ffffff20;
+  color: #fff;
+  padding: 9px 12px;
+  border: 1px solid #fff6;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.ov-trip-sidebar {
+  display: none;
+}
+@media (max-width: 680px) {
+  .ov-trip-layout {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+  .ov-chat-messages {
+    min-height: 0;
+  }
+  .ov-chat-suggestions {
+    flex-basis: 48px;
+    height: 48px;
+    padding-bottom: 10px;
+  }
+  .ov-chat-composer-actions > span {
+    display: none;
+  }
+  .ov-trip-weather {
+    min-height: 66px;
+    margin-bottom: 12px;
+  }
+}
+@media (max-height: 520px) {
+  .ov-trip-layout {
+    padding-top: 78px;
+    padding-bottom: 40px;
+  }
+  .ov-chat-suggestions {
+    flex-basis: 42px;
+    height: 42px;
+    padding-bottom: 6px;
+  }
+  .ov-chat-composer-actions {
+    margin-top: 8px;
+  }
+  .ov-trip-weather {
+    min-height: 0;
+    margin-bottom: 8px;
+    padding-block: 6px;
+  }
+  .ov-trip-weather p {
+    display: none;
+  }
+}
+.ov-trip-layout {
+  position: relative;
+}
+.ov-trip-weather {
+  position: absolute;
+  z-index: 4;
+  top: 86px;
+  right: 30px;
+  display: block;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+}
+.ov .ov-trip-weather .ov-weather-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 12px;
+  border: 1px solid #ffffff60;
+  border-radius: 24px;
+  background: #ffffff1f;
+  color: #fff;
+  font-size: 14px;
+  backdrop-filter: blur(14px);
+}
+.ov-weather-badge > span {
+  font-size: 14px;
+  opacity: 1;
+  font-variant-numeric: tabular-nums;
+}
+.ov-weather-tooltip {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: min(320px, calc(100vw - 32px));
+  padding: 16px;
+  border: 1px solid #ffffff60;
+  border-radius: 16px;
+  background: #14303aeb;
+  color: #fff;
+  box-shadow: 0 10px 32px #0003;
+  backdrop-filter: blur(18px);
+}
+.ov-weather-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  height: 10px;
+  left: 0;
+  right: 0;
+}
+.ov .ov-weather-tooltip strong {
+  font-size: 14px;
+}
+.ov .ov-weather-tooltip p {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-block: 8px;
+}
+.ov-weather-tooltip a {
+  font-size: 12px;
+}
+.ov-trip-weather:hover .ov-weather-tooltip,
+.ov-trip-weather:focus-within .ov-weather-tooltip,
+.ov-trip-weather[data-open="true"] .ov-weather-tooltip {
+  display: block;
+}
+@media (max-width: 680px) {
+  .ov-trip-weather {
+    top: 76px;
+    right: 16px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .ov-trip-layout:has(.ov-trip-weather) {
+    padding-top: 126px;
+  }
+}
+.ov-trip-weather {
+  left: 30px;
+  right: auto;
+}
+.ov-weather-tooltip {
+  left: 0;
+  right: auto;
+}
+@media (max-width: 680px) {
+  .ov-trip-weather {
+    left: 16px;
+    right: auto;
+  }
+}
+.ov-trip-type-stage {
+  padding-bottom: 48px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e4e6e8;
+}

@@ -1,0 +1,1548 @@
+/* Editorial modules follow the supplied Ostrovok home-page references. */
+.ov .ov-editorial-heading {
+  margin-bottom: 26px;
+}
+.ov .ov-editorial-heading h2 {
+  font-family:
+    Ostrovok Spoof,
+    Ostrovok PT,
+    sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  margin: 0 0 11px;
+  color: #16191e;
+  letter-spacing: -0.015em;
+}
+.ov .ov-editorial-heading p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 0;
+  color: #2d3137;
+}
+.ov .ov-editorial-note {
+  font-size: 11px;
+  color: #626c7a;
+  display: block;
+  margin-top: 14px;
+}
+.ov .ov-autumn,
+.ov .ov-mystic,
+.ov .ov-gastro,
+.ov .ov-blog {
+  margin: 58px 0;
+}
+.ov-autumn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+.ov-autumn-hotel > .ov-image-window {
+  width: 100%;
+  height: 163px;
+  border-radius: 23px;
+  object-fit: cover;
+}
+.ov-autumn-hotel > .ov-autumn-caption {
+  padding: 13px 14px 10px;
+}
+.ov-autumn-stars {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #ba6c00;
+  line-height: 1;
+  display: block;
+  margin-bottom: 5px;
+}
+.ov .ov-autumn-hotel h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin: 0 0 5px;
+  min-height: 42px;
+}
+.ov .ov-autumn-hotel p {
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+.ov-autumn-hotel strong {
+  font-size: 25px;
+  font-weight: 700;
+  color: #15181d;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+.ov-guru-promo {
+  position: relative;
+  border-radius: 23px;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    #0743ff 2%,
+    #0071ff 45%,
+    #00b2ff 80%,
+    #0780ff
+  );
+  min-height: 282px;
+  padding: 18px 19px 17px;
+  color: white;
+  isolation: isolate;
+}
+.ov .ov-guru-promo h3 {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin: 0 0 12px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 1px 3px #0038a850;
+}
+.ov .ov-guru-promo p {
+  font-size: 15px;
+  line-height: 1.35;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 1px 3px #0038a850;
+}
+.ov-guru-promo > img {
+  position: absolute;
+  width: 105%;
+  height: auto;
+  right: -12%;
+  bottom: 12px;
+  z-index: 1;
+  filter: drop-shadow(0 10px 10px #004cce40);
+  pointer-events: none;
+}
+.ov-guru-promo > button {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 14px;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #0c41cf;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 5px;
+  border-radius: 7px;
+  z-index: 3;
+}
+.ov-mystic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.ov-mystic-card {
+  position: relative;
+  aspect-ratio: 1.34;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #24344b;
+}
+.ov-mystic-card > img,
+.ov-food-card > img,
+.ov-blog-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ov-editorial-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 12, 20, 0.91),
+    rgba(4, 12, 20, 0.38) 32%,
+    transparent 70%
+  );
+}
+.ov .ov-mystic-card h3 {
+  position: absolute;
+  left: 22px;
+  right: 20px;
+  bottom: 22px;
+  margin: 0;
+  font-family:
+    Ostrovok Spoof,
+    Ostrovok PT,
+    sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.05;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 3px #0002;
+}
+.ov-food-categories {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+  margin: 6px 0 24px;
+  padding: 4px 5px 7px;
+}
+.ov-food-categories > button {
+  background: none;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 2px 10px;
+  position: relative;
+  white-space: nowrap;
+  color: #1c2129;
+}
+.ov-food-categories > button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: 3px;
+  background: transparent;
+}
+.ov-food-categories > .is-active {
+  color: #0c41cf;
+}
+.ov-food-categories > .is-active:after {
+  background: #0c41cf;
+}
+.ov-food-categories > .ov-food-reset {
+  display: grid;
+  place-items: center;
+  background: #edf2fd;
+  color: #0c41cf;
+  border-radius: 50%;
+  height: 27px;
+  width: 27px;
+  padding: 0;
+  flex-shrink: 0;
+}
+.ov-food-slider {
+  position: relative;
+}
+.ov-food-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 48px) / 5);
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-radius: 24px;
+}
+.ov-food-card {
+  height: 390px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #293a42;
+}
+.ov-food-card > .ov-editorial-shade {
+  background: linear-gradient(
+    0deg,
+    #111c2bed,
+    rgba(17, 28, 43, 0.24) 38%,
+    transparent 62%
+  );
+}
+.ov-food-caption {
+  position: absolute;
+  bottom: 23px;
+  left: 20px;
+  right: 15px;
+  color: white;
+}
+.ov .ov-food-caption h3 {
+  font-family:
+    Ostrovok Spoof,
+    Ostrovok PT,
+    sans-serif;
+  font-size: 24px;
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 0 0 11px;
+  overflow-wrap: anywhere;
+  letter-spacing: -0.02em;
+}
+.ov-food-caption > span {
+  font-size: 15px;
+}
+.ov-carousel-next {
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 41px;
+  width: 41px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px #0002;
+  color: #1e2531;
+  z-index: 3;
+}
+.ov-blog-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 210px 210px;
+  gap: 9px;
+}
+.ov-blog-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #9adb7b;
+}
+.ov-blog-souvenirs {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+.ov-blog-cancellation {
+  grid-column: 2;
+  grid-row: 1;
+}
+.ov-blog-farms {
+  grid-column: 3;
+  grid-row: 1;
+}
+.ov-blog-mongolia {
+  grid-column: 2;
+  grid-row: 2;
+}
+.ov-blog-card > img {
+  object-position: center;
+}
+.ov-blog-cancellation > img {
+  object-position: 50% 30%;
+}
+.ov-blog-souvenirs > img {
+  object-position: 51% center;
+}
+.ov-blog-caption {
+  position: absolute;
+  bottom: 22px;
+  left: 21px;
+  right: 20px;
+  color: white;
+}
+.ov .ov-blog-caption h3 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-shadow: 0 1px 3px #0005;
+  letter-spacing: -0.01em;
+}
+.ov .ov-blog-souvenirs h3 {
+  font-family:
+    Ostrovok Spoof,
+    Ostrovok PT,
+    sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.06;
+  margin-bottom: 15px;
+  -webkit-line-clamp: 4;
+  letter-spacing: -0.02em;
+}
+.ov-blog-caption > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #f0f4e9;
+}
+.ov-blog-more {
+  grid-column: 3;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  justify-content: center;
+  padding: 22px 10px;
+  color: #171c22;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.3;
+}
+.ov-blog-more > svg {
+  margin-top: 29px;
+}
+.ov-blog-more:hover {
+  color: #0c41cf;
+}
+.ov-blog-card > .ov-editorial-shade {
+  background: linear-gradient(
+    0deg,
+    rgba(5, 14, 15, 0.88),
+    rgba(5, 14, 15, 0.48) 23%,
+    transparent 70%
+  );
+}
+@media (min-width: 1450px) {
+  .ov-food-card {
+    height: 400px;
+  }
+}
+@media (max-width: 1100px) {
+  .ov .ov-editorial-heading h2 {
+    font-size: 30px;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: 18px;
+  }
+  .ov-food-categories {
+    gap: 25px;
+  }
+  .ov-food-categories > button {
+    font-size: 16px;
+  }
+  .ov .ov-guru-promo h3 {
+    font-size: 19px;
+  }
+  .ov .ov-guru-promo p {
+    font-size: 13px;
+  }
+  .ov-guru-promo {
+    min-height: 270px;
+    padding: 17px;
+  }
+  .ov-autumn-hotel > .ov-image-window {
+    height: 150px;
+  }
+  .ov .ov-autumn-hotel h3 {
+    font-size: 16px;
+    min-height: 39px;
+  }
+  .ov-autumn-hotel > .ov-autumn-caption {
+    padding: 13px 10px;
+  }
+  .ov-autumn-hotel strong {
+    font-size: 23px;
+  }
+  .ov .ov-mystic-card h3 {
+    font-size: 23px;
+    left: 18px;
+    right: 17px;
+    bottom: 20px;
+  }
+  .ov-food-card {
+    height: 350px;
+  }
+  .ov .ov-food-caption h3 {
+    font-size: 22px;
+  }
+  .ov-food-caption {
+    left: 15px;
+    bottom: 21px;
+  }
+  .ov-food-caption > span {
+    font-size: 13px;
+  }
+  .ov-blog-grid {
+    grid-template-rows: 190px 190px;
+  }
+  .ov .ov-blog-caption h3 {
+    font-size: 15px;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: 27px;
+  }
+  .ov-blog-caption {
+    left: 17px;
+    right: 16px;
+    bottom: 19px;
+  }
+  .ov-blog-caption > div {
+    font-size: 10px;
+    gap: 8px;
+  }
+  .ov-blog-more {
+    font-size: 19px;
+    padding-top: 24px;
+  }
+}
+@media (max-width: 900px) {
+  .ov .ov-editorial-heading h2 {
+    font-size: 29px;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: 17px;
+  }
+  .ov .ov-editorial-heading {
+    margin-bottom: 24px;
+  }
+  .ov .ov-autumn,
+  .ov .ov-mystic,
+  .ov .ov-gastro,
+  .ov .ov-blog {
+    margin: 45px 0;
+  }
+  .ov-autumn-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    overflow-x: auto;
+    grid-template-columns: repeat(4, 225px);
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+  }
+  .ov-autumn-hotel,
+  .ov-guru-promo {
+    scroll-snap-align: start;
+  }
+  .ov-autumn-hotel > .ov-image-window {
+    height: 150px;
+  }
+  .ov .ov-autumn-hotel h3 {
+    font-size: 18px;
+  }
+  .ov-guru-promo {
+    min-height: 294px;
+  }
+  .ov .ov-guru-promo h3 {
+    font-size: 21px;
+  }
+  .ov .ov-guru-promo p {
+    font-size: 15px;
+  }
+  .ov-mystic-grid {
+    gap: 12px;
+  }
+  .ov-mystic-card {
+    aspect-ratio: 0.9;
+    border-radius: 20px;
+  }
+  .ov .ov-mystic-card h3 {
+    font-size: 22px;
+    bottom: 18px;
+    left: 17px;
+  }
+  .ov-food-categories {
+    gap: 24px;
+    margin-bottom: 18px;
+  }
+  .ov-food-categories > button {
+    font-size: 16px;
+  }
+  .ov-food-track {
+    grid-auto-columns: calc((100% - 24px) / 3.3);
+    border-radius: 20px;
+  }
+  .ov-food-card {
+    height: 340px;
+    border-radius: 20px;
+  }
+  .ov .ov-food-caption h3 {
+    font-size: 23px;
+  }
+  .ov-carousel-next {
+    right: -12px;
+  }
+  .ov-blog-grid {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 215px 215px 130px;
+  }
+  .ov-blog-souvenirs {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .ov-blog-cancellation {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .ov-blog-farms {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .ov-blog-mongolia {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .ov-blog-more {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 19px;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .ov-blog-more > svg {
+    margin-top: 0;
+  }
+  .ov-blog-mongolia .ov-blog-caption {
+    bottom: 16px;
+  }
+  .ov .ov-blog-mongolia h3 {
+    font-size: 17px;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: 27px;
+  }
+  .ov-blog-card {
+    border-radius: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .ov .ov-editorial-heading {
+    margin-bottom: 19px;
+  }
+  .ov .ov-editorial-heading h2 {
+    font-size: 27px;
+    line-height: 1.13;
+    margin-bottom: 11px;
+    letter-spacing: -0.015em;
+  }
+  .ov .ov-editorial-heading p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .ov .ov-autumn,
+  .ov .ov-mystic,
+  .ov .ov-gastro,
+  .ov .ov-blog {
+    margin: 36px 0;
+  }
+  .ov-autumn-grid {
+    grid-template-columns: repeat(4, 246px);
+    gap: 13px;
+    margin-right: -16px;
+    padding-right: 16px;
+  }
+  .ov-autumn-hotel > .ov-image-window {
+    height: 164px;
+    border-radius: 21px;
+  }
+  .ov-autumn-hotel > .ov-autumn-caption {
+    padding: 12px 12px 10px;
+  }
+  .ov .ov-autumn-hotel h3 {
+    font-size: 18px;
+    min-height: 41px;
+  }
+  .ov-autumn-hotel p {
+    font-size: 13px;
+    margin-bottom: 19px;
+  }
+  .ov-autumn-hotel strong {
+    font-size: 25px;
+  }
+  .ov-guru-promo {
+    border-radius: 21px;
+    min-height: 304px;
+    padding: 20px;
+  }
+  .ov .ov-guru-promo h3 {
+    font-size: 22px;
+  }
+  .ov .ov-guru-promo p {
+    font-size: 15px;
+  }
+  .ov .ov-editorial-note {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .ov-mystic-grid {
+    grid-template-columns: repeat(3, 286px);
+    overflow-x: auto;
+    gap: 13px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-right: -16px;
+    padding-right: 16px;
+  }
+  .ov-mystic-card {
+    aspect-ratio: 1.1;
+    border-radius: 22px;
+    scroll-snap-align: start;
+  }
+  .ov .ov-mystic-card h3 {
+    font-size: 24px;
+    left: 21px;
+    bottom: 22px;
+    right: 22px;
+  }
+  .ov-food-categories {
+    gap: 24px;
+    margin: 0 -16px 18px 0;
+    padding: 0 16px 8px 0;
+  }
+  .ov-food-categories > button {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+  .ov-food-track {
+    grid-auto-columns: 215px;
+    gap: 12px;
+    border-radius: 20px;
+    margin-right: -16px;
+    padding-right: 16px;
+    scroll-snap-type: x mandatory;
+  }
+  .ov-food-card {
+    height: 355px;
+    border-radius: 22px;
+    scroll-snap-align: start;
+  }
+  .ov-food-caption {
+    left: 20px;
+    bottom: 22px;
+    right: 18px;
+  }
+  .ov .ov-food-caption h3 {
+    font-size: 26px;
+  }
+  .ov-food-caption > span {
+    font-size: 14px;
+  }
+  .ov-carousel-next {
+    right: -7px;
+    width: 37px;
+    height: 37px;
+  }
+  .ov-blog-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 310px 190px 190px;
+    gap: 10px;
+  }
+  .ov-blog-souvenirs {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  .ov-blog-cancellation {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .ov-blog-farms {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .ov-blog-mongolia {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .ov-blog-more {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 17px;
+    padding: 20px 9px;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .ov-blog-more > svg {
+    margin-top: 22px;
+    width: 23px;
+  }
+  .ov-blog-card {
+    border-radius: 20px;
+  }
+  .ov-blog-caption {
+    left: 14px;
+    right: 13px;
+    bottom: 17px;
+  }
+  .ov .ov-blog-souvenirs h3 {
+    font-size: 28px;
+    line-height: 1.06;
+    margin-bottom: 13px;
+    -webkit-line-clamp: 4;
+  }
+  .ov-blog-souvenirs .ov-blog-caption {
+    left: 21px;
+    right: 20px;
+    bottom: 22px;
+  }
+  .ov .ov-blog-caption h3 {
+    font-size: 15px;
+    -webkit-line-clamp: 3;
+    line-height: 1.18;
+  }
+  .ov .ov-blog-mongolia h3 {
+    font-size: 15px;
+  }
+  .ov-blog-caption > div {
+    font-size: 9px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .ov-blog-souvenirs .ov-blog-caption > div {
+    font-size: 11px;
+  }
+  .ov-blog-card > .ov-editorial-shade {
+    background: linear-gradient(
+      0deg,
+      #071216f0,
+      #07121670 48%,
+      transparent 88%
+    );
+  }
+}
+
+/* The seasonal collection follows the full-width original, below the stories. */
+.ov-home-white {
+  position: relative;
+  z-index: 1;
+  display: flow-root;
+  background: #fff;
+}
+.ov-halloween {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  clip-path: inset(0);
+  isolation: isolate;
+  background: #233127;
+  padding: 190px 0 185px;
+  color: #fff;
+}
+.ov-halloween-backdrop {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background: url("/ostrovok/halloween-web.jpg") center / cover;
+  pointer-events: none;
+}
+.ov-halloween-inner {
+  width: 92%;
+  max-width: 1920px;
+  margin-inline: auto;
+}
+.ov .ov-halloween-title {
+  font-family:
+    Ostrovok Spoof,
+    Ostrovok PT,
+    sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: -0.015em;
+  color: #fff;
+  margin: 0 auto 42px;
+  text-shadow: 0 2px 12px #0009;
+}
+.ov-halloween-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+.ov-halloween-hotel > .ov-image-window {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.82;
+  object-fit: cover;
+  border-radius: 24px;
+}
+.ov-halloween-hotel > .ov-halloween-caption {
+  padding: 18px 16px 10px;
+}
+.ov .ov-halloween-hotel h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 4px;
+  color: #fff;
+  text-shadow: 0 1px 6px #0009;
+}
+.ov .ov-halloween-hotel p {
+  font-size: 16px;
+  margin: 0 0 25px;
+  color: #fff;
+  text-shadow: 0 1px 6px #0009;
+}
+.ov-halloween-hotel strong {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 1px 6px #0009;
+}
+.ov-halloween-guru {
+  background: linear-gradient(145deg, #063dff 8%, #0088ff 57%, #14a9fa 100%);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  padding: 20px;
+  isolation: isolate;
+}
+.ov .ov-halloween-guru h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0 0 14px;
+  position: relative;
+  z-index: 2;
+}
+.ov .ov-halloween-guru p {
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.ov-halloween-guru > img {
+  position: absolute;
+  width: 109%;
+  height: auto;
+  bottom: 19px;
+  right: -5%;
+  pointer-events: none;
+}
+.ov-halloween-guru > button {
+  position: absolute;
+  bottom: 13px;
+  left: 20px;
+  right: 20px;
+  padding: 10px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #0c41cf;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 3;
+}
+@media (min-width: 1700px) {
+  .ov-halloween {
+    padding-block: 230px 210px;
+  }
+  .ov .ov-halloween-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .ov-halloween-guru {
+    min-height: 370px;
+    padding: 24px;
+  }
+  .ov .ov-halloween-guru h3 {
+    font-size: 28px;
+  }
+  .ov .ov-halloween-guru p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1100px) {
+  .ov-halloween {
+    padding-block: 120px;
+  }
+  .ov .ov-halloween-title {
+    max-width: 690px;
+    font-size: 32px;
+    margin-bottom: 34px;
+  }
+  .ov-halloween-grid {
+    gap: 12px;
+  }
+  .ov-halloween-hotel > .ov-image-window {
+    border-radius: 20px;
+  }
+  .ov-halloween-hotel > .ov-halloween-caption {
+    padding: 14px 9px;
+  }
+  .ov .ov-halloween-hotel h3 {
+    font-size: 17px;
+  }
+  .ov .ov-halloween-hotel p {
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  .ov-halloween-hotel strong {
+    font-size: 25px;
+  }
+  .ov-halloween-guru {
+    min-height: 270px;
+    padding: 17px;
+    border-radius: 20px;
+  }
+  .ov .ov-halloween-guru h3 {
+    font-size: 20px;
+  }
+  .ov .ov-halloween-guru p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .ov-halloween {
+    padding-block: 90px;
+  }
+  .ov-halloween-inner {
+    width: calc(100% - 44px);
+  }
+  .ov-halloween-grid {
+    grid-template-columns: repeat(4, 240px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+  }
+  .ov-halloween-hotel,
+  .ov-halloween-guru {
+    scroll-snap-align: start;
+  }
+  .ov .ov-halloween-hotel h3 {
+    font-size: 18px;
+  }
+  .ov .ov-halloween-guru h3 {
+    font-size: 22px;
+  }
+  .ov-halloween-guru {
+    min-height: 292px;
+  }
+}
+@media (max-width: 640px) {
+  .ov-halloween {
+    padding-block: 70px 65px;
+  }
+  .ov-halloween-inner {
+    width: calc(100% - 32px);
+  }
+  .ov .ov-halloween-title {
+    font-size: 28px;
+    margin-bottom: 28px;
+    text-align: start;
+    max-width: 380px;
+  }
+  .ov-halloween-grid {
+    margin-right: -16px;
+    padding-right: 16px;
+    grid-template-columns: repeat(4, 250px);
+    gap: 14px;
+  }
+  .ov-halloween-hotel > .ov-image-window {
+    border-radius: 22px;
+  }
+  .ov-halloween-hotel > .ov-halloween-caption {
+    padding-inline: 12px;
+  }
+  .ov .ov-halloween-hotel h3 {
+    font-size: 19px;
+  }
+  .ov .ov-halloween-hotel p {
+    font-size: 15px;
+  }
+  .ov-halloween-hotel strong {
+    font-size: 26px;
+  }
+  .ov-halloween-guru {
+    min-height: 303px;
+    border-radius: 22px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ov-halloween-backdrop {
+    background-position: 60% center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ov-halloween-backdrop {
+    position: absolute;
+  }
+}
+.ov-blog-article-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+/* Full first screen, with a gradual handoff into the editorial content. */
+.ov {
+  --ov-header-size: 76px;
+}
+.ov .ov-hero {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  min-height: calc(100svh - var(--ov-header-size));
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  position: relative;
+  overflow: visible;
+  z-index: 3;
+}
+.ov-hero-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.ov .ov-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  background: linear-gradient(0deg, #fff, #ffffff7a 25%, transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+.ov .ov-hero-content {
+  width: 100%;
+  padding-block: clamp(60px, 8svh, 100px) clamp(100px, 12svh, 150px);
+  position: relative;
+  z-index: 2;
+}
+.ov .ov-hero-location {
+  z-index: 2;
+}
+
+/* The white and Mojito sheets scroll over the pinned photograph. */
+.ov-home-upper {
+  border-radius: 0 0 48px 48px;
+  margin-bottom: -48px;
+  padding-bottom: 24px;
+  background: linear-gradient(
+    180deg,
+    #fff 48%,
+    #f0fbe9 66%,
+    #d2f7b7 84%,
+    #acef81
+  );
+}
+.ov-home-lower {
+  margin-top: -48px;
+  padding-top: 24px;
+  border-radius: 48px 48px 0 0;
+}
+.ov .ov-halloween-hotel {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.ov .ov-halloween-hotel > .ov-image-window {
+  flex-shrink: 0;
+  border-radius: 24px 24px 0 0;
+}
+.ov .ov-halloween-caption {
+  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.ov .ov-halloween-hotel h3,
+.ov .ov-halloween-hotel p,
+.ov .ov-halloween-hotel strong {
+  color: #2d3137;
+  text-shadow: none;
+}
+.ov .ov-halloween-hotel p {
+  color: #6b7078;
+}
+.ov .ov-halloween-hotel strong {
+  margin-top: auto;
+}
+.ov .ov-guru-promo > img,
+.ov .ov-halloween-guru > img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: none;
+  pointer-events: none;
+}
+.ov .ov-guru-promo > button,
+.ov .ov-halloween-guru > button {
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  min-height: 52px;
+  padding: 15px 12px;
+  border-radius: 16px;
+}
+@media (max-width: 900px) {
+  .ov {
+    --ov-header-size: 68px;
+  }
+  .ov-home-upper {
+    border-radius: 0 0 36px 36px;
+    margin-bottom: -36px;
+  }
+  .ov-home-lower {
+    border-radius: 36px 36px 0 0;
+    margin-top: -36px;
+  }
+}
+@media (max-width: 640px) {
+  .ov {
+    --ov-header-size: 62px;
+  }
+  .ov .ov-hero-content {
+    padding-block: 52px 100px;
+  }
+  .ov .ov-hero::after {
+    height: 105px;
+  }
+  .ov-home-upper {
+    border-radius: 0 0 28px 28px;
+    margin-bottom: -28px;
+    padding-bottom: 16px;
+  }
+  .ov-home-lower {
+    border-radius: 28px 28px 0 0;
+    margin-top: -28px;
+    padding-top: 12px;
+  }
+  .ov .ov-halloween-caption {
+    padding: 16px 14px 20px;
+  }
+  .ov .ov-halloween-hotel {
+    border-radius: 22px;
+  }
+  .ov .ov-halloween-hotel > .ov-image-window {
+    border-radius: 22px 22px 0 0;
+  }
+}
+
+/* Original main-page geometry: 1380px including 30px side paddings. */
+.ov-home-white > .ov-container,
+.ov .ov-hero-content,
+.ov .ov-halloween-inner {
+  width: 100%;
+  max-width: 1380px;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+.ov-home-upper {
+  border-radius: 0 0 40px 40px;
+  margin-bottom: -40px;
+}
+.ov-home-lower {
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+}
+.ov .ov-autumn-hotel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f4f4f4;
+}
+.ov .ov-autumn-hotel > .ov-image-window {
+  border-radius: 24px;
+  height: auto;
+  aspect-ratio: 1.82;
+  flex-shrink: 0;
+}
+.ov .ov-autumn-caption {
+  flex: 1;
+  padding: 16px 16px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.ov .ov-autumn-hotel h3 {
+  min-height: 0;
+  margin-bottom: 4px;
+}
+.ov .ov-autumn-hotel p {
+  margin-bottom: 16px;
+}
+.ov .ov-autumn-hotel strong {
+  margin-top: auto;
+}
+@media (min-width: 681px) and (max-width: 1074px) {
+  .ov-home-white > .ov-container,
+  .ov .ov-hero-content,
+  .ov .ov-halloween-inner {
+    padding-inline: 32px;
+  }
+  .ov-home-upper {
+    border-radius: 0 0 24px 24px;
+    margin-bottom: -24px;
+  }
+  .ov-home-lower {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+  }
+}
+@media (max-width: 680px) {
+  .ov-home-white > .ov-container,
+  .ov .ov-hero-content,
+  .ov .ov-halloween-inner {
+    padding-inline: 16px;
+  }
+  .ov-home-upper {
+    border-radius: 0 0 24px 24px;
+    margin-bottom: -24px;
+  }
+  .ov-home-lower {
+    border-radius: 24px 24px 0 0;
+    margin-top: -24px;
+  }
+}
+
+/* The home navigation is part of the photograph rather than a separate bar. */
+.ov .ov-header-home {
+  position: absolute;
+  inset: 0 0 auto;
+  width: 100%;
+  border: 0;
+  background: linear-gradient(180deg, #0b233f80, #0b233f00);
+  color: #fff;
+  z-index: 35;
+}
+.ov .ov-header-home .ov-header-inner {
+  max-width: 1380px;
+  padding-inline: 30px;
+}
+.ov .ov-header-home .ov-logo img {
+  filter: brightness(0) invert(1);
+}
+.ov .ov-header-home .ov-nav-active::after {
+  background: #fff;
+}
+.ov .ov-header-home .ov-header-actions > .ov-login {
+  border-color: #ffffff99;
+  background: #ffffff14;
+  backdrop-filter: blur(8px);
+}
+.ov .ov-header-home .ov-counter {
+  background: #acef81;
+  color: #12367d;
+}
+.ov .ov-hero {
+  min-height: 100svh;
+}
+.ov .ov-header-home .ov-mobile-nav {
+  color: #2d3137;
+}
+@media (min-width: 681px) and (max-width: 1074px) {
+  .ov .ov-header-home .ov-header-inner {
+    padding-inline: 32px;
+  }
+}
+@media (max-width: 680px) {
+  .ov .ov-header-home .ov-header-inner {
+    padding-inline: 16px;
+  }
+  .ov .ov-hero-content {
+    padding-top: 100px;
+  }
+}
+
+/* Original HotelGalleryCard image frame: rounded independently of the card. */
+.ov .ov-autumn-hotel > .ov-image-window,
+.ov .ov-halloween-hotel > .ov-image-window {
+  height: 176px;
+  aspect-ratio: auto;
+  border-radius: 24px;
+  position: relative;
+}
+.ov .ov-autumn-hotel > .ov-image-window > img,
+.ov .ov-halloween-hotel > .ov-image-window > img {
+  position: absolute;
+  inset: 0;
+  object-position: center;
+}
+
+/* A rounded foreground sheet replaces the hero's fade into white. */
+.ov .ov-hero {
+  isolation: auto;
+  z-index: auto;
+}
+.ov .ov-hero::after {
+  display: none;
+}
+.ov-home-upper {
+  margin-top: -40px;
+  padding-top: 24px;
+  border-radius: 40px;
+}
+.ov .ov-hero-form {
+  background: #acef81;
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 6px 24px #172c3020;
+}
+.ov-search-service-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.ov-search-service-group {
+  display: flex;
+  padding: 2px;
+  border-radius: 16px;
+  background: #ffffff80;
+}
+.ov .ov-search-service-tabs button,
+.ov .ov-search-service-tabs > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 18px;
+  border-radius: 16px;
+  font-family: var(--ov-font-display);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #2d3137;
+  background: transparent;
+  white-space: nowrap;
+}
+.ov .ov-search-service-tabs button.is-active {
+  color: #0c41cf;
+  background: #fff;
+}
+.ov .ov-search-service-tabs > a {
+  background: #ffffff80;
+}
+.ov-apartments-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #2d3137;
+  cursor: pointer;
+}
+.ov-apartments-switch > input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 38px;
+  height: 24px;
+  margin: 0;
+  opacity: 0;
+}
+.ov-switch-track {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border-radius: 22px;
+  background: #c7c9ca;
+  flex-shrink: 0;
+  transition: background 0.18s;
+}
+.ov-switch-track::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px #0002;
+  transition: transform 0.18s;
+}
+.ov-apartments-switch input:checked + .ov-switch-track {
+  background: #0c41cf;
+}
+.ov-apartments-switch input:checked + .ov-switch-track::after {
+  transform: translateX(16px);
+}
+.ov-apartments-switch input:focus-visible + .ov-switch-track {
+  outline: 3px solid #0c41cf;
+  outline-offset: 3px;
+}
+@media (max-width: 1074px) {
+  .ov-home-upper {
+    margin-top: -24px;
+    border-radius: 24px;
+  }
+}
+@media (max-width: 680px) {
+  .ov-home-upper {
+    padding-top: 12px;
+  }
+  .ov .ov-hero-form {
+    padding: 12px;
+    border-radius: 20px;
+  }
+  .ov-search-service-tabs {
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 12px;
+  }
+  .ov .ov-search-service-tabs button,
+  .ov .ov-search-service-tabs > a {
+    font-size: 14px;
+    padding: 10px 11px;
+    gap: 6px;
+    min-height: 43px;
+    flex-shrink: 0;
+  }
+  .ov-search-service-tabs svg {
+    width: 18px;
+  }
+  .ov-search-service-group {
+    flex-shrink: 0;
+  }
+  .ov-apartments-switch {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Frosted search surface over the landscape. */
+.ov .ov-hero-form {
+  background: rgba(19, 39, 48, 0.28);
+  border: 1px solid #ffffff61;
+  backdrop-filter: blur(24px) saturate(135%);
+  -webkit-backdrop-filter: blur(24px) saturate(135%);
+  box-shadow:
+    0 14px 45px #071a2733,
+    inset 0 1px #ffffff26;
+}
+.ov .ov-search-service-group,
+.ov .ov-search-service-tabs > a {
+  background: #ffffff24;
+  border: 1px solid #ffffff24;
+}
+.ov .ov-search-service-tabs button,
+.ov .ov-search-service-tabs > a {
+  color: #fff;
+}
+.ov .ov-search-service-tabs button.is-active {
+  background: #fff;
+  color: #0c41cf;
+}
+.ov .ov-apartments-switch {
+  color: #fff;
+}
+.ov .ov-switch-track {
+  background: #b7c0c8;
+}

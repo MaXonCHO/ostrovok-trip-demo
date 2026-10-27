@@ -1,0 +1,137 @@
+/* Hero-only form, matching the original white controls on Mojito. The compact
+   form on search results and hotel pages retains its existing presentation. */
+.ov-hero-form .ov-search-original {
+  display: grid;
+  grid-template-columns: minmax(0, 45fr) minmax(0, 28fr) minmax(0, 13fr) minmax(
+      0,
+      14fr
+    );
+  gap: 8px;
+  align-items: stretch;
+  width: 100%;
+  color: #2d3137;
+}
+.ov-hero-form .ov-search-original .ov-search-field {
+  min-width: 0;
+}
+.ov-hero-form .ov-search-original .ov-field-button {
+  min-height: 64px;
+  height: 100%;
+  padding: 12px 18px;
+  border: 0 !important;
+  border-radius: 24px;
+  background: #fff;
+  gap: 8px;
+}
+.ov-hero-form .ov-search-original .ov-field-button > span:not(.ov-night-count) {
+  gap: 2px;
+}
+.ov-hero-form .ov-search-original .ov-field-button small {
+  font-family: "Ostrovok PT", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3333333333;
+  color: #626d7b;
+}
+.ov-hero-form .ov-search-original .ov-field-button strong {
+  font-family: "Ostrovok PT", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.375;
+  color: #2d3137;
+}
+.ov-hero-form .ov-search-original .ov-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.ov-hero-form .ov-search-original .ov-original-date {
+  padding-inline: 14px;
+}
+.ov-hero-form .ov-search-original .ov-original-date strong {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  text-wrap: pretty;
+}
+.ov-hero-form .ov-search-original .ov-guests .ov-field-button {
+  padding-inline: 16px;
+}
+.ov-hero-form .ov-search-original .ov-guests .ov-field-button small {
+  color: #626d7b;
+}
+.ov-hero-form .ov-search-original .ov-guests .ov-field-button strong {
+  white-space: normal;
+}
+.ov-hero-form .ov-search-original .ov-search-submit {
+  min-width: 0;
+  min-height: 64px;
+  padding: 15px 20px !important;
+  border-radius: 24px;
+  font-family: "Ostrovok PT", Arial, sans-serif;
+  font-size: 20px !important;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.ov-hero-form .ov-search-original .ov-city-popover {
+  z-index: 48;
+}
+.ov-hero-form .ov-search-original .ov-calendar {
+  z-index: 48;
+}
+.ov-hero-form .ov-search-original .ov-guests-popover {
+  z-index: 48;
+}
+.ov-hero-form .ov-search-original input {
+  font-size: 16px;
+}
+@media (max-width: 1074px) {
+  .ov-hero-form .ov-search-original {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .ov-hero-form .ov-search-original .ov-destination,
+  .ov-hero-form .ov-search-original .ov-dates {
+    grid-column: 1 / -1;
+  }
+  .ov-hero-form .ov-search-original .ov-dates,
+  .ov-hero-form .ov-search-original .ov-guests {
+    position: static;
+  }
+  .ov-hero-form .ov-search-original .ov-calendar {
+    width: min(610px, 100%);
+    max-width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ov-hero-form .ov-search-original .ov-guests-popover {
+    left: 0;
+    right: auto;
+    width: min(310px, 100%);
+  }
+}
+@media (max-width: 680px) {
+  .ov-hero-form .ov-search-original .ov-field-button {
+    min-height: 56px;
+    padding: 8px 14px;
+  }
+  .ov-hero-form .ov-search-original .ov-original-date {
+    padding-inline: 12px;
+  }
+  .ov-hero-form .ov-search-original .ov-field-button strong {
+    font-size: 16px;
+  }
+  .ov-hero-form .ov-search-original .ov-calendar {
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+  .ov-hero-form .ov-search-original .ov-guests-popover {
+    max-width: 100%;
+  }
+  .ov-hero-form .ov-search-original .ov-search-submit {
+    min-height: 56px;
+    min-width: 0 !important;
+    padding: 12px 14px !important;
+    font-size: 18px !important;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "retrievedAt": "2026-10-27",
+  "images": [
+    {
+      "file": "/ostrovok/mystic-egypt.jpg",
+      "subject": "Мистика Долины Царей в Луксоре",
+      "sourcePage": "https://ostrovok.ru/",
+      "imageUrl": "https://nof.fastrovok.net/travel/mainpage_content/luxor.jpg",
+      "retrievedAt": "2026-10-27",
+      "sha256": "fe645559696be0c4a192821f3be9a9d3dd24db735c19f6b70f482d3b749dfa1f",
+      "license": "© Островок / правообладатель изображения. Открытая лицензия не подтверждена. Оригинальный публичный ассет сохранён для локального прототипа.",
+      "matchStatus": "Точный оригинал из актуальной HTML/CSS главной страницы Островка, полученной с User-Agent Chrome."
+    },
+    {
+      "file": "/ostrovok/mystic-nesvizh.jpg",
+      "subject": "Призрак Чёрной дамы в окрестностях Минска",
+      "sourcePage": "https://ostrovok.ru/",
+      "imageUrl": "https://nof.fastrovok.net/travel/mainpage_content/minsk.jpg",
+      "retrievedAt": "2026-10-27",
+      "sha256": "8d4d15ecf7ca2702f7b9be522b7b4c63a743883274b97f162d7ff8c93a5df9f8",
+      "license": "© Островок / правообладатель изображения. Открытая лицензия не подтверждена. Оригинальный публичный ассет сохранён для локального прототипа.",
+      "matchStatus": "Точный оригинал из актуальной HTML/CSS главной страницы Островка, полученной с User-Agent Chrome."
+    },
+    {
+      "file": "/ostrovok/mystic-amberd.jpg",
+      "subject": "Туманная крепость Амберд под Ереваном",
+      "sourcePage": "https://ostrovok.ru/",
+      "imageUrl": "https://nof.fastrovok.net/travel/mainpage_content/yerevan.jpg",
+      "retrievedAt": "2026-10-27",
+      "sha256": "77b0b9db60a3ee7b927a8757406632f197a650fdecb1c395b7ad6f19c87b1988",
+      "license": "© Островок / правообладатель изображения. Открытая лицензия не подтверждена. Оригинальный публичный ассет сохранён для локального прототипа.",
+      "matchStatus": "Точный оригинал из актуальной HTML/CSS главной страницы Островка, полученной с User-Agent Chrome."
+    }
+  ]
+}

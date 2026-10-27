@@ -1,0 +1,81 @@
+/* Photos enlarge inside their original frames; labels and controls stay still. */
+.ov .ov-image-window {
+  overflow: hidden;
+  padding: 0;
+}
+.ov .ov-image-window > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ov
+  :is(
+    .ov-image-window > img,
+    .ov-mystic-card > img,
+    .ov-food-card > img,
+    .ov-blog-card > img,
+    .ov-guru-promo > img,
+    .ov-halloween-guru > img,
+    .ov-card-image img,
+    .ov-hotel-mosaic button > img,
+    .ov-room-photo > img
+  ),
+.ov-gallery-stage > img {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .ov .ov-autumn-hotel:hover > .ov-image-window > img,
+  .ov .ov-halloween-hotel:hover > .ov-image-window > img,
+  .ov .ov-mystic-card:hover > img,
+  .ov .ov-food-card:hover > img,
+  .ov .ov-blog-card:hover > img,
+  .ov .ov-guru-promo:hover > img,
+  .ov .ov-halloween-guru:hover > img,
+  .ov .ov-card-image:hover img,
+  .ov .ov-hotel-mosaic button:hover > img,
+  .ov .ov-room:hover .ov-room-photo > img,
+  .ov-gallery-stage:hover > img {
+    transform: scale(1.06);
+  }
+  .ov .ov-card-image:focus-within img,
+  .ov .ov-hotel-mosaic button:focus-visible > img,
+  .ov .ov-blog-card:focus-within > img {
+    transform: scale(1.06);
+  }
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .ov .ov-hotel-mosaic button:hover > img,
+  .ov-gallery-stage:hover > img {
+    transform: none;
+    transition: none;
+  }
+}
+
+/* The landscape drifts gently with the pointer; its magnification stays fixed. */
+.ov .ov-hero .ov-hero-cover {
+  inset: -18px;
+  width: calc(100% + 36px);
+  max-width: none;
+  height: calc(100% + 36px);
+  max-height: none;
+  transform: translate3d(var(--hero-pan-x, 0px), var(--hero-pan-y, 0px), 0);
+  transition: transform 900ms cubic-bezier(0.2, 0.65, 0.25, 1);
+  will-change: transform;
+}
+.ov .ov-hero > .ov-hero-location {
+  top: calc(var(--ov-header-size) + 16px);
+  bottom: auto;
+}
+@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .ov .ov-hero .ov-hero-cover {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}

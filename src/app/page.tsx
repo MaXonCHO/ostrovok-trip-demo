@@ -1,4 +1,4 @@
-import { Home } from "@/features/trips/home";
+import { OstrovokHome } from "@/features/ostrovok/home";
 export default function Page() {
-  return <Home />;
+  return <OstrovokHome />;
 }

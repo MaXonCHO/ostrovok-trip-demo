@@ -1,0 +1,91 @@
+{
+  "retrievedAt": "2026-10-27",
+  "note": "Тематические подборки по статьям О!Блога. Устаревающие цены, расписания и спецпредложения не перенесены. Для общероссийских статей использованы только петербургские разделы и их фотографии.",
+  "images": [
+    {
+      "id": "weekend",
+      "href": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "originalTitle": "Петербург на выходные: 10 небанальных локаций от местной",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2023/02/St.-Petersburg-1280x521.jpg",
+      "publishedAt": "2026-02-06T20:00:29+03:00",
+      "file": "/ostrovok/collections/spb-weekend.jpg",
+      "sha256": "009dd6d36d2cec5481688202774fdb372231d5330b14c402d4438f41cffdca01",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа."
+    },
+    {
+      "id": "food",
+      "href": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "originalTitle": "Куда сходить в Питере, чтобы: поесть, выпить, насладиться жизнью",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/Frame-20873257171-1280x520.jpg",
+      "publishedAt": "2025-07-07T19:00:03+03:00",
+      "file": "/ostrovok/collections/spb-food.jpg",
+      "sha256": "0d1066221de346e11680fec26b5b3d39742a59ae1c499dd7211afa103fec904d",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа."
+    },
+    {
+      "id": "romance",
+      "href": "https://blog.ostrovok.ru/romantika-v-rossijskix-otelyax/",
+      "originalTitle": "Романтика в российских отелях: 14 мест, где можно провести День всех влюблённых",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2025/01/3копия-15.jpg",
+      "publishedAt": "2025-01-31T20:00:41+03:00",
+      "sourceSection": "«Санкт-Петербург», Северная столица",
+      "file": "/ostrovok/collections/spb-romance.jpg",
+      "sha256": "c8b78dfeff63089d3e8b7bafabd4c9d0250f639d1b001992fc0fcd10bce76e0c",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа."
+    },
+    {
+      "id": "museums",
+      "href": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "originalTitle": "10 необычных музеев Санкт-Петербурга",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/2копия-3.jpg",
+      "publishedAt": "2023-09-19T20:00:48+03:00",
+      "file": "/ostrovok/collections/spb-museums.jpg",
+      "sha256": "bc85b84c2ec955049228c4f939b329444e5bd85b28129f17813fa95dbd77f3f1",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа.",
+      "sourceSection": "Учебный музей академии Штиглица"
+    },
+    {
+      "id": "family",
+      "href": "https://blog.ostrovok.ru/otdyh-na-osennih-kanikulah-2025/",
+      "originalTitle": "Куда поехать на осенние каникулы: 6 мест в России и зарубежье для отдыха с детьми",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2025/09/2к-12.jpg",
+      "publishedAt": "2026-09-10T18:00:08+03:00",
+      "sourceSection": "Санкт-Петербург, Россия",
+      "file": "/ostrovok/collections/spb-family.jpg",
+      "sha256": "bebd0d0a662b36fec0827d68367095aa9371f862dfb9333bf03cca7b2ce70109",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа."
+    },
+    {
+      "id": "walks",
+      "href": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "originalTitle": "Достопримечательности Петербурга: открываем с нового ракурса",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/Frame-2087325717-4-1280x520.jpg",
+      "publishedAt": "2025-07-15T20:00:03+03:00",
+      "file": "/ostrovok/collections/spb-walks.jpg",
+      "sha256": "29c6d443db0f4321e3b212f2cb31375de6e26484deac8c3054d28eead3997c02",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа."
+    },
+    {
+      "id": "free",
+      "href": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "originalTitle": "Бесплатный Санкт-Петербург: 11 необычных идей для культурного досуга",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/1копия-4.jpg",
+      "publishedAt": "2023-12-08T20:00:46+03:00",
+      "file": "/ostrovok/collections/spb-free.jpg",
+      "sha256": "8083b9fac6d8f3c3b90e6a1c45ddcae2d237f6c870abf441fd3638eb871cd298",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа.",
+      "sourceSection": "Бесплатные пешеходные экскурсии"
+    },
+    {
+      "id": "autumn",
+      "href": "https://blog.ostrovok.ru/10-idej-chem-zanyatsya-v-sankt-peterburge-osenyu/",
+      "originalTitle": "10 идей, чем заняться в Санкт-Петербурге осенью",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2024/09/5копия-15.jpg",
+      "publishedAt": "2024-09-27T20:00:37+03:00",
+      "file": "/ostrovok/collections/spb-autumn.jpg",
+      "sha256": "adec08d20514999e9463b41e3054be9bc39ac3e51e28c0c770a6500537ed5ec8",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Сохранено для локального прототипа.",
+      "sourceSection": "Пройтись по оранжерее Таврического сада"
+    }
+  ]
+}

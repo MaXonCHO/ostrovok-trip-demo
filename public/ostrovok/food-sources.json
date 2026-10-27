@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-10-27",
+  "sourceSection": "Записки гастрономического туриста; exact featured_directions items from desktop homepage",
+  "purpose": "Local hackathon demo. Original photographs remain copyrighted by their respective owners; no open license is asserted.",
+  "assets": [
+    {
+      "file": "/ostrovok/food-kazan.jpg",
+      "source": "https://ostrovok.ru/",
+      "imageUrl": "https://of.fastrovok.net/travel/mainpage_content/kazanOct.jpg",
+      "subject": "Эчпочмаки на тарелке; встроенная в изображение плашка «Россия»",
+      "credit": "© Островок / respective original image rights holders"
+    },
+    {
+      "file": "/ostrovok/food-istanbul.jpg",
+      "source": "https://ostrovok.ru/",
+      "imageUrl": "https://of.fastrovok.net/travel/mainpage_content/stambulBl.jpg",
+      "subject": "Кебаб на тарелке; встроенная плашка «Турция»",
+      "credit": "© Островок / respective original image rights holders"
+    },
+    {
+      "file": "/ostrovok/food-beijing.jpg",
+      "source": "https://ostrovok.ru/",
+      "imageUrl": "https://of.fastrovok.net/travel/mainpage_content/pekinOct.jpg",
+      "subject": "Утка по-пекински; встроенная плашка «Китай»",
+      "credit": "© Островок / respective original image rights holders"
+    },
+    {
+      "file": "/ostrovok/food-petersburg.jpg",
+      "source": "https://ostrovok.ru/",
+      "imageUrl": "https://of.fastrovok.net/travel/mainpage_content/spbOct.jpg",
+      "subject": "Рассольник; встроенная плашка «Россия»",
+      "credit": "© Островок / respective original image rights holders"
+    },
+    {
+      "file": "/ostrovok/food-belgrade.jpg",
+      "source": "https://ostrovok.ru/",
+      "imageUrl": "https://of.fastrovok.net/travel/mainpage_content/belgOct.jpg",
+      "subject": "Плескавица; встроенная плашка «Сербия»",
+      "credit": "© Островок / respective original image rights holders"
+    }
+  ]
+}

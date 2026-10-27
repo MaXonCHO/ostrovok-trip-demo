@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-27",
+  "purpose": "Local hackathon demo, public hotel photography. Copyright remains with the respective owners; no open license is asserted.",
+  "assets": [
+    {
+      "file": "/ostrovok/halloween-nesselbeck.jpg",
+      "hotel": "Отель Нессельбек",
+      "sourcePage": "https://ostrovok.ru/hotel/russia/orlovka/mid7841984/nesselbeck_hotel_/",
+      "imageURL": "https://cdn.ostrovok.ru/t/640x400/extranet/media/66b91525b4204c15a91c2f5b88509a65.jpg",
+      "subject": "Точная фотография ночного фасада Нессельбека из featured_seasonal_hotels главной Островка, исходное кадрирование 640×400"
+    },
+    {
+      "file": "/ostrovok/halloween-alpine.jpg",
+      "hotel": "Alpine Castle Hotel, Dilijan",
+      "sourcePage": "https://ostrovok.ru/hotel/armenia/dilijan/mid13347580/hotel_alpine_castle/",
+      "imageURL": "https://cdn.ostrovok.ru/t/640x400/content/bc/d1/bcd157b4441511571f46d23728010cb224cd548f.JPEG",
+      "subject": "Точная фотография Alpine Castle из featured_seasonal_hotels главной Островка, исходное кадрирование 640×400",
+      "actualEncoding": "WebP from original CDN URL; source bytes retained under existing .jpg path"
+    },
+    {
+      "file": "/ostrovok/halloween-ferme.jpg",
+      "hotel": "La Ferme De Reve",
+      "sourcePage": "https://ostrovok.ru/hotel/russia/donoshevo/mid7035046/la_ferme_de_reve_2/",
+      "imageURL": "https://cdn.ostrovok.ru/t/640x400/extranet/71/75/717569fa8cda80166fb2a857a80c62649ce0681e.jpeg",
+      "subject": "Оригинальная фотография замка La Ferme de Reve из seasonal_hotels главной Островка"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "retrievedAt": "2026-10-27",
+  "cssSource": "https://mpf.fastrovok.net/branch/b173060/_next/static/css/8322ce622b294922.css",
+  "images": [
+    {
+      "file": "/ostrovok/guru-suitcase-original.webp",
+      "subject": "Оригинальный фон авторизации ГУРУ: 3D чемодан, звезда, знак процента и карточка до -40%",
+      "sourcePage": "https://ostrovok.ru/",
+      "imageUrl": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/auth-card-bg@2x.da6608e8.webp",
+      "retrievedAt": "2026-10-27",
+      "sha256": "c6dcae3731d33b42be1e867e9fc87a25927b0403d2cff7aa7b614c1c6a8153a2",
+      "license": "© Островок / правообладатель изображения. Открытая лицензия не подтверждена. Оригинальный публичный ассет сохранён для локального прототипа.",
+      "matchStatus": "Точный оригинал из актуальной HTML/CSS главной страницы Островка, полученной с User-Agent Chrome."
+    },
+    {
+      "file": "/ostrovok/guru-breakfast-original.webp",
+      "subject": "Оригинальный фон авторизации ГУРУ: 3D круассан и знак процента",
+      "sourcePage": "https://ostrovok.ru/",
+      "imageUrl": "https://mpf.fastrovok.net/branch/b173060/_next/static/assets/auth-card-bg@2x.efeffea7.webp",
+      "retrievedAt": "2026-10-27",
+      "sha256": "ffb17cffd2a76eed598662b740288f3db270cebf3651ac49be739a7462efa6df",
+      "license": "© Островок / правообладатель изображения. Открытая лицензия не подтверждена. Оригинальный публичный ассет сохранён для локального прототипа.",
+      "matchStatus": "Точный оригинал из актуальной HTML/CSS главной страницы Островка, полученной с User-Agent Chrome."
+    }
+  ]
+}

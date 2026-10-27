@@ -1,0 +1,42 @@
+{
+  "retrievedAt": "2026-10-27",
+  "publicationDateEvidence": "https://blog.ostrovok.ru/ — даты первых трёх статей; time[datePublished] на странице статьи об Улан-Баторе.",
+  "images": [
+    {
+      "file": "/ostrovok/blog-souvenirs.jpg",
+      "title": "От фарфора до сладостей: какие сувениры привезти из Петербурга",
+      "publishedAt": "2026-10-23",
+      "sourcePage": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/b2c-7-scaled.jpg",
+      "sha256": "eb6fbc2003fbee912ae3a2e3e5caf6d4171fc9c1f66ddab43b0bc3b8572356cf",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Оригинальная обложка сохранена для локального прототипа."
+    },
+    {
+      "file": "/ostrovok/blog-cancellation.jpg",
+      "title": "План перестроен: как бесплатно отменить бронирование отеля на Островке",
+      "publishedAt": "2026-10-22",
+      "sourcePage": "https://blog.ostrovok.ru/kak-besplatno-otmenit-bronirovanie/",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/b2c-1-9-scaled.jpg",
+      "sha256": "d8937b0c28c72cf4294b10a7f9b5af50323f234523f7e1044beb9e045ac518da",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Оригинальная обложка сохранена для локального прототипа."
+    },
+    {
+      "file": "/ostrovok/blog-farms.jpg",
+      "title": "Доить коров, варить сыр: 10 ферм и экоотелей для агротуризма в России",
+      "publishedAt": "2026-10-20",
+      "sourcePage": "https://blog.ostrovok.ru/agroturizm-v-rossii/",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/Rectangle-2131328063.jpg",
+      "sha256": "5e446263931fb33a315a91004066447d7af9a6b7a106770a8af399bd55933707",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Оригинальная обложка сохранена для локального прототипа."
+    },
+    {
+      "file": "/ostrovok/blog-mongolia.jpg",
+      "title": "О, Монголия: гид по Улан-Батору и окрестностям",
+      "publishedAt": "2026-10-16",
+      "sourcePage": "https://blog.ostrovok.ru/ulan-batoru/",
+      "imageUrl": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/Ulaanbaatar-1280x521.jpg",
+      "sha256": "8ed363dcee68f19d36dc5932491c0c5952e6ce7cb8a94508bb3e68dfc896e3db",
+      "license": "© Островок / правообладатель фотографии. Открытая лицензия не подтверждена. Оригинальная обложка сохранена для локального прототипа."
+    }
+  ]
+}
