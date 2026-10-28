@@ -1,3 +1,4 @@
+import { durableRoute } from "@/server/durable-database";
 import { NextRequest, NextResponse } from "next/server";
 import {
   account,
@@ -29,7 +30,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const result = (data: unknown) =>
   NextResponse.json(data, { headers: { "Cache-Control": "no-store" } });
-export async function GET(
+async function handleGET(
   req: NextRequest,
   { params }: { params: Promise<{ path: string[] }> },
 ) {
@@ -74,7 +75,7 @@ export async function GET(
     return failure(e);
   }
 }
-export async function POST(
+async function handlePOST(
   req: NextRequest,
   { params }: { params: Promise<{ path: string[] }> },
 ) {
@@ -121,3 +122,11 @@ export async function POST(
     return failure(e);
   }
 }
+
+export const GET = durableRoute(handleGET, (request) =>
+  new URL(request.url).pathname.endsWith("/auth/session"),
+);
+
+export const POST = durableRoute(handlePOST, true);
+
+export const maxDuration = 60;
