@@ -108,7 +108,7 @@ export function TripProfile({ id }: { id: string }) {
   const p = trip.profile;
   const candidates = [
     ...trip.selection.results,
-    ...(trip.includeUnverified ? trip.selection.needsCheck : []),
+    ...trip.selection.needsCheck,
   ].slice(0, 5);
   const owner = trip.myRole === "owner";
   const pinned = candidates.find((h) => h.hotel.id === trip.pinnedHotelId);
@@ -193,7 +193,7 @@ export function TripProfile({ id }: { id: string }) {
             </div>
             <div>
               <dt>Номера и наличие</dt>
-              <dd>Цены и доступность нужно подтвердить</dd>
+              <dd>Тарифы и наличие не загружены</dd>
             </div>
           </dl>
           <h3>Пожелания</h3>
@@ -216,10 +216,7 @@ export function TripProfile({ id }: { id: string }) {
             <p>Пока нет дополнительных пожеланий.</p>
           )}
           {trip.expectations.brandNames.length > 0 && (
-            <p>
-              Бренды: {trip.expectations.brandNames.join(", ")}. Наличие
-              магазинов не подтверждено.
-            </p>
+            <p>Бренды: {trip.expectations.brandNames.join(", ")}.</p>
           )}
           {owner && (
             <Link className="ov-inline-button" href={"/my-trip?trip=" + id}>
@@ -335,33 +332,10 @@ export function TripProfile({ id }: { id: string }) {
             ))
           ) : (
             <div className="ov-planner-empty">
-              <h3>Нет вариантов, подтверждающих все условия</h3>
-              <p>
-                В базе нет актуальных цен, часть требований требует проверки.
-                Можно явно включить такие варианты в профиль или изменить
-                запрос.
-              </p>
-              {owner && (
-                <button
-                  className="ov-button"
-                  disabled={busy}
-                  onClick={() =>
-                    command({
-                      type: "finalize",
-                      version: trip.version,
-                      includeUnverified: true,
-                    })
-                  }
-                >
-                  Включить варианты для проверки
-                </button>
-              )}
+              <h3>Подходящих вариантов пока нет</h3>
+              <p>Измените пожелания, чтобы расширить подборку.</p>
             </div>
           )}
-          <p className="ov-selection-caption">
-            Каждая карточка основана на импортированной записи. Непроверенные
-            факты не превращаются в подтверждённые после голосования.
-          </p>
         </section>
       </div>
     </div>

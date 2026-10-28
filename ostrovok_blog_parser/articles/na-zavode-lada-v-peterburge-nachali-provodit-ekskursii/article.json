@@ -1,0 +1,49 @@
+{
+  "id": "166109",
+  "slug": "na-zavode-lada-v-peterburge-nachali-provodit-ekskursii",
+  "title": "На заводе LADA в Петербурге начали проводить экскурсии",
+  "url": "https://blog.ostrovok.ru/na-zavode-lada-v-peterburge-nachali-provodit-ekskursii/",
+  "date_published": "2026-10-28",
+  "date_published_raw": "2026-10-28T11:00:09+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Варя Муравьёва",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "Материал о промышленном туризме в Петербурге: экскурсия на автомобильное производство как альтернатива музейным и прогулочным маршрутам. Условия посещения следует смотреть у организатора.",
+  "tags": [
+    "промышленный туризм",
+    "экскурсии"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/na-zavode-lada-v-peterburge-nachali-provodit-ekskursii/",
+    "category": "unusual",
+    "summary": "Материал о промышленном туризме в Петербурге: экскурсия на автомобильное производство как альтернатива музейным и прогулочным маршрутам. Условия посещения следует смотреть у организатора.",
+    "tags": [
+      "промышленный туризм",
+      "экскурсии"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=5"
+  },
+  "collected_at": "2026-10-28T10:04:22.750919+00:00",
+  "available_images": 1,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "29f1fb448935a1fd86cdd8a0d8f414a93a9a2864f73351d9674a7f5b136df392",
+      "bytes": 119696,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/na-zavode-lada-v-peterburge-nachali-provodit-ekskursii/images/01_29f1fb448935a1fd.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/b2c-1-10-1280x520.jpg",
+      "source_url": "https://blog.ostrovok.ru/na-zavode-lada-v-peterburge-nachali-provodit-ekskursii/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,121 @@
+{
+  "id": "73332",
+  "slug": "kuda-sxodit-poest-v-pitere",
+  "title": "Куда сходить в Питере, чтобы: поесть, выпить, насладиться жизнью",
+  "url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+  "date_published": "2025-07-07",
+  "date_published_raw": "2025-07-07T19:00:03+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Мария Макеева",
+  "category": "food",
+  "category_label": "Еда и рестораны",
+  "summary": "Разные варианты гастрономического досуга: от повседневных остановок на еду до атмосферных заведений для вечернего выхода. Идеи для сочетания прогулок, еды и отдыха.",
+  "tags": [
+    "кафе",
+    "рестораны",
+    "бары"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+    "category": "food",
+    "summary": "Разные варианты гастрономического досуга: от повседневных остановок на еду до атмосферных заведений для вечернего выхода. Идеи для сочетания прогулок, еды и отдыха.",
+    "tags": [
+      "кафе",
+      "рестораны",
+      "бары"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B8%D1%82%D0%B5%D1%80&page=1"
+  },
+  "collected_at": "2026-10-28T10:04:56.739724+00:00",
+  "available_images": 22,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "56f17da055391c0e67ff63e3fd5c3ac5821364627ead550b0f8647894b7b3fd8",
+      "bytes": 68020,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/01_56f17da055391c0e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/Frame-20873257171-1280x520.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "d9853b36561693b07cd567d72fd6baa4e2d359b43ab200554539a7c1f08800bf",
+      "bytes": 153978,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/02_d9853b36561693b0.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/1копия.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Иллюстрация раздела: Teplo",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "0547257195c201722cb3368bdefa6eae4b733a2df0ecba7290e570cf385bd245",
+      "bytes": 224556,
+      "width": 1600,
+      "height": 948,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/03_0547257195c20172.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/1_Charlie.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Иллюстрация раздела: Charlie",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "14ae671456bab9de381eea2db350e65b9baf38f79948767803e74a3fe0a534a6",
+      "bytes": 133744,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/04_14ae671456bab9de.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/сырники.png",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Иллюстрация раздела: STIM",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "271e498dc61335146729ecffddca5313d4993b23cd15afdff64dcfb96a85a6b6",
+      "bytes": 124822,
+      "width": 1600,
+      "height": 948,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/05_271e498dc6133514.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/3_Hype-PASTALOUNGE.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Иллюстрация раздела: Hype PASTA&LOUNGE",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "b73cb3ee4d41846a2b5779da3fef3e6a055b5d46d73cf085abdfe9b78b2b629c",
+      "bytes": 171490,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/kuda-sxodit-poest-v-pitere/images/06_b73cb3ee4d41846a.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2022/04/4_Вольчека.png",
+      "source_url": "https://blog.ostrovok.ru/kuda-sxodit-poest-v-pitere/",
+      "caption": "Иллюстрация раздела: Булочные Ф. Вольчека",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

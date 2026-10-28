@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Петербург · графическая иллюстрация</title><desc id="desc">Условный городской силуэт, мост и Нева. Не изображение конкретной гостиницы.</desc>
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#173e62"/><stop offset="1" stop-color="#b6c9d8"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#578ba2"/><stop offset="1" stop-color="#173e62"/></linearGradient><pattern id="windows" width="36" height="45" patternUnits="userSpaceOnUse"><rect x="13" y="12" width="10" height="17" rx="5" fill="#e9d1a2" opacity=".7"/></pattern></defs>
+<path fill="url(#sky)" d="M0 0h1200v720H0z"/><circle cx="946" cy="156" r="57" fill="#f9dfab"/><path d="M75 186h260m-100-40h160m300 95h175" fill="none" stroke="#d3e2e9" stroke-width="5" opacity=".4"/>
+<g fill="#7494aa"><path d="M0 382h110v-90h130v90h60v-115h160v115h65v-64h170v64h100V269h150v113h130v-81h125v170H0z"/></g>
+<g fill="#385f7a"><path d="M0 368h185v112H0zm207-39h135v151H207zm500 28h185v123H707zm211-20h130v143H918zm151 33h131v110h-131z"/><path d="M369 374h290v106H369zm52-28h188v29H421zm34-17h120v18H455z"/><path d="M457 329a58 58 0 0 1 116 0z"/><path d="M507 236h16v37h-16zm6-92h4v94h-4z"/></g>
+<path d="M0 368h185v112H0zm207-39h135v151H207zm500 28h185v123H707zm211-20h130v143H918zm151 33h131v110h-131zM389 389h250v91H389z" fill="url(#windows)"/>
+<path fill="url(#water)" d="M0 480h1200v240H0z"/>
+<g fill="none" stroke="#a2c8d6" opacity=".35" stroke-width="4"><path d="M50 542h257m200 35h178m225-32h215M180 632h260m327 17h218M34 689h135m360-17h164"/></g>
+<g stroke="#193c55" fill="none"><path d="M-10 500h400l210-116 210 116h400" stroke-width="18"/><path d="m390 500 210-150 210 150M425 481v-5m35-14v-13m35-6v-19m35 0v-24m35 4v-31m70 30v-30m35 51v-24m35 44v-19m35 38v-13" stroke-width="7"/><path d="M0 524h1200M90 494v66m1020-66v66" stroke-width="12"/></g>
+<text x="58" y="102" font-family="Arial,sans-serif" font-size="31" fill="#f7eddb" letter-spacing="7">САНКТ-ПЕТЕРБУРГ</text><text x="60" y="142" font-family="Arial,sans-serif" font-size="17" fill="#d9e5eb" letter-spacing="3">ГОРОД У ВОДЫ</text>
+</svg>

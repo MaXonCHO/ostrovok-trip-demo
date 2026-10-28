@@ -23,7 +23,6 @@ export function LiveSelection({
   const { user, openLogin } = useAccount();
   const router = useRouter();
   const [initial, setInitial] = useState<Selection | null>(null);
-  const [showUnknown, setShowUnknown] = useState(false);
   const [busy, setBusy] = useState(false);
   const [visibleCount, setVisibleCount] = useState(4);
   const [error, setError] = useState("");
@@ -42,9 +41,11 @@ export function LiveSelection({
   }, [selection]);
   const current = selection ?? initial;
   const shown = current
-    ? showUnknown
-      ? current.needsCheck
-      : current.results
+    ? [...current.results, ...current.needsCheck].filter(
+        (hotel, index, hotels) =>
+          hotels.findIndex((item) => item.hotel.id === hotel.hotel.id) ===
+          index,
+      )
     : [];
   async function finalize() {
     if (!user?.authenticated) {
@@ -58,7 +59,7 @@ export function LiveSelection({
       await postPlanner("trips/" + tripId, {
         type: "finalize",
         version,
-        includeUnverified: showUnknown,
+        includeUnverified: true,
       });
       router.push("/trips/" + tripId);
     } catch (e) {
@@ -102,13 +103,11 @@ export function LiveSelection({
               обновляется после каждого ответа.
             </p>
           </div>
-          <span className="ov-update-status" role="status" aria-live="polite">
-            {pending
-              ? "Уточняем пожелания…"
-              : current
-                ? `${current.matchingCount} по данным · ${current.unverifiedCount} требуют проверки`
-                : "Загружаем базу…"}
-          </span>
+          {(pending || !current) && (
+            <span className="ov-update-status" role="status" aria-live="polite">
+              {pending ? "Уточняем пожелания…" : "Загружаем отели…"}
+            </span>
+          )}
         </header>
         {current?.applied.length ? (
           <div className="ov-criteria-row">
@@ -127,39 +126,7 @@ export function LiveSelection({
             ))}
           </div>
         ) : null}
-        <div
-          className="ov-selection-tabs"
-          role="group"
-          aria-label="Проверенность условий"
-        >
-          <button
-            className={!showUnknown ? "is-active" : ""}
-            aria-pressed={!showUnknown}
-            onClick={() => {
-              setShowUnknown(false);
-              setVisibleCount(4);
-            }}
-          >
-            Подходят по данным ({current?.matchingCount ?? 0})
-          </button>
-          <button
-            className={showUnknown ? "is-active" : ""}
-            aria-pressed={showUnknown}
-            onClick={() => {
-              setShowUnknown(true);
-              setVisibleCount(4);
-            }}
-          >
-            Нужно уточнить ({current?.unverifiedCount ?? 0})
-          </button>
-        </div>
-        {showUnknown && (
-          <p className="ov-selection-explanation">
-            <Info size={18} />У этих вариантов есть неподтверждённые условия. Их
-            можно сохранить для дальнейшей проверки.
-          </p>
-        )}
-        {current && current.matchingCount < 3 && (
+        {current && shown.length < 3 && (
           <details className="ov-selection-compromise">
             <summary>
               <Info size={17} />
@@ -167,14 +134,12 @@ export function LiveSelection({
             </summary>
             <div>
               <strong>
-                {current.matchingCount
+                {shown.length
                   ? "Под все условия пока мало вариантов"
-                  : "Все обязательные условия пока не подтверждены"}
+                  : "Подходящих вариантов пока нет"}
               </strong>
               <p>
-                Не ослабляем запрос автоматически. Можно уточнить данные,
-                посмотреть варианты для проверки или изменить конкретное
-                требование.
+                Можно изменить конкретное требование, чтобы расширить подборку.
               </p>
               {current.suggestions.map((s) => (
                 <button
@@ -203,11 +168,7 @@ export function LiveSelection({
         ) : (
           <div className="ov-planner-empty">
             <BuildingsMessage />
-            <p>
-              {showUnknown
-                ? "Даже для проверки не осталось вариантов. Измените условия в диалоге."
-                : "Откройте список «Нужно уточнить», чтобы видеть варианты с отсутствующими сведениями. Они не считаются подтверждённым совпадением."}
-            </p>
+            <p>Измените пожелания в диалоге, чтобы расширить подборку.</p>
           </div>
         )}
         {shown.length > visibleCount && (
@@ -241,14 +202,10 @@ export function LiveSelection({
             {error}
           </p>
         )}
-        <p className="ov-selection-caption">
-          Все расстояния в источнике по прямой. Пешие маршруты и актуальные цены
-          нужно подтвердить отдельно.
-        </p>
       </div>
     </section>
   );
 }
 function BuildingsMessage() {
-  return <h3>Подтверждённых вариантов пока нет</h3>;
+  return <h3>Подходящих вариантов пока нет</h3>;
 }

@@ -9,6 +9,7 @@ import {
   TravelBlog,
 } from "./home-blocks";
 import { TravelPrompt } from "./travel-prompt";
+import { BlogRecommendation } from "@/features/blog/recommendation";
 
 export function OstrovokHome() {
   const heroRef = useRef<HTMLElement>(null);
@@ -80,6 +81,7 @@ export function OstrovokHome() {
       <div className="ov-home-white ov-home-upper">
         <div className="ov-container">
           <AutumnOffers />
+          <BlogRecommendation />
           <MysticRoutes />
           <GastroNotes />
         </div>

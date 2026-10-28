@@ -9,6 +9,12 @@ export interface Hotel {
   address: string;
   stars: number;
   photos: string[];
+  photoEvidence?: {
+    sourceUrl: string | null;
+    matchStatus: string;
+    confidence: string;
+    license: string | null;
+  };
   price: number | null;
   imported?: boolean;
   ratingSnapshot?: number | null;

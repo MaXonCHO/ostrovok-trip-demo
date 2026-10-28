@@ -30,6 +30,7 @@ import type {
 } from "@/features/planner/types";
 
 import type { TripWeather } from "./trip-weather";
+import { blogInterestEvent } from "@/features/blog/articles";
 
 const storageKey = "ostrovok-trip-conversation-v1";
 interface Conversation {
@@ -242,6 +243,12 @@ function AssistantText({
 export function TripChat({ query }: { query: Query }) {
   const auth = useAccount();
   const seed = JSON.stringify(query);
+  // Older homepage links used `trip` as a navigation nonce rather than a
+  // persisted workspace ID. Only a direct trip link restores a workspace.
+  const explicitTrip =
+    !param(query, "source") && !param(query, "wish") && !param(query, "new")
+      ? param(query, "trip")
+      : "";
   const [conversation, setConversation] = useState<Conversation | null>(null);
   const [pending, setPending] = useState(false);
   const [typingIndex, setTypingIndex] = useState<number | null>(null);
@@ -259,11 +266,9 @@ export function TripChat({ query }: { query: Query }) {
     async function restore() {
       await ensureAccount();
       const saved = readSaved();
-      const explicit = param(query, "trip");
+      const explicit = explicitTrip;
       const next =
-        saved &&
-        !param(query, "new") &&
-        (saved.seed === seed || !Object.keys(query).length)
+        saved && (saved.seed === seed || !Object.keys(query).length)
           ? saved
           : createConversation(query, seed);
       const id = explicit || next.tripId;
@@ -302,12 +307,24 @@ export function TripChat({ query }: { query: Query }) {
           throw new Error(workspace.error || "Нет доступа к поездке.");
       }
       if (mounted) {
-        const fresh = id ? createConversation(query, seed) : next;
+        const fresh = id
+          ? {
+              ...next,
+              tripId: undefined,
+              tripVersion: undefined,
+              selection: undefined,
+              expectations: undefined,
+              requestId: crypto.randomUUID(),
+            }
+          : next;
         setConversation({
           ...fresh,
-          requestId: fresh.requestId || crypto.randomUUID(),
+          error: undefined,
+          requestId: fresh.error
+            ? crypto.randomUUID()
+            : fresh.requestId || crypto.randomUUID(),
         });
-        setPending(fresh.messages.at(-1)?.role === "user" && !fresh.error);
+        setPending(fresh.messages.at(-1)?.role === "user");
       }
     }
     void restore().catch((error) => {
@@ -327,6 +344,7 @@ export function TripChat({ query }: { query: Query }) {
     if (!conversation) return;
     try {
       localStorage.setItem(storageKey, JSON.stringify(conversation));
+      window.dispatchEvent(new Event(blogInterestEvent));
     } catch {
       /* Keep the current conversation usable without storage. */
     }
@@ -336,24 +354,39 @@ export function TripChat({ query }: { query: Query }) {
     const controller = new AbortController();
     const timer = window.setTimeout(() => controller.abort("timeout"), 35000);
     let mounted = true;
+    let restarted = false;
     const request = async () => {
       try {
-        const response = await fetch("/api/trip-chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            context: conversation.context,
-            messages: recentMessages(conversation.messages),
-            requestId: conversation.requestId,
-            ...(conversation.tripId
-              ? {
-                  tripId: conversation.tripId,
-                  tripVersion: conversation.tripVersion,
-                }
-              : {}),
-          }),
-          signal: controller.signal,
-        });
+        const send = (
+          tripId = conversation.tripId,
+          tripVersion = conversation.tripVersion,
+          requestId = conversation.requestId,
+        ) =>
+          fetch("/api/trip-chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              context: conversation.context,
+              messages: recentMessages(conversation.messages),
+              requestId,
+              ...(tripId
+                ? {
+                    tripId,
+                    tripVersion,
+                  }
+                : {}),
+            }),
+            signal: controller.signal,
+          });
+        let response = await send();
+        // A saved browser draft can outlive its guest session or server workspace.
+        // Start a new workspace with the user's visible history, never bypass
+        // access checks for an explicitly opened shared trip.
+        if ([401, 403, 404].includes(response.status) && !explicitTrip) {
+          await ensureAccount(true);
+          restarted = true;
+          response = await send("", undefined, crypto.randomUUID());
+        }
         const data: unknown = await response.json();
         if (!response.ok) {
           const message =
@@ -377,6 +410,14 @@ export function TripChat({ query }: { query: Query }) {
             current
               ? {
                   ...current,
+                  ...(restarted
+                    ? {
+                        tripId: undefined,
+                        tripVersion: undefined,
+                        selection: undefined,
+                        expectations: undefined,
+                      }
+                    : {}),
                   ...(typeof tripId === "string"
                     ? {
                         tripId,
@@ -408,6 +449,15 @@ export function TripChat({ query }: { query: Query }) {
             current
               ? {
                   ...current,
+                  ...(restarted
+                    ? {
+                        tripId: undefined,
+                        tripVersion: undefined,
+                        selection: undefined,
+                        expectations: undefined,
+                        requestId: crypto.randomUUID(),
+                      }
+                    : {}),
                   error: controller.signal.aborted
                     ? "Ответ занимает больше времени, чем обычно. Попробуйте ещё раз."
                     : error instanceof Error
@@ -427,7 +477,7 @@ export function TripChat({ query }: { query: Query }) {
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [pending, conversation, auth.ready]);
+  }, [pending, conversation, auth.ready, explicitTrip]);
   useEffect(() => {
     const log = end.current?.parentElement;
     if (log && log.scrollHeight > log.clientHeight)

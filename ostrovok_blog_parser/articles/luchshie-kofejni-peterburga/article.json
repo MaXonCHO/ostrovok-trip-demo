@@ -1,0 +1,121 @@
+{
+  "id": "115448",
+  "slug": "luchshie-kofejni-peterburga",
+  "title": "Лучшие кофейни Петербурга: 7 заведений, куда ходят местные за спешелти-кофе",
+  "url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+  "date_published": "2024-11-21",
+  "date_published_raw": "2024-11-21T20:00:37+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Никита Назаров",
+  "category": "food",
+  "category_label": "Еда и рестораны",
+  "summary": "Подборка городских кофеен для тех, кому важны кофе, атмосфера и локальные места. Может стать основой для прогулки с несколькими остановками на напиток и отдых.",
+  "tags": [
+    "кофейни",
+    "кофе",
+    "локальные места"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+    "category": "food",
+    "summary": "Подборка городских кофеен для тех, кому важны кофе, атмосфера и локальные места. Может стать основой для прогулки с несколькими остановками на напиток и отдых.",
+    "tags": [
+      "кофейни",
+      "кофе",
+      "локальные места"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=4"
+  },
+  "collected_at": "2026-10-28T10:04:45.769816+00:00",
+  "available_images": 8,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "ddf2ef57ab7efc407b7957cf7e183c0c7de8846d20c428cb6884f5f49e0f8f40",
+      "bytes": 33224,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/luchshie-kofejni-peterburga/images/01_ddf2ef57ab7efc40.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/Frame-2087325717-7-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "97f4a8590c1a25ddd58add9720d540982665e730d03d408d33fbab2bfcfb9b61",
+      "bytes": 143042,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/luchshie-kofejni-peterburga/images/02_97f4a8590c1a25dd.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/1копия-16.jpg",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Иллюстрация раздела: «Дом Флоу»",
+      "caption_origin": "article_section_context",
+      "credit": "Юлия Новикова / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "900e3d7adb4e73c1ea56b7c8108e96f06cc9d4c5cf51df739f93e3e4536fe5d6",
+      "bytes": 303430,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/luchshie-kofejni-peterburga/images/03_900e3d7adb4e73c1.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/2копия-16.jpg",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Иллюстрация раздела: Coffee 3",
+      "caption_origin": "article_section_context",
+      "credit": "Coffee 3",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "5938166cb709e638d9c806d4f01420db058069b8d44cc525c0ad9e08fe555d47",
+      "bytes": 198726,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/luchshie-kofejni-peterburga/images/04_5938166cb709e638.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/3копия-15.jpg",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Иллюстрация раздела: Фильтр-кофейня «ТЧК»",
+      "caption_origin": "article_section_context",
+      "credit": "Ольга Евтеева & Александр Е. / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "6e157c619230836bec94bbc1f10112a76ab235903fe9af1d1fbfa2d3cef3bbc7",
+      "bytes": 141354,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/luchshie-kofejni-peterburga/images/05_6e157c619230836b.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/4копия-15.jpg",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Иллюстрация раздела: «Институт»",
+      "caption_origin": "article_section_context",
+      "credit": "Anna Potemkina & Анастасия Севостьянова / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c9599cb3634cd6e7f28e8b16c2af25d9d7a3505a0f3ef360213449f0718097ca",
+      "bytes": 86194,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/luchshie-kofejni-peterburga/images/06_c9599cb3634cd6e7.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/11/5копия-13.jpg",
+      "source_url": "https://blog.ostrovok.ru/luchshie-kofejni-peterburga/",
+      "caption": "Иллюстрация раздела: Verlé",
+      "caption_origin": "article_section_context",
+      "credit": "Evgeny Belyaev & Виктория Н. / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

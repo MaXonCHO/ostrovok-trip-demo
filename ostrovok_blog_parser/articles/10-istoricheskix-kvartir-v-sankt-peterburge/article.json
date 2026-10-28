@@ -1,0 +1,121 @@
+{
+  "id": "109363",
+  "slug": "10-istoricheskix-kvartir-v-sankt-peterburge",
+  "title": "10 исторических квартир в Санкт-Петербурге: доходные дома, голландские печи и дворы-колодцы",
+  "url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+  "date_published": "2024-08-08",
+  "date_published_raw": "2024-08-08T20:00:58+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Людмила Ермакова",
+  "category": "housing",
+  "category_label": "Где остановиться",
+  "summary": "Варианты проживания в исторической городской среде. Подборка для тех, кто хочет сделать старый дом, характерный интерьер и атмосферу квартала частью путешествия.",
+  "tags": [
+    "исторические квартиры",
+    "интерьеры",
+    "жильё"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+    "category": "housing",
+    "summary": "Варианты проживания в исторической городской среде. Подборка для тех, кто хочет сделать старый дом, характерный интерьер и атмосферу квартала частью путешествия.",
+    "tags": [
+      "исторические квартиры",
+      "интерьеры",
+      "жильё"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:08:04.624665+00:00",
+  "available_images": 11,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "ad2793227f17427b0f9a0a80167d8bd3d7656b4a0d7bf7f1ff2614f0ecd11572",
+      "bytes": 97104,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/01_ad2793227f17427b.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/Frame-2087325717-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "ebece97896d729766498961020331b48a3e5d2eaf84f01040c63f8982ca3b44e",
+      "bytes": 131994,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/02_ebece97896d72976.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/1копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: M Apart Bogema",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "6fbcb9588cb1ea39eec822efae633fced4a6b933c40e325953ae5d0229355288",
+      "bytes": 113340,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/03_6fbcb9588cb1ea39.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/2копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: «Брискорн»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "02d6ef769c0883d0ece11c661bc9712c71086b7ea1ea6ca12c9d557d4e261967",
+      "bytes": 70242,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/04_02d6ef769c0883d0.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/3копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: Квартира у Дворцовой площади",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "80b3f293a9243ac2f1d3266e0d57d06f70a556017d4a7980abdaddcfe16b99cb",
+      "bytes": 113020,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/05_80b3f293a9243ac2.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/4копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: «LS Белые ночи Питера»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "ad905b7008d93aff326921b8ef6f2f16038e9931e6baa2b2325b724edec087e6",
+      "bytes": 159096,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-istoricheskix-kvartir-v-sankt-peterburge/images/06_ad905b7008d93aff.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/5копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-istoricheskix-kvartir-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: «А3»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

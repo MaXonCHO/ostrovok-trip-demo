@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Info, MapPin } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight, MapPin } from "@phosphor-icons/react";
 import { Favorite } from "@/features/ostrovok/shared";
 import type { Hotel } from "@/features/ostrovok/catalog";
 import type { Query } from "@/features/ostrovok/search-state";
@@ -31,7 +31,7 @@ export function DatabaseHotel({ hotel }: { hotel: Hotel; query?: Query }) {
         <div>
           <span className="ov-selection-caption">
             <MapPin size={16} />
-            Санкт-Петербург · архивная карточка
+            Санкт-Петербург
           </span>
           <h1>{hotel.name}</h1>
           <p>{hotel.address}</p>
@@ -49,15 +49,27 @@ export function DatabaseHotel({ hotel }: { hotel: Hotel; query?: Query }) {
           />
         ))}
       </div>
+      {hotel.photoEvidence?.sourceUrl && (
+        <p className="ov-selection-caption">
+          Фотографии:{" "}
+          <a
+            href={hotel.photoEvidence.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            источник изображений
+          </a>
+          {hotel.photoEvidence.matchStatus !== "matched"
+            ? " · сопоставление по данным поставщика"
+            : ""}
+        </p>
+      )}
       <div className="ov-profile-columns">
         <section>
           <h2>Об отеле</h2>
           <p>{hotel.description}</p>
-          <p className="ov-selection-caption">
-            Источник: {hotel.source}. Описание и удобства являются историческим
-            снимком, а не актуальной гарантией.
-          </p>
-          <h2>Указано в источнике</h2>
+          <p className="ov-selection-caption">Источник: {hotel.source}.</p>
+          <h2>Удобства отеля</h2>
           <div className="ov-amenity-chips">
             {hotel.amenities.map((a) => (
               <span key={a}>{a}</span>
@@ -65,17 +77,9 @@ export function DatabaseHotel({ hotel }: { hotel: Hotel; query?: Query }) {
           </div>
           {hotel.ratingSnapshot !== null &&
             hotel.ratingSnapshot !== undefined && (
-              <p>
-                Оценка в архивном источнике: {hotel.ratingSnapshot}/10. Не
-                текущий рейтинг.
-              </p>
+              <p>Оценка гостей: {hotel.ratingSnapshot}/10.</p>
             )}
-          <h2>Что известно об окружении</h2>
-          <p className="ov-condition-notice">
-            <Info size={18} />
-            Координаты не подтверждены. Расстояния по прямой от геокодированной
-            точки, не пешком.
-          </p>
+          <h2>Рядом с отелем</h2>
           {record && (
             <dl className="ov-source-metrics">
               {[
@@ -110,10 +114,7 @@ export function DatabaseHotel({ hotel }: { hotel: Hotel; query?: Query }) {
             Актуальная цена, наличие, категория номера, питание и правила отмены
             в загруженной базе отсутствуют.
           </p>
-          <p>
-            Мы не подставляем демонстрационные тарифы. Эти сведения нужно
-            подтвердить перед бронированием.
-          </p>
+          <p>Обсудите пожелания к размещению в своей поездке.</p>
           <Link
             href={
               "/my-trip?wish=" +

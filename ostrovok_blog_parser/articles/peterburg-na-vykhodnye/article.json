@@ -1,0 +1,121 @@
+{
+  "id": "148062",
+  "slug": "peterburg-na-vykhodnye",
+  "title": "Петербург на выходные: 10 небанальных локаций от местной",
+  "url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+  "date_published": "2026-02-06",
+  "date_published_raw": "2026-02-06T20:00:29+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Диана Акчурина",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "Небанальные места для короткой поездки: небольшие культурные пространства, необычные интерьеры, тихие дворы и городские точки, которые дополняют классический туристический маршрут.",
+  "tags": [
+    "нишевые места",
+    "культурные пространства",
+    "выходные"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+    "category": "unusual",
+    "summary": "Небанальные места для короткой поездки: небольшие культурные пространства, необычные интерьеры, тихие дворы и городские точки, которые дополняют классический туристический маршрут.",
+    "tags": [
+      "нишевые места",
+      "культурные пространства",
+      "выходные"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=1"
+  },
+  "collected_at": "2026-10-28T10:03:09.815646+00:00",
+  "available_images": 8,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "cc417bb113383aacd1052cf28dc8964ed5aa80a9cfb53154acdbe60d6129316a",
+      "bytes": 166832,
+      "width": 1280,
+      "height": 521,
+      "path": "articles/peterburg-na-vykhodnye/images/01_cc417bb113383aac.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/02/St.-Petersburg-1280x521.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "3f2cbefdea6329e7a038498b6f47cafe6765cb0eebb7d4f9c7d115463c41e624",
+      "bytes": 140040,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/peterburg-na-vykhodnye/images/02_3f2cbefdea6329e7.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/02/2копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Иллюстрация раздела: «Артмуза»",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "3f30aa8f9ceab759a6ff8504f25f9e40bb51cf753368ca485715da5c049732d1",
+      "bytes": 161456,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/peterburg-na-vykhodnye/images/03_3f30aa8f9ceab759.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/02/3копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Иллюстрация раздела: Левашовский хлебозавод",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "a629b60db599d45116da13f7bdf935f2fec38356b1264ef929daa825bcccf37a",
+      "bytes": 96310,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/peterburg-na-vykhodnye/images/04_a629b60db599d451.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/02/4копия-5.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Иллюстрация раздела: Библиотека имени М. Ю. Лермонтова",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "bac17655a203cca3d19f8466ca9fc2a6e25e8b277ffd3761886a347ed78dc52b",
+      "bytes": 185700,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/peterburg-na-vykhodnye/images/05_bac17655a203cca3.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/02/5копия-5.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Иллюстрация раздела: Особняк Серебрякова",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "212b003bd6db9a5ffe07ccd82035ed8e6a7d66d96744186342c71fc57d7b5a71",
+      "bytes": 216598,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/peterburg-na-vykhodnye/images/06_212b003bd6db9a5f.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/02/6копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/peterburg-na-vykhodnye/",
+      "caption": "Иллюстрация раздела: Кафе «Оранжерея»",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

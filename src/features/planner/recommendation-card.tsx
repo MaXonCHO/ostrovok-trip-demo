@@ -60,18 +60,6 @@ export function RecommendationCard({
           <h3>
             <Link href={"/hotel/" + h.slug}>{h.name}</Link>
           </h3>
-          <span
-            className={`ov-match-status ${item.status === "needs-check" ? "is-unverified" : ""}`}
-          >
-            {item.status === "needs-check" ? (
-              <Info size={15} />
-            ) : (
-              <Check size={15} />
-            )}{" "}
-            {item.status === "needs-check"
-              ? "Нужна проверка условий"
-              : "Подходит по данным архива"}
-          </span>
           <ul className="ov-reasons">
             {item.reasons.slice(0, 2).map((r) => (
               <li key={r}>
@@ -86,20 +74,9 @@ export function RecommendationCard({
       <details className="ov-recommendation-evidence">
         <summary>
           Почему этот отель
-          {item.unknowns.length ? " · есть вопросы к условиям" : ""}{" "}
           <CaretDown size={17} />
         </summary>
         <div>
-          {item.unknowns.length > 0 && (
-            <div className="ov-condition-notice">
-              <strong>Что нужно подтвердить</strong>
-              <ul>
-                {item.unknowns.map((u) => (
-                  <li key={u}>{u}</li>
-                ))}
-              </ul>
-            </div>
-          )}
           {item.reasons.length > 2 && (
             <ul className="ov-reasons">
               {item.reasons.slice(2).map((r) => (
@@ -115,16 +92,6 @@ export function RecommendationCard({
               <div className="ov-evidence-item" key={p.label + i}>
                 <strong>{p.label}</strong>
                 <p>{p.value}</p>
-                <small>
-                  {p.status === "unknown"
-                    ? "Не подтверждено"
-                    : p.status === "unverified"
-                      ? "Геоточка требует проверки"
-                      : "Архивное наблюдение"}{" "}
-                  · {p.source}
-                  {p.date ? " · " + p.date : ""}
-                </small>
-                <small>{p.method}</small>
               </div>
             ))
           ) : (
@@ -133,13 +100,6 @@ export function RecommendationCard({
               доступные сведения.
             </p>
           )}
-          <div className="ov-evidence-item">
-            <strong>Источник карточки</strong>
-            <p>{h.source}. Исторический снимок, условия могли измениться.</p>
-            <Link href={"/api/planner/catalog/" + h.id} target="_blank">
-              Посмотреть исходную запись
-            </Link>
-          </div>
           {item.tradeoffs.map((t) => (
             <p className="ov-tradeoff" key={t}>
               <Info size={16} />

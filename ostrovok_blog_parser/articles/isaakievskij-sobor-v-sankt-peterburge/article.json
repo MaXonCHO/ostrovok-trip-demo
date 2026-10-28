@@ -1,0 +1,121 @@
+{
+  "id": "97576",
+  "slug": "isaakievskij-sobor-v-sankt-peterburge",
+  "title": "Исаакиевский собор в Санкт-Петербурге: интересные факты, лайфхаки и немного мистики",
+  "url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+  "date_published": "2024-01-04",
+  "date_published_raw": "2024-01-04T20:00:41+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "О! Редакция",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "История Исаакиевского собора и детали посещения: любопытные сюжеты, архитектура и практические нюансы, которые помогают глубже разобраться в известной достопримечательности.",
+  "tags": [
+    "архитектура",
+    "история",
+    "лайфхаки"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+    "category": "unusual",
+    "summary": "История Исаакиевского собора и детали посещения: любопытные сюжеты, архитектура и практические нюансы, которые помогают глубже разобраться в известной достопримечательности.",
+    "tags": [
+      "архитектура",
+      "история",
+      "лайфхаки"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:03:53.039739+00:00",
+  "available_images": 14,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "f364d9df62f66f7c9c0cb08ba716cdd0a85b6fffaa5d898943c88816422ab320",
+      "bytes": 147170,
+      "width": 1240,
+      "height": 480,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/01_f364d9df62f66f7c.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/2_2-1.png",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "a89eb6f3ee3ae24b2c0ed6550000c7ad3f3528871e9dffe88ea9533f5595ce50",
+      "bytes": 352596,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/02_a89eb6f3ee3ae24b.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/1копия-23.jpg",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: Причины посетить Исаакиевский собор",
+      "caption_origin": "article_section_context",
+      "credit": "V_E / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "1bc8d14c5ef3e2bfa78222bcf7108f80dfba4e9a592d50335d16472013d33da9",
+      "bytes": 323642,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/03_1bc8d14c5ef3e2bf.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/2копия-24.jpg",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: Адрес и график работы",
+      "caption_origin": "article_section_context",
+      "credit": "FOTOGRIN / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "44d6c5a76f54651eed8e61dac65a1dc2ff78c32e638085ec3ca8bbb562d44f6f",
+      "bytes": 509178,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/04_44d6c5a76f54651e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/3копия-23.jpg",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: Билеты",
+      "caption_origin": "article_section_context",
+      "credit": "Elena Odareeva / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "18f0da4171985e102f0170db8ae6d51a3f6227020276520f48c7934f38d83bcf",
+      "bytes": 207152,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/05_18f0da4171985e10.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/4копия-22.jpg",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: История",
+      "caption_origin": "article_section_context",
+      "credit": "cathedral.ru",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "a332067e3c9bf86b72f0cef9d3b36866bfb33744fb72370cbd5e3961c9e9df5b",
+      "bytes": 525296,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/isaakievskij-sobor-v-sankt-peterburge/images/06_a332067e3c9bf86b.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/5копия-23.jpg",
+      "source_url": "https://blog.ostrovok.ru/isaakievskij-sobor-v-sankt-peterburge/",
+      "caption": "Иллюстрация раздела: Собор в советское время",
+      "caption_origin": "article_section_context",
+      "credit": "Lobanov Yury / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

@@ -1,4 +1,5 @@
 import { catalogHotel, catalogRecords } from "./database";
+import { finalRankingScores } from "./final-ranking";
 import type {
   CatalogRecord,
   Criterion,
@@ -105,8 +106,7 @@ export function evidenceFor(
         source: "Каталог ostrovok_embedding_mvp",
         date: null,
         status: "unknown",
-        method:
-          "Нужно уточнить отдельно; отсутствующие сведения не восстанавливаются нейросетью",
+        method: "Сведения об этом условии отсутствуют в каталоге",
       });
   return out.slice(0, 6);
 }
@@ -140,7 +140,7 @@ function evaluate(
       known: false,
       matches: false,
       strength: 0.25,
-      unknown: `${c.label}: в источнике не подтверждено`,
+      unknown: `${c.label}: нет сведений в каталоге`,
     };
   }
   const metric = metricKeys[c.key];
@@ -162,11 +162,11 @@ function evaluate(
       strength: c.value ? strength : 1 - strength,
       reason:
         c.key === "quiet"
-          ? `В OSM отмечено ${n} ночных заведений в радиусе 500 м; тишина номера не подтверждена`
+          ? `В OSM отмечено ${n} ночных заведений в радиусе 500 м`
           : `${c.label}: ${n} отмеченных объектов в 500 м по прямой (OSM)`,
       unknown:
         c.importance === "required"
-          ? `${c.label}: расположение и нужные условия требуют проверки`
+          ? `${c.label}: нет сведений о точном соответствии условию`
           : undefined,
       tradeoff:
         c.key === "quiet" && n > 15
@@ -178,7 +178,7 @@ function evaluate(
     known: false,
     matches: false,
     strength: 0.2,
-    unknown: `${c.label}${c.detail ? ": " + c.detail : ""}: данные не подтверждены`,
+    unknown: `${c.label}${c.detail ? ": " + c.detail : ""}: нет сведений в каталоге`,
   };
 }
 export function rankHotels(
@@ -188,6 +188,22 @@ export function rankHotels(
   records = catalogRecords(),
 ): Selection {
   const criteria = expectations.criteria;
+  const query = [
+    expectations.purpose,
+    ...criteria
+      .filter((c) => c.value)
+      .map((c) => `${c.label} ${c.detail ?? ""}`),
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const native = query.trim()
+    ? finalRankingScores(query, records, criteria, {
+        hardQuery: criteria
+          .filter((c) => c.importance === "required")
+          .map((c) => c.detail ?? "")
+          .join(" "),
+      })
+    : new Map();
   const wanted = terms(
     [
       expectations.purpose,
@@ -204,24 +220,30 @@ export function rankHotels(
       let score = 0,
         weight = 0,
         excluded = false;
+      const nativeScore = native.get(h.hotel_id);
+      if (nativeScore?.excluded) excluded = true;
       for (const c of criteria) {
         const e = evaluate(h, c, records);
         const w = c.importance === "required" ? 3 : 1;
         score += e.strength * w;
         weight += w;
         if (e.reason) reasons.push(e.reason);
+        if (c.detail?.startsWith("Из О!Блога:"))
+          reasons.unshift(
+            `Учтён интерес из чтения: ${c.detail.slice(12).trim()}`,
+          );
         if (e.unknown) unknowns.push(e.unknown);
         if (e.tradeoff) tradeoffs.push(e.tradeoff);
         if (c.importance === "required") {
           if (e.known && !e.matches) excluded = true;
           else if (!e.known)
-            unknowns.push(`${c.label}: обязательное условие пока не проверено`);
+            unknowns.push(`${c.label}: нет сведений об обязательном условии`);
         }
       }
       // No offer prices exist in the source. A hard price cap cannot be verified.
       if (profile.budgetMax !== null)
         unknowns.push(
-          `Нет актуальной цены, лимит ${profile.budgetMax.toLocaleString("ru-RU")} ₽ за номер за ночь не подтверждён`,
+          `В каталоге нет цены для сопоставления с бюджетом ${profile.budgetMax.toLocaleString("ru-RU")} ₽ за номер за ночь`,
         );
       if (profile.city && profile.city !== "saint-petersburg") excluded = true;
       const document = terms(
@@ -241,17 +263,16 @@ export function rankHotels(
             ? "Описание сопоставлено с вашими пожеланиями"
             : "Отель из импортированного каталога Петербурга",
         );
-      if (!h.identity_verified)
-        tradeoffs.push(
-          "Геоточка отеля не проверена. Расстояния из OSM могут относиться к другой точке",
-        );
       if (!h.amenities_snapshot.length)
         tradeoffs.push("В архивной карточке не указаны удобства");
       const uniqueUnknown = [...new Set(unknowns)];
       const result: RankedHotel = {
         hotel: catalogHotel(h),
         score: Number(
-          ((weight ? score / weight : 0.5) * 0.8 + lexical * 0.2).toFixed(5),
+          (nativeScore
+            ? nativeScore.score * 0.85 + (weight ? score / weight : 0.5) * 0.15
+            : (weight ? score / weight : 0.5) * 0.8 + lexical * 0.2
+          ).toFixed(5),
         ),
         status: uniqueUnknown.length ? "needs-check" : "matches",
         reasons: [...new Set(reasons)].slice(0, 4),
@@ -288,7 +309,7 @@ export function rankHotels(
     unverifiedCount: needs.length,
     applied: criteria,
     suggestions,
-    engine: "lexical+facts",
+    engine: "tfidf+facts",
     revision,
   };
 }

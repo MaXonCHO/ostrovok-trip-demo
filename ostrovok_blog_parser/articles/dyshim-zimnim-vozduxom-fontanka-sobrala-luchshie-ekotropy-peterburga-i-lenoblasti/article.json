@@ -1,0 +1,51 @@
+{
+  "id": "118002",
+  "slug": "dyshim-zimnim-vozduxom-fontanka-sobrala-luchshie-ekotropy-peterburga-i-lenoblasti",
+  "title": "Дышим зимним воздухом: «Фонтанка» собрала лучшие экотропы Петербурга и Ленобласти",
+  "url": "https://blog.ostrovok.ru/dyshim-zimnim-vozduxom-fontanka-sobrala-luchshie-ekotropy-peterburga-i-lenoblasti/",
+  "date_published": "2025-01-10",
+  "date_published_raw": "2025-01-10T11:00:35+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Варя Муравьёва",
+  "category": "nature",
+  "category_label": "Природа и загородный отдых",
+  "summary": "Подборка экотроп города и области для прогулок в холодный сезон. Разные природные территории помогают выбрать спокойный маршрут вне центра Петербурга.",
+  "tags": [
+    "экотропы",
+    "зима",
+    "природа"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/dyshim-zimnim-vozduxom-fontanka-sobrala-luchshie-ekotropy-peterburga-i-lenoblasti/",
+    "category": "nature",
+    "summary": "Подборка экотроп города и области для прогулок в холодный сезон. Разные природные территории помогают выбрать спокойный маршрут вне центра Петербурга.",
+    "tags": [
+      "экотропы",
+      "зима",
+      "природа"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=3"
+  },
+  "collected_at": "2026-10-28T10:05:41.946775+00:00",
+  "available_images": 1,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "822f3a07d965941465069bf101e523d90015f4ad6c327039403f3a0a0ef1a266",
+      "bytes": 191050,
+      "width": 1280,
+      "height": 559,
+      "path": "articles/dyshim-zimnim-vozduxom-fontanka-sobrala-luchshie-ekotropy-peterburga-i-lenoblasti/images/01_822f3a07d9659414.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/01/б2с-1280x559.jpg",
+      "source_url": "https://blog.ostrovok.ru/dyshim-zimnim-vozduxom-fontanka-sobrala-luchshie-ekotropy-peterburga-i-lenoblasti/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

@@ -84,7 +84,7 @@ export interface Selection {
   unverifiedCount: number;
   applied: Criterion[];
   suggestions: { key: string; label: string; impact: number }[];
-  engine: "lexical+facts" | "e5+facts";
+  engine: "lexical+facts" | "tfidf+facts" | "e5+facts";
   revision: number;
 }
 export interface Account {

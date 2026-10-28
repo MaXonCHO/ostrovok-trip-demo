@@ -1,0 +1,119 @@
+{
+  "id": "109828",
+  "slug": "chto-poprobovat-v-peterburge",
+  "title": "7 легендарных блюд, которые нужно попробовать в Санкт-Петербурге",
+  "url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+  "date_published": "2024-08-23",
+  "date_published_raw": "2024-08-23T20:00:55+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Екатерина Борисова",
+  "category": "food",
+  "category_label": "Еда и рестораны",
+  "summary": "Знакомство с характерными для Петербурга блюдами и гастрономическими традициями. Подойдёт как отправная точка для собственного списка вкусов, которые хочется попробовать в поездке.",
+  "tags": [
+    "местная кухня",
+    "блюда"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+    "category": "food",
+    "summary": "Знакомство с характерными для Петербурга блюдами и гастрономическими традициями. Подойдёт как отправная точка для собственного списка вкусов, которые хочется попробовать в поездке.",
+    "tags": [
+      "местная кухня",
+      "блюда"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:04:35.327115+00:00",
+  "available_images": 9,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "4cb9fe4d7614818f0305e256cac20c71b3d5deb02569d45c711a1600e61a8fe3",
+      "bytes": 72872,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/chto-poprobovat-v-peterburge/images/01_4cb9fe4d7614818f.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/Frame-2087325717-4-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "68268e6bffe9a512e5a32d8c14e2af07c2a347164f70aa97fbfbede2f130e6fc",
+      "bytes": 362116,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/chto-poprobovat-v-peterburge/images/02_68268e6bffe9a512.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/1копия-14.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Иллюстрация раздела: Где попробовать вкусную шаверму",
+      "caption_origin": "article_section_context",
+      "credit": "Baturina Yuliya / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "dbedad6f29ce323e0d5adf219e9b2fd691e6bff9814d6586929351a75430cda5",
+      "bytes": 327978,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/chto-poprobovat-v-peterburge/images/03_dbedad6f29ce323e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/2копия-14.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Иллюстрация раздела: Где попробовать корюшку",
+      "caption_origin": "article_section_context",
+      "credit": "Lenasirena / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "4594ca1e146ba2d7d9d135716777c6486b418fd7c81c48173f439ac477e6fd4d",
+      "bytes": 213844,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/chto-poprobovat-v-peterburge/images/04_4594ca1e146ba2d7.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/3копия-14.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Иллюстрация раздела: Где попробовать миног",
+      "caption_origin": "article_section_context",
+      "credit": "Andrey Starostin / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c2a6a8af3e82e60302183b39f5bc508d3a7fbad3311838b5cc7c473fe61ed44d",
+      "bytes": 162498,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/chto-poprobovat-v-peterburge/images/05_c2a6a8af3e82e603.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/4копия-14.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Иллюстрация раздела: Где попробовать рассольник",
+      "caption_origin": "article_section_context",
+      "credit": "Яндекс.Еда & rectoclub.ru / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "53ad84128845f23482d39b37daff13053e4410f212fc061c9719a16746fd013b",
+      "bytes": 119678,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/chto-poprobovat-v-peterburge/images/06_53ad84128845f234.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2024/08/5копия-13.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-poprobovat-v-peterburge/",
+      "caption": "Иллюстрация раздела: Где попробовать пышки",
+      "caption_origin": "article_section_context",
+      "credit": "Dusya Kan / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

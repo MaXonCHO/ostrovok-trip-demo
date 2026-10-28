@@ -1,0 +1,117 @@
+/* Match the main page's 1380px grid and real PT Root UI / Spoof roles.
+   This layer changes alignment and typography only, not the curtain geometry. */
+.ov .ov-blog-hero-inner,
+.ov .ov-blog-collection-sheet .ov-container,
+.ov .ov-blog-related-scene .ov-container,
+.ov .ov-journal-content > .ov-journal-results.ov-container,
+.ov .ov-journal-article {
+  width: 100%;
+  max-width: 1380px;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+.ov .ov-blog-hero h1,
+.ov .ov-journal-article-heading h1 {
+  font-family: var(--ov-font-display);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.08333;
+  letter-spacing: -0.015em;
+}
+.ov .ov-blog-collection-sheet header h2,
+.ov .ov-blog-related-title,
+.ov .ov-journal-gallery h2,
+.ov .ov-journal-related > h2 {
+  font-family: var(--ov-font-display);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.015em;
+}
+.ov .ov-blog-collection-sheet header p {
+  font-family: var(--ov-font-body);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.ov .ov-journal-article .ov-journal-intro,
+.ov .ov-journal-article .ov-journal-body {
+  margin-inline: 0 auto;
+}
+.ov .ov-journal-intro > p:first-child {
+  font-family: var(--ov-font-body);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.ov .ov-journal-body {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-body);
+  font-weight: 400;
+  line-height: 1.65;
+}
+.ov .ov-journal-body h2 {
+  font-family: var(--ov-font-display);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.ov .ov-journal-body h3,
+.ov .ov-journal-card h3 {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-card-title);
+  font-weight: 700;
+  line-height: 22px;
+}
+.ov .ov-journal-body h4 {
+  font-family: var(--ov-font-body);
+  font-size: var(--ov-type-body);
+  font-weight: 700;
+  line-height: 1.4;
+}
+@media (min-width: 681px) and (max-width: 1074px) {
+  .ov .ov-blog-hero-inner,
+  .ov .ov-blog-collection-sheet .ov-container,
+  .ov .ov-blog-related-scene .ov-container,
+  .ov .ov-journal-content > .ov-journal-results.ov-container,
+  .ov .ov-journal-article {
+    padding-inline: 32px;
+  }
+}
+@media (max-width: 680px) {
+  .ov .ov-blog-hero-inner,
+  .ov .ov-blog-collection-sheet .ov-container,
+  .ov .ov-blog-related-scene .ov-container,
+  .ov .ov-journal-content > .ov-journal-results.ov-container,
+  .ov .ov-journal-article {
+    padding-inline: 16px;
+  }
+}
+@media (max-width: 640px) {
+  .ov .ov-blog-hero h1,
+  .ov .ov-journal-article-heading h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+  .ov .ov-blog-collection-sheet header h2,
+  .ov .ov-blog-related-title,
+  .ov .ov-journal-gallery h2,
+  .ov .ov-journal-related > h2 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .ov .ov-blog-collection-sheet header p,
+  .ov .ov-journal-intro > p:first-child {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .ov .ov-journal-body h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) and (max-height: 700px) {
+  .ov .ov-blog-hero h1 {
+    font-size: 28px;
+    line-height: 1.08;
+  }
+}

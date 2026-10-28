@@ -1,0 +1,121 @@
+{
+  "id": "159829",
+  "slug": "belye-nochi-v-pitere",
+  "title": "Белые ночи в Петербурге: идеи для тех, кто хочет получить максимум кайфа",
+  "url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+  "date_published": "2026-06-11",
+  "date_published_raw": "2026-06-11T20:00:09+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Диана Акчурина",
+  "category": "seasonal",
+  "category_label": "Сезонные идеи",
+  "summary": "Идеи прогулок и досуга во время белых ночей. Материал помогает собрать вечернюю и ночную программу с учётом особого летнего ритма города.",
+  "tags": [
+    "белые ночи",
+    "лето",
+    "вечерние прогулки"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+    "category": "seasonal",
+    "summary": "Идеи прогулок и досуга во время белых ночей. Материал помогает собрать вечернюю и ночную программу с учётом особого летнего ритма города.",
+    "tags": [
+      "белые ночи",
+      "лето",
+      "вечерние прогулки"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=1"
+  },
+  "collected_at": "2026-10-28T10:08:16.019636+00:00",
+  "available_images": 10,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "d2a4943fe6592d33e25a4691dd7b21a24733502a0a933b67d45185580187dda3",
+      "bytes": 68054,
+      "width": 1280,
+      "height": 521,
+      "path": "articles/belye-nochi-v-pitere/images/01_d2a4943fe6592d33.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/Куда-сходить-в-питере-1280x521.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "0c96f8ed5a28facab4e4293b47205a2a4e5b144cf127c14f44440864ce04128f",
+      "bytes": 139298,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/belye-nochi-v-pitere/images/02_0c96f8ed5a28faca.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/1копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Иллюстрация раздела: Посмотреть развод мостов с теплохода",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "97439450aa4d9c07f5f19207392bb73360f3510f93bb44717ccefa12e5a69257",
+      "bytes": 173186,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/belye-nochi-v-pitere/images/03_97439450aa4d9c07.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/2копия-8.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Иллюстрация раздела: Устроить забег по барам",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "feb66a02d8d9bdf0e9ecfae61705808bfd148ca390dd070f211e18564b376f47",
+      "bytes": 165218,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/belye-nochi-v-pitere/images/04_feb66a02d8d9bdf0.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/3копия-7.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Иллюстрация раздела: Посетить кинопоказ под открытым небом",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "ad6ddff2bff2f8097d80b13f20646587ae7e26d71bc1d3144fa04c79427ca135",
+      "bytes": 129600,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/belye-nochi-v-pitere/images/05_ad6ddff2bff2f809.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/4копия-7.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Иллюстрация раздела: Полюбоваться закатом на пляжах Финского залива",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "449ab2f33f5bbdc512c3e0e32c7b900af9275e29f9b5c807c688cc93d85592c1",
+      "bytes": 196572,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/belye-nochi-v-pitere/images/06_449ab2f33f5bbdc5.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/06/5копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/belye-nochi-v-pitere/",
+      "caption": "Иллюстрация раздела: Поесть на уличной террасе или на крыше",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

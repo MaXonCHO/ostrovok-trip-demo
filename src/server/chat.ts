@@ -4,6 +4,7 @@ import { createWorkspace, tripRow } from "./workspaces";
 import { rankHotels } from "./recommendations";
 import { plannerAgent } from "./planner-agent";
 import { HttpError } from "./http";
+import { inferredReadingExpectations } from "./reading-interests";
 import type {
   Account,
   Expectations,
@@ -83,7 +84,11 @@ export async function chatCommand(
       messages,
       profile,
       expectations,
-      rankHotels(profile, expectations, row.revision),
+      rankHotels(
+        profile,
+        inferredReadingExpectations(user, expectations),
+        row.revision,
+      ),
       signal,
     );
     const changed =
@@ -96,7 +101,7 @@ export async function chatCommand(
       tripVersion: row.version + 1,
       selection: rankHotels(
         result.reply.profile,
-        result.expectations,
+        inferredReadingExpectations(user, result.expectations),
         revision,
       ),
     };

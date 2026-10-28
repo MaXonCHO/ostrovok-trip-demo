@@ -16,6 +16,7 @@ import { defaults, type SearchState } from "./search-state";
 import { Modal, SearchForm } from "./shared";
 import { useSpeechInput } from "./use-speech-input";
 import { navigateToTrip } from "./trip-navigation";
+import { blogDraftKey, blogInterestEvent } from "@/features/blog/articles";
 
 const examples = [
   "Выходные в Петербурге",
@@ -34,6 +35,15 @@ export function TravelPrompt() {
   const input = useRef<HTMLInputElement>(null);
   const filterTitle = useRef<HTMLHeadingElement>(null);
   const speech = useSpeechInput(wish, setWish);
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      try {
+        localStorage.setItem(blogDraftKey, wish.slice(0, 3000));
+        window.dispatchEvent(new Event(blogInterestEvent));
+      } catch {}
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, [wish]);
   const changeMode = (open: boolean) => {
     setFiltersOpen(open);
   };
@@ -53,6 +63,7 @@ export function TravelPrompt() {
       window.requestAnimationFrame(focusRequest);
     };
     window.addEventListener("ov:focus-request", focus);
+    if (window.location.hash === "#trip-request-heading") focus();
     return () => window.removeEventListener("ov:focus-request", focus);
   }, []);
   useEffect(() => {
@@ -75,7 +86,7 @@ export function TravelPrompt() {
     });
     params.set("source", filtersOpen ? "filters" : "wish");
     params.set(
-      "trip",
+      "new",
       globalThis.crypto?.randomUUID?.() ||
         `${Date.now()}-${Math.random().toString(36).slice(2)}`,
     );

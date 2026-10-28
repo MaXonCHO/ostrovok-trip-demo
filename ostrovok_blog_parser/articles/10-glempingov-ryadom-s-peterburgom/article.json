@@ -1,0 +1,119 @@
+{
+  "id": "127165",
+  "slug": "10-glempingov-ryadom-s-peterburgom",
+  "title": "10 глэмпингов рядом с Петербургом: где можно отдохнуть в Ленинградской области",
+  "url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+  "date_published": "2025-06-05",
+  "date_published_raw": "2025-06-05T20:00:32+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Ксения Сёмкина",
+  "category": "nature",
+  "category_label": "Природа и загородный отдых",
+  "summary": "Варианты размещения на природе неподалёку от Петербурга. Материал для планирования отдыха вне города с более комфортным форматом ночёвки, чем обычная палатка.",
+  "tags": [
+    "глэмпинги",
+    "загородный отдых"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+    "category": "nature",
+    "summary": "Варианты размещения на природе неподалёку от Петербурга. Материал для планирования отдыха вне города с более комфортным форматом ночёвки, чем обычная палатка.",
+    "tags": [
+      "глэмпинги",
+      "загородный отдых"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:05:43.984331+00:00",
+  "available_images": 14,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "6d800dd174b523478db426ccc2cb3c81a23628a7747573acef64dfaa61acd562",
+      "bytes": 174070,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/01_6d800dd174b52347.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/Frame-2087325717-1-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "354bc479470bdcf80d1216de0c937c0e2670f97e17ff94a6560289a7b237dfbb",
+      "bytes": 314094,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/02_354bc479470bdcf8.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/1копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Иллюстрация раздела: Vuoksa Camp",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "f662244b300fe8c4788c1f98a186c9461f15cf55e10f26cfec81240eabd48d46",
+      "bytes": 471714,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/03_f662244b300fe8c4.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/2копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Иллюстрация раздела: Forest Lake",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "13d1a98da86930c7eb9301f73f2fe22f25419d86149f9738e99d3eee40046743",
+      "bytes": 428256,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/04_13d1a98da86930c7.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/4копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Иллюстрация раздела: «Майтри кэмп»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "51d3bfd025ce1c732e8b7bf1d0f690837f2bbd81a5ead1ba67b89c99737681cd",
+      "bytes": 232940,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/05_51d3bfd025ce1c73.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/6копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Иллюстрация раздела: «Веззика»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "f3ae3bfc63bf6ddbf06280b51bd0080aaebbd20fa84f69495466b7bf02ca4f74",
+      "bytes": 160418,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-glempingov-ryadom-s-peterburgom/images/06_f3ae3bfc63bf6ddb.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/06/7копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-glempingov-ryadom-s-peterburgom/",
+      "caption": "Иллюстрация раздела: «Выборг Бэй»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

@@ -1,6 +1,7 @@
 import { randomUUID, randomBytes, createHash } from "node:crypto";
 import { database, transaction } from "./database";
 import { rankHotels, labels } from "./recommendations";
+import { inferredReadingExpectations } from "./reading-interests";
 import { HttpError } from "./http";
 import type {
   Account,
@@ -89,13 +90,22 @@ export function workspace(
     context: JSON.parse(row.context_json),
     profile,
     expectations,
-    selection: rankHotels(profile, expectations, row.revision),
+    selection: rankHotels(
+      profile,
+      row.status === "draft"
+        ? inferredReadingExpectations(
+            { ...user, id: row.owner_id },
+            expectations,
+          )
+        : expectations,
+      row.revision,
+    ),
     messages: db
       .prepare(
         "SELECT role,content FROM trip_messages WHERE trip_id=? AND user_id=? ORDER BY id",
       )
       .all(row.id, user.id) as unknown as TripChatMessage[],
-    includeUnverified: !!row.include_unverified,
+    includeUnverified: true,
     members: db
       .prepare(
         "SELECT users.id,users.name,trip_members.role FROM trip_members JOIN users ON users.id=trip_members.user_id WHERE trip_id=? ORDER BY joined_at",
@@ -143,10 +153,7 @@ export function selectedOptions(row: TripRow, selection?: Selection) {
       JSON.parse(row.expectations_json),
       row.revision,
     );
-  return [...s.results, ...(row.include_unverified ? s.needsCheck : [])].slice(
-    0,
-    5,
-  );
+  return [...s.results, ...s.needsCheck].slice(0, 5);
 }
 export function mutateWorkspace(
   id: string,
@@ -183,8 +190,15 @@ export function mutateWorkspace(
           "Сначала уточните город, даты, бюджет и состав участников.",
         );
       db.prepare(
-        "UPDATE trips SET status='profile',include_unverified=?,updated_at=? WHERE id=?",
-      ).run(command.includeUnverified === true ? 1 : 0, timestamp(), id);
+        "UPDATE trips SET status='profile',expectations_json=?,include_unverified=?,updated_at=? WHERE id=?",
+      ).run(
+        JSON.stringify(
+          inferredReadingExpectations(user, JSON.parse(row.expectations_json)),
+        ),
+        1,
+        timestamp(),
+        id,
+      );
     } else if (type === "invite") {
       if (!user.authenticated)
         throw new HttpError(401, "Войдите для приглашения спутников.");

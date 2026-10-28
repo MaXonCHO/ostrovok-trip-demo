@@ -1,0 +1,119 @@
+{
+  "id": "129824",
+  "slug": "dostoprimechatelnosti-sankt-peterburga",
+  "title": "Достопримечательности Петербурга: открываем с нового ракурса",
+  "url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+  "date_published": "2025-07-15",
+  "date_published_raw": "2025-07-15T20:00:03+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Диана Акчурина",
+  "category": "routes",
+  "category_label": "Маршруты и пригороды",
+  "summary": "Известные достопримечательности рассматриваются через дополнительные детали и менее очевидные ракурсы. Подборка для тех, кто хочет вернуться к знакомым местам с новым маршрутом.",
+  "tags": [
+    "достопримечательности",
+    "прогулки"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+    "category": "routes",
+    "summary": "Известные достопримечательности рассматриваются через дополнительные детали и менее очевидные ракурсы. Подборка для тех, кто хочет вернуться к знакомым местам с новым маршрутом.",
+    "tags": [
+      "достопримечательности",
+      "прогулки"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:05:06.376006+00:00",
+  "available_images": 11,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "75cc8a85233e99083e98947ad0ee5c102cdab5c2c52b5d7423d0515ebc3e13ba",
+      "bytes": 96046,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/01_75cc8a85233e9908.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/Frame-2087325717-4-1280x520.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "1b3cf9d84db06734eb626fa2073bbeba15a11c0da8d1685d308147ab056d4b53",
+      "bytes": 415320,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/02_1b3cf9d84db06734.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/1копия-12.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Невский проспект",
+      "caption_origin": "article_section_context",
+      "credit": "Vladimir Kovalchuk / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c86fb8f1ea229c82ff1d75da34af176281ca3a12b682f8690907a6059c79d2d5",
+      "bytes": 298188,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/03_c86fb8f1ea229c82.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/2копия-10.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Эрмитаж",
+      "caption_origin": "article_section_context",
+      "credit": "tovovan / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "a65b059e06944beaeac3eb3c906f48d5a050910940894d81c5f2bc51c5640d8a",
+      "bytes": 510176,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/04_a65b059e06944bea.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/3копия-11.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Исаакиевский собор",
+      "caption_origin": "article_section_context",
+      "credit": "Baturina Yuliya / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c691250c2fbaf657739e6fae6fbd5a5866f1ca2d45c40a6b26636f304e783dc6",
+      "bytes": 311514,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/05_c691250c2fbaf657.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/4копия-12.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Казанский собор",
+      "caption_origin": "article_section_context",
+      "credit": "Ultraskrip / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "bfc64e16746f2d91ab76cc7ef8eb7dd18df02f26db8ace95990fe57ec2519c95",
+      "bytes": 376152,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/dostoprimechatelnosti-sankt-peterburga/images/06_bfc64e16746f2d91.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/07/5копия-10.jpg",
+      "source_url": "https://blog.ostrovok.ru/dostoprimechatelnosti-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Петропавловская крепость",
+      "caption_origin": "article_section_context",
+      "credit": "Stanislav Samoylik / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

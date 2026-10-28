@@ -23,7 +23,8 @@ interface AuthState {
 const Context = createContext<AuthState | null>(null);
 let initialRequest: Promise<{ user: Account; favorites: string[] }> | null =
   null;
-export function ensureAccount() {
+export function ensureAccount(refresh = false) {
+  if (refresh) initialRequest = null;
   return (initialRequest ??= fetch("/api/planner/auth/session", {
     cache: "no-store",
   })

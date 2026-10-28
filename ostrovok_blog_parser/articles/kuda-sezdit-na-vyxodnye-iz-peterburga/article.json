@@ -1,0 +1,119 @@
+{
+  "id": "121995",
+  "slug": "kuda-sezdit-na-vyxodnye-iz-peterburga",
+  "title": "Куда съездить на выходные из Петербурга: 6 идей для коротких поездок",
+  "url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+  "date_published": "2025-03-21",
+  "date_published_raw": "2025-03-21T20:00:16+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Диана Акчурина",
+  "category": "routes",
+  "category_label": "Маршруты и пригороды",
+  "summary": "Несколько направлений для короткой поездки из Петербурга. Идеи для расширения городского путешествия и смены обстановки на один или несколько дней.",
+  "tags": [
+    "выходные",
+    "поездки из города"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+    "category": "routes",
+    "summary": "Несколько направлений для короткой поездки из Петербурга. Идеи для расширения городского путешествия и смены обстановки на один или несколько дней.",
+    "tags": [
+      "выходные",
+      "поездки из города"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=3"
+  },
+  "collected_at": "2026-10-28T10:05:26.877714+00:00",
+  "available_images": 13,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "52b4ef7f2016c280fd1e3d6f9217c3e1ea9d83894ebc48bc13bed70cd3270bac",
+      "bytes": 103382,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/01_52b4ef7f2016c280.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/Frame-2087325718-2-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "670186e6752be3e416b3701461104597ed040dfbddd1ab7c42f16d8dba218f03",
+      "bytes": 272936,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/02_670186e6752be3e4.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/1копия-15.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Иллюстрация раздела: Выборг: финское прошлое и парк «Монрепо»",
+      "caption_origin": "article_section_context",
+      "credit": "Michaelvbg / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "5420fd3053ddb33e7c58e4c60b45cd0bba14db4cf11f36ddcd4e36a51d4c3788",
+      "bytes": 73836,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/03_5420fd3053ddb33e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/1копия-23.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Иллюстрация раздела: Где остановиться",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "e8f55a09865accc594515a55bbfb71c72288c3c17165d7558433ce6a63177bef",
+      "bytes": 131340,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/04_e8f55a09865accc5.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/3копия-15.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Иллюстрация раздела: Приозерск: кристальные озёра и крепость Корела",
+      "caption_origin": "article_section_context",
+      "credit": "Yulia_B / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "d92ef35dae73fd22e5140808ca9106b8f6cc59ac38d1c02cb733de3b1264186b",
+      "bytes": 375688,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/05_d92ef35dae73fd22.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/5копия-13.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Иллюстрация раздела: Сортавала: уголок финской архитектуры и знаменитый мраморный каньон",
+      "caption_origin": "article_section_context",
+      "credit": "Elenglush / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "203f2eddd87c17e2832c1d40049943f53c5cfef7130584143c99b0455ab9117f",
+      "bytes": 317302,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/kuda-sezdit-na-vyxodnye-iz-peterburga/images/06_203f2eddd87c17e2.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/03/7копия-11.jpg",
+      "source_url": "https://blog.ostrovok.ru/kuda-sezdit-na-vyxodnye-iz-peterburga/",
+      "caption": "Иллюстрация раздела: Великий Новгород: город-музей Древней Руси",
+      "caption_origin": "article_section_context",
+      "credit": "E. O. / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

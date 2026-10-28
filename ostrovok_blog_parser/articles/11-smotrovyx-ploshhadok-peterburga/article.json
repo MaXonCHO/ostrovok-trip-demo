@@ -1,0 +1,119 @@
+{
+  "id": "125692",
+  "slug": "11-smotrovyx-ploshhadok-peterburga",
+  "title": "Сверху видно всё: 11 смотровых площадок Петербурга",
+  "url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+  "date_published": "2025-05-16",
+  "date_published_raw": "2025-05-16T20:00:22+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Мария Назарова",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "Подборка точек, откуда можно увидеть город сверху. Разные виды смотровых площадок позволяют подобрать панорамный маршрут под интересы и формат поездки.",
+  "tags": [
+    "панорамы",
+    "смотровые площадки"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+    "category": "unusual",
+    "summary": "Подборка точек, откуда можно увидеть город сверху. Разные виды смотровых площадок позволяют подобрать панорамный маршрут под интересы и формат поездки.",
+    "tags": [
+      "панорамы",
+      "смотровые площадки"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=3"
+  },
+  "collected_at": "2026-10-28T10:04:12.680453+00:00",
+  "available_images": 11,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "4a2bbd72fa63a8665f7d191fdb9fec7e7ea3984e8d0192f434e5c7279bef72de",
+      "bytes": 180894,
+      "width": 1280,
+      "height": 520,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/01_4a2bbd72fa63a866.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/Frame-2087325717-1-1280x520.png",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c120689b455c572c8b024c4c7d97a195e5b79a00ae21cdaf6cdfdc0e16ac92f3",
+      "bytes": 319682,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/02_c120689b455c572c.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/1копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Иллюстрация раздела: «Лахта-центр»",
+      "caption_origin": "article_section_context",
+      "credit": "Michaelvbg / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "e89698c8a147d3454433b262ae2ab95cfb56467cafd0e96a772ec698fad0fa70",
+      "bytes": 448804,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/03_e89698c8a147d345.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/2копия-6.jpg",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Иллюстрация раздела: Колоннада Исаакиевского собора",
+      "caption_origin": "article_section_context",
+      "credit": "Julia Moiseenko / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "264b27cfd5b1c40f1dd7cdc7131e3b0c337133c818c8680a15080f16d507abd7",
+      "bytes": 252292,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/04_264b27cfd5b1c40f.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/3копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Иллюстрация раздела: Думская башня",
+      "caption_origin": "article_section_context",
+      "credit": "Baturina Yuliya / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "6ea065f6cb85a37be22a7236aa4aeb51c1a13925e4c9692882549552a13085a4",
+      "bytes": 297078,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/05_6ea065f6cb85a37b.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/4копия-5.jpg",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Иллюстрация раздела: Колокольня Владимирского собора",
+      "caption_origin": "article_section_context",
+      "credit": "Telia / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "e66206b91597e0ec22bf8530ead22a79490cb77175466ba27c6ade5099c3b86a",
+      "bytes": 366194,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/11-smotrovyx-ploshhadok-peterburga/images/06_e66206b91597e0ec.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2025/05/5копия-5.jpg",
+      "source_url": "https://blog.ostrovok.ru/11-smotrovyx-ploshhadok-peterburga/",
+      "caption": "Иллюстрация раздела: Колоннада Казанского собора",
+      "caption_origin": "article_section_context",
+      "credit": "Ultraskrip / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

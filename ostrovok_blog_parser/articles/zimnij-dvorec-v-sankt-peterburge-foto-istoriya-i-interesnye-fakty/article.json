@@ -1,0 +1,121 @@
+{
+  "id": "57210",
+  "slug": "zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty",
+  "title": "Зимний дворец в Санкт-Петербурге",
+  "url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+  "date_published": "2020-07-28",
+  "date_published_raw": "2020-07-28T20:00:41+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Ольга Каширина",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "Исторический материал о Зимнем дворце: устройство здания, связанные с ним события и интересные детали. Вариант для подготовки к знакомству с дворцовой частью города.",
+  "tags": [
+    "дворец",
+    "история",
+    "архитектура"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+    "category": "unusual",
+    "summary": "Исторический материал о Зимнем дворце: устройство здания, связанные с ним события и интересные детали. Вариант для подготовки к знакомству с дворцовой частью города.",
+    "tags": [
+      "дворец",
+      "история",
+      "архитектура"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=4"
+  },
+  "collected_at": "2026-10-28T10:04:03.209668+00:00",
+  "available_images": 10,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "5d6e39d85e8beb9a9a1f1eec6b0399fb0cd804dfe8da3c5a3639b4da638f777b",
+      "bytes": 108686,
+      "width": 900,
+      "height": 393,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/01_5d6e39d85e8beb9a.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_main.png",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "01c83cc383f1ae436c7d061466f3b0ff7a38ab93b2c59187095a7fa0983d3b31",
+      "bytes": 184868,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/02_01c83cc383f1ae43.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_9.jpg",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Иллюстрация раздела: Как попасть внутрь Зимнего дворца",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "012368f68b02da157da6baefbd360dce05968452f24860c9dc1b80239995ec77",
+      "bytes": 135530,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/03_012368f68b02da15.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_10.jpg",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Иллюстрация раздела: XX век",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "9c2b9e31d0ce1b83aedc82cc11cbe2ce6a76bcf43b0c3a4f9d37f0859c8bc5a0",
+      "bytes": 306776,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/04_9c2b9e31d0ce1b83.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_7.jpg",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Иллюстрация раздела: Иорданская лестница",
+      "caption_origin": "article_section_context",
+      "credit": "Marco Rubino / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "a3378200f6a675d48e3c7514f7fab8ef712e4ef2510d1052ce63aff608a83f92",
+      "bytes": 288902,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/05_a3378200f6a675d4.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_4.jpg",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Иллюстрация раздела: Петровский зал",
+      "caption_origin": "article_section_context",
+      "credit": "vserg48 / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "8463598e54300502b885cab9472e0976018c9c5b7493face65568e90304a4e4e",
+      "bytes": 214510,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/images/06_8463598e54300502.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/07/palace_6.jpg",
+      "source_url": "https://blog.ostrovok.ru/zimnij-dvorec-v-sankt-peterburge-foto-istoriya-i-interesnye-fakty/",
+      "caption": "Иллюстрация раздела: Лоджии Рафаэля",
+      "caption_origin": "article_section_context",
+      "credit": "Arthit Kaeoratanapattama / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

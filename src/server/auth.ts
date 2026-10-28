@@ -2,6 +2,7 @@ import { randomBytes, randomUUID, createHash } from "node:crypto";
 import { cookies } from "next/headers";
 import { database, transaction } from "./database";
 import { HttpError } from "./http";
+import { mergeReadingInterests } from "./reading-interests";
 import type { Account } from "@/features/planner/types";
 const cookie = "ostrovok_account";
 const digest = (s: string) => createHash("sha256").update(s).digest("hex");
@@ -131,6 +132,7 @@ export async function verifyCode(
       );
     }
     if (previous && !previous.authenticated) {
+      mergeReadingInterests(previous.id, user!.id);
       const trips = db
         .prepare("SELECT id FROM trips WHERE owner_id=?")
         .all(previous.id) as { id: string }[];

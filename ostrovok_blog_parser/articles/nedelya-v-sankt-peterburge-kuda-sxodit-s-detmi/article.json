@@ -1,0 +1,119 @@
+{
+  "id": "53537",
+  "slug": "nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi",
+  "title": "Неделя в Санкт-Петербурге: куда сходить с детьми",
+  "url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+  "date_published": "2020-03-12",
+  "date_published_raw": "2020-03-12T20:00:37+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Света Савина",
+  "category": "family",
+  "category_label": "С детьми",
+  "summary": "Варианты семейной культурной программы на несколько дней. Материал помогает распределить детские активности по поездке и сочетать разные виды городского досуга.",
+  "tags": [
+    "с детьми",
+    "семейный отдых"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+    "category": "family",
+    "summary": "Варианты семейной культурной программы на несколько дней. Материал помогает распределить детские активности по поездке и сочетать разные виды городского досуга.",
+    "tags": [
+      "с детьми",
+      "семейный отдых"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=4"
+  },
+  "collected_at": "2026-10-28T10:07:42.424477+00:00",
+  "available_images": 15,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "56f7f0de08f336d01d324ff5e35aa6890605e1cc43ab2608b7c733d1bc1ce8dc",
+      "bytes": 166526,
+      "width": 1100,
+      "height": 482,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/01_56f7f0de08f336d0.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/ostrovok-filters-4-10.4789-1.jpg",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "c9c469ee29ee0ab2a6973df686334b3568069de5274f38bd61f6a0fd7558b05f",
+      "bytes": 220260,
+      "width": 1600,
+      "height": 1064,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/02_c9c469ee29ee0ab2.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/piter_1.png",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Иллюстрация раздела: Музей рекордов и фактов «ТИТИКАКА»",
+      "caption_origin": "article_section_context",
+      "credit": "Света Савина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "2cd64a924522a812743c6a11a6c0214aacb7efa3ec11485625e5048794d7442d",
+      "bytes": 382042,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/03_2cd64a924522a812.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/piter_9.jpg",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Иллюстрация раздела: Михайловский сад",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "131f8c07f8d81bfaca9d72b3a5b96ee5949ef2042ddee3517b16f87313d1f48f",
+      "bytes": 530658,
+      "width": 1600,
+      "height": 1064,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/04_131f8c07f8d81bfa.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/piter_2.png",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Иллюстрация раздела: Новая Голландия",
+      "caption_origin": "article_section_context",
+      "credit": "Света Савина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "dd9fdef7cb0eb63fb48fa678d99679c2f45c3e616f7d34072b029338a7579438",
+      "bytes": 179514,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/05_dd9fdef7cb0eb63f.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/piter_12.jpg",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Иллюстрация раздела: Парк аттракционов «Диво Остров»",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "7130621a44bdd3536eea890e5d0dcdb896f95fe229662d942d4062853ed8f7cf",
+      "bytes": 226314,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/images/06_7130621a44bdd353.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2020/03/piter_8.jpg",
+      "source_url": "https://blog.ostrovok.ru/nedelya-v-sankt-peterburge-kuda-sxodit-s-detmi/",
+      "caption": "Иллюстрация раздела: Центральный парк культуры и отдыха им. Кирова",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

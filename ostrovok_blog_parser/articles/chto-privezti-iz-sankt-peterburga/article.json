@@ -1,0 +1,107 @@
+{
+  "id": "166028",
+  "slug": "chto-privezti-iz-sankt-peterburga",
+  "title": "От фарфора до сладостей: какие сувениры привезти из Петербурга",
+  "url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+  "date_published": "2026-10-23",
+  "date_published_raw": "2026-10-23T20:00:58+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "Диана Акчурина",
+  "category": "tips",
+  "category_label": "Практические советы",
+  "summary": "Идеи сувениров и подарков из Петербурга: разные варианты памятных покупок и локальных вещей. Полезно для составления списка покупок перед отъездом.",
+  "tags": [
+    "сувениры",
+    "подарки",
+    "покупки"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+    "category": "tips",
+    "summary": "Идеи сувениров и подарков из Петербурга: разные варианты памятных покупок и локальных вещей. Полезно для составления списка покупок перед отъездом.",
+    "tags": [
+      "сувениры",
+      "подарки",
+      "покупки"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=1"
+  },
+  "collected_at": "2026-10-28T10:07:32.898311+00:00",
+  "available_images": 5,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "c05d1662d1320413fc8d780e13c1c779a8d26c566f7d038504749a1cb0bef0dd",
+      "bytes": 55774,
+      "width": 1280,
+      "height": 521,
+      "path": "articles/chto-privezti-iz-sankt-peterburga/images/01_c05d1662d1320413.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/b2c-7-1280x521.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "00c0d018359bfe6960d092c43053571176bda59a30149de7b85549a87d11a0f1",
+      "bytes": 207206,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/chto-privezti-iz-sankt-peterburga/images/02_00c0d018359bfe69.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/1kk.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Что вкусного привезти из Петербурга",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "06689d371c93b85975da814eff3455927e2f5aa94183dc993dd187aeea1ff4eb",
+      "bytes": 233336,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/chto-privezti-iz-sankt-peterburga/images/03_06689d371c93b859.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/2kk.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Что необычного взять в Петербурге",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "5a5dd806a4206ca360664ec5524138daae5fc9b41163835816c308c0cbca0324",
+      "bytes": 143600,
+      "width": 1080,
+      "height": 718,
+      "path": "articles/chto-privezti-iz-sankt-peterburga/images/04_5a5dd806a4206ca3.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/3kk.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Что купить в подарок близким",
+      "caption_origin": "article_section_context",
+      "credit": "Диана Акчурина",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "8473ce4e83b6b257d3fdf356ce001b821c6c08b79dec36542129e2100e5422cc",
+      "bytes": 227058,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/chto-privezti-iz-sankt-peterburga/images/05_8473ce4e83b6b257.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2026/10/4k-2-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/chto-privezti-iz-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Где остановиться",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": []
+}

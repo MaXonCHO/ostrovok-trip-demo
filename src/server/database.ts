@@ -2,7 +2,12 @@ import { DatabaseSync } from "node:sqlite";
 import { mkdirSync, chmodSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { createHash } from "node:crypto";
-import source from "../../data/embedding/hotels_catalog.json";
+import source from "../../data/final/catalog.json";
+import {
+  finalHotelGallery,
+  finalHotelMedia,
+  finalCatalogImport,
+} from "./final-catalog";
 import media from "@/data/fixtures/real-hotels.json";
 import type { CatalogRecord } from "@/features/planner/types";
 import type { Hotel } from "@/features/ostrovok/catalog";
@@ -10,7 +15,13 @@ const shared = globalThis as typeof globalThis & {
   __plannerDatabases?: Map<string, DatabaseSync>;
 };
 export const catalogVersion = createHash("sha256")
-  .update(JSON.stringify(source))
+  .update(
+    JSON.stringify({
+      source,
+      photos: finalCatalogImport.publishedFiles,
+      version: "final-v1",
+    }),
+  )
   .digest("hex");
 export function database() {
   const file =
@@ -73,6 +84,9 @@ export function database() {
       db.prepare(
         "INSERT INTO catalog_meta VALUES('source_name','ostrovok_embedding_mvp.zip') ON CONFLICT(key) DO UPDATE SET value=excluded.value",
       ).run();
+      db.prepare(
+        "INSERT INTO catalog_meta VALUES('media_source','ostrovok_mvp_FINAL_frontend.zip') ON CONFLICT(key) DO UPDATE SET value=excluded.value",
+      ).run();
       db.exec("COMMIT");
     } catch (e) {
       db.exec("ROLLBACK");
@@ -104,8 +118,11 @@ export function catalogRecords(): CatalogRecord[] {
   ).map((r) => JSON.parse(r.record_json));
 }
 export function catalogHotel(record: CatalogRecord): Hotel {
-  const photos =
-    record.hotel_id === "kaggle_1507"
+  const importedPhotos = finalHotelGallery(record.hotel_id);
+  const photoEvidence = finalHotelMedia(record.hotel_id);
+  const photos = importedPhotos.length
+    ? importedPhotos
+    : record.hotel_id === "kaggle_1507"
       ? (media.find((h) => h.id === "spb-0")?.assets.map((p) => p.path) ?? [])
       : [];
   return {
@@ -117,11 +134,19 @@ export function catalogHotel(record: CatalogRecord): Hotel {
     name: record.name,
     city: "Санкт-Петербург",
     citySlug: "saint-petersburg",
-    address: "Санкт-Петербург · адрес требует проверки",
+    address: "Санкт-Петербург",
     stars: 0,
     photos,
+    photoEvidence: photoEvidence
+      ? {
+          sourceUrl: photoEvidence.sourceUrl,
+          matchStatus: photoEvidence.matchStatus,
+          confidence: photoEvidence.confidence,
+          license: photoEvidence.license,
+        }
+      : undefined,
     price: null,
-    distance: "Пешие маршруты не подтверждены",
+    distance: "",
     amenities: record.amenities_snapshot,
     description: record.description_snapshot,
     source: record.sources.hotel_listing,

@@ -1,0 +1,126 @@
+{
+  "id": "96105",
+  "slug": "besplatnyj-sankt-peterburg",
+  "title": "Бесплатный Санкт-Петербург: 11 необычных идей для культурного досуга",
+  "url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+  "date_published": "2023-12-08",
+  "date_published_raw": "2023-12-08T20:00:46+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "О! Редакция",
+  "category": "tips",
+  "category_label": "Практические советы",
+  "summary": "Идеи культурного досуга без обязательных расходов на входной билет. Подборка для бюджетного путешествия и поиска менее очевидных городских занятий.",
+  "tags": [
+    "бесплатно",
+    "экономия",
+    "культура"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+    "category": "tips",
+    "summary": "Идеи культурного досуга без обязательных расходов на входной билет. Подборка для бюджетного путешествия и поиска менее очевидных городских занятий.",
+    "tags": [
+      "бесплатно",
+      "экономия",
+      "культура"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=2"
+  },
+  "collected_at": "2026-10-28T10:07:25.138793+00:00",
+  "available_images": 8,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "e19cc3d173404bb51b4e9a6dd490819bd5e5e6ce17452cae15afe9284874c279",
+      "bytes": 114400,
+      "width": 1240,
+      "height": 480,
+      "path": "articles/besplatnyj-sankt-peterburg/images/01_e19cc3d173404bb5.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/обложка-2.png",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "3d8ddba6c0997c9add3c6f4b3a0adfb433675289af68314324a53490910145d8",
+      "bytes": 419072,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/besplatnyj-sankt-peterburg/images/02_3d8ddba6c0997c9a.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/1копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Иллюстрация раздела: Бесплатные пешеходные экскурсии",
+      "caption_origin": "article_section_context",
+      "credit": "bellena / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "ca0aa2d24f5c33da293d2294e4b500eb8b0abc91fb92e11f10c5720efdd88281",
+      "bytes": 137028,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/besplatnyj-sankt-peterburg/images/03_ca0aa2d24f5c33da.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/3копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Иллюстрация раздела: Театр-студия СПбГУ",
+      "caption_origin": "article_section_context",
+      "credit": "Театр-студия СПбГУ",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "04857c50d07b4f99dc325aad91eeb84f85de4746f117b21eb95c7da62e7dfa2f",
+      "bytes": 246914,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/besplatnyj-sankt-peterburg/images/04_04857c50d07b4f99.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/5копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Иллюстрация раздела: Горный музей",
+      "caption_origin": "article_section_context",
+      "credit": "Анастасия Литвинова / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "e7155a5a57b7c29209f10a82efd913b237a30957ff6f3582c0ff3bbf54d4df1f",
+      "bytes": 332226,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/besplatnyj-sankt-peterburg/images/05_e7155a5a57b7c292.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/7копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Иллюстрация раздела: Библиотека комиксов",
+      "caption_origin": "article_section_context",
+      "credit": "Каталогизатор / Яндекс.Карты",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "659e62023de49a605d8e94d7aec8fac9ab3fd3fbf86d9decc477e42fbd958677",
+      "bytes": 680002,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/besplatnyj-sankt-peterburg/images/06_659e62023de49a60.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/8копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/besplatnyj-sankt-peterburg/",
+      "caption": "Иллюстрация раздела: Прогулки по кладбищам",
+      "caption_origin": "article_section_context",
+      "credit": "Chatham172 / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://blog.ostrovok.ru/wp-content/uploads/2023/12/2копия-4.jpg",
+      "error": "HTTP Error 403: ранее получен запрет; повторный запрос не выполнялся"
+    }
+  ]
+}

@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ArrowRight, Plus, SignOut, Suitcase } from "@phosphor-icons/react";
 import { useAccount } from "./account-provider";
 export function AccountPage() {
+  const router = useRouter();
   const auth = useAccount();
   const [trips, setTrips] = useState<
     { id: string; title: string; status: string; updatedAt: string }[]
@@ -93,10 +95,14 @@ export function AccountPage() {
           </p>
         </div>
       )}
-      <Link href="/my-trip?new=1" className="ov-button">
+      <button
+        type="button"
+        className="ov-button"
+        onClick={() => router.push("/my-trip?new=" + crypto.randomUUID())}
+      >
         <Plus size={18} />
         Новая поездка
-      </Link>
+      </button>
     </div>
   );
 }

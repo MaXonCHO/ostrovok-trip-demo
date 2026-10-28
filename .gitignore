@@ -6,6 +6,8 @@ node_modules/
 !.env.example
 .tools/
 .data/
+data/incoming/
+ostrovok_mvp_FINAL_frontend.zip
 test-results/
 playwright-report/
 *.tsbuildinfo

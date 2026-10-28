@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { database, catalogVersion } from "@/server/database";
+import { finalCatalogImport } from "@/server/final-catalog";
 export const dynamic = "force-dynamic";
 export function GET() {
   try {
@@ -13,7 +14,9 @@ export function GET() {
       hotels: row.n,
       catalogVersion,
       hasCurrentPrices: false,
-      search: "lexical+facts",
+      search: "tfidf+facts",
+      photographedHotels: finalCatalogImport.photographedHotels,
+      readingPersonalization: true,
       agentConfigured: !!process.env.DEEPSEEK_API_KEY,
     });
   } catch {

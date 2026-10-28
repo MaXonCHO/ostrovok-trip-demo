@@ -1,0 +1,18 @@
+{
+  "articles": 25,
+  "photos": 129,
+  "categories": {
+    "unusual": 6,
+    "food": 4,
+    "routes": 3,
+    "nature": 3,
+    "housing": 3,
+    "tips": 2,
+    "family": 1,
+    "seasonal": 3
+  },
+  "articles_without_photos": [],
+  "missing_articles": [],
+  "earliest_publication": "2020-03-12",
+  "latest_publication": "2026-10-28"
+}

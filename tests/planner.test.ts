@@ -61,7 +61,7 @@ test("import is idempotent, preserves source uncertainty and survives reopening 
   );
   const hotels = catalogHotels();
   assert.ok(hotels.every((h) => h.price === null && !h.identityVerified));
-  assert.equal(hotels.filter((h) => h.photos.length).length, 1);
+  assert.equal(hotels.filter((h) => h.photos.length).length, 298);
   const other = new DatabaseSync(process.env.DATABASE_PATH!);
   assert.equal(other.prepare("SELECT count(*) AS n FROM hotels").get()!.n, 300);
   other.close();
@@ -111,9 +111,9 @@ test("unknown prices, brand names and unverified geography are never offered as 
   assert.ok(
     s.needsCheck
       .flatMap((h) => h.nearby)
-      .some((p) => p.method.includes("не восстанавливаются")),
+      .some((p) => p.method.includes("отсутствуют в каталоге")),
   );
-  assert.equal(s.engine, "lexical+facts");
+  assert.equal(s.engine, "tfidf+facts");
 });
 test("model cannot silently relax a hard requirement, and malformed dates or invented criteria fail", () => {
   const previous = emptyExpectations();

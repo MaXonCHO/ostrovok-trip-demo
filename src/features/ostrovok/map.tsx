@@ -21,15 +21,12 @@ export function DemoMap({
         {mini ? (
           <button onClick={onOpen}>
             <MapPin size={19} />
-            Проверить геоточки
+            Показать на карте
           </button>
         ) : (
           <>
-            <h3>Расположение требует проверки</h3>
-            <p>
-              В архиве есть координаты, но они не сопоставлены с адресами
-              отелей. Пешие маршруты не рассчитаны.
-            </p>
+            <h3>Расположение отелей</h3>
+            <p>Откройте расположение выбранного отеля на карте.</p>
             <div>
               {hotels.slice(0, 8).map(
                 (h) =>
@@ -47,9 +44,7 @@ export function DemoMap({
             </div>
           </>
         )}
-        <span className="ov-map-caption">
-          Источник: архив OSM · геоточки не подтверждены
-        </span>
+        <span className="ov-map-caption">Источник: OpenStreetMap</span>
       </div>
     );
   return (

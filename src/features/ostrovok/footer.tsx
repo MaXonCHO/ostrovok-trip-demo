@@ -22,7 +22,7 @@ const linkGroups = [
     links: [
       ["База знаний", "https://help.ostrovok.ru/ru"],
       ["Служба поддержки", "https://ostrovok.ru/feedback/"],
-      ["Блог о путешествиях", "https://blog.ostrovok.ru/?ref=footer"],
+      ["Блог о путешествиях", "/blog"],
       ["Популярные направления", "https://ostrovok.ru/hotel/"],
       ["Юридическая информация", "https://ostrovok.ru/about/legal/"],
       [
@@ -159,9 +159,17 @@ export function StorefrontFooter() {
                 <ul>
                   {group.links.map(([text, href]) => (
                     <li key={text}>
-                      <a href={href} target="_blank" rel="noopener noreferrer">
-                        {text}
-                      </a>
+                      {href.startsWith("/") ? (
+                        <Link href={href}>{text}</Link>
+                      ) : (
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {text}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>

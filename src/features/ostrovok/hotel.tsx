@@ -251,15 +251,15 @@ export function OstrovokHotel({
                       {hotel.roomPhoto ? (
                         <img
                           src={hotel.roomPhoto}
-                          alt="Фотография номера из галереи отеля, категория уточняется"
+                          alt="Фотография номера из галереи отеля"
                         />
                       ) : (
                         <div>
                           <Bed size={36} />
                           <span>
-                            Фотография категории
+                            Фотография номера
                             <br />
-                            не подтверждена
+                            пока не добавлена
                           </span>
                         </div>
                       )}
@@ -508,10 +508,7 @@ export function OstrovokHotel({
               {photo + 1} / {hotel.photos.length}
             </span>
           </div>
-          <p>
-            Фотографии официальной галереи отеля. Соответствие конкретной
-            категории номера не подтверждено.
-          </p>
+          <p>Фотографии официальной галереи отеля.</p>
         </div>
       </Modal>
       <Modal title="Расположение отеля" open={map} onOpenChange={setMap} wide>

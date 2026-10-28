@@ -14,6 +14,12 @@ import "@/styles/ostrovok-trip.css";
 import "@/styles/ostrovok-footer.css";
 import "@/styles/ostrovok-trip-types.css";
 import "@/styles/ostrovok-planner.css";
+import "@/styles/ostrovok-blog.css";
+import "@/styles/ostrovok-blog-hero.css";
+import "@/styles/ostrovok-blog-alignment.css";
+import "@/styles/ostrovok-blog-banner.css";
+import "@/styles/ostrovok-reading.css";
+import "@/styles/ostrovok-blog-notes.css";
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title: {

@@ -25,6 +25,7 @@ import {
   MagnifyingGlass,
   CaretLeft,
   CaretRight,
+  BookOpen,
 } from "@phosphor-icons/react";
 import { cities, type Hotel } from "./catalog";
 import { StorefrontFooter } from "./footer";
@@ -154,7 +155,8 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
   const auth = useAccount();
   const router = useRouter();
   const pathname = usePathname();
-  const home = pathname === "/" || pathname === "/my-trip";
+  const home =
+    pathname === "/" || pathname === "/my-trip" || pathname === "/blog";
   const hydrated = useSyncExternalStore(
     subscribeToHydration,
     clientReady,
@@ -182,8 +184,14 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
           <nav className="ov-header-nav" aria-label="Основная навигация">
             <Link
               href="/"
-              className={pathname === "/my-trip" ? undefined : "ov-nav-active"}
-              aria-current={pathname === "/my-trip" ? undefined : "page"}
+              className={
+                pathname === "/" ||
+                pathname === "/search" ||
+                pathname.startsWith("/hotel/")
+                  ? "ov-nav-active"
+                  : undefined
+              }
+              aria-current={pathname === "/" ? "page" : undefined}
             >
               <Buildings size={20} />
               Отели
@@ -195,6 +203,15 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
             >
               <Suitcase size={20} />
               Моя поездка
+            </Link>
+            <Link
+              href="/blog"
+              className={
+                pathname.startsWith("/blog") ? "ov-nav-active" : undefined
+              }
+              aria-current={pathname === "/blog" ? "page" : undefined}
+            >
+              <BookOpen size={20} /> О!Блог
             </Link>
           </nav>
           <div className="ov-header-actions">
@@ -260,6 +277,13 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
             <Link href="/my-trip" onClick={() => setMenu(false)}>
               Моя поездка
             </Link>
+            <Link
+              href="/blog"
+              onClick={() => setMenu(false)}
+              aria-current={pathname === "/blog" ? "page" : undefined}
+            >
+              О!Блог
+            </Link>
             <button
               onClick={() => {
                 setSupport(true);
@@ -283,10 +307,8 @@ export function StorefrontShell({ children }: { children: React.ReactNode }) {
           вместе со спутниками. После входа избранное сохраняется в аккаунте.
         </p>
         <p>
-          Каталог содержит 300 архивных карточек Петербурга. Цены и наличие
-          отсутствуют; адреса, геоточки и сведения об окружении требуют
-          проверки. Фотографии показаны только там, где есть сопоставленный
-          источник.
+          В каталоге 300 отелей Петербурга с фотографиями, удобствами и
+          сведениями об окружении.
         </p>
         <p>
           Вход по телефону демонстрационный, код 0000. Реальное бронирование не

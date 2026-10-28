@@ -1,0 +1,41 @@
+{
+  "source": "ostrovok_mvp_FINAL_frontend.zip",
+  "hotels": 300,
+  "photographedHotels": 298,
+  "illustrations": 2,
+  "publishedFiles": 682,
+  "multiPhotoGalleries": 81,
+  "statuses": {
+    "matched_from_existing_parser": 143,
+    "matched": 91,
+    "fallback_web_match": 64,
+    "ambiguous": 1,
+    "not_found": 1
+  },
+  "catalogSha256": "84f9e543a2f3ed92ec504a74d2e15811c58fd8c1b0ed78dd336f4c1261d85889",
+  "embeddingModel": "intfloat/multilingual-e5-small",
+  "embeddingDimensions": 384,
+  "queryPrefix": "query: ",
+  "identityVerifiedCount": 0,
+  "permission": {
+    "scope": "hackathon",
+    "usageStatus": "allowed",
+    "independentlyVerified": false,
+    "validOutsideHackathon": false
+  },
+  "search": {
+    "native": "E5 + metric-percentiles",
+    "semanticWeight": 0.68,
+    "metricWeight": 0.32,
+    "quietSemanticWeight": 0.4,
+    "quietMetricWeight": 0.6,
+    "quietNightlifeWeight": 4,
+    "metricPercentiles": [
+      10,
+      90
+    ],
+    "hardNightlifeMetric": "nightlife_within_500m",
+    "centerIsSemanticOnly": true,
+    "currentPrices": false
+  }
+}

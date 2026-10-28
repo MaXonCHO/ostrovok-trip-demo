@@ -1,0 +1,124 @@
+{
+  "id": "91537",
+  "slug": "10-neobychnyx-muzeev-sankt-peterburga",
+  "title": "10 необычных музеев Санкт-Петербурга",
+  "url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+  "date_published": "2023-09-19",
+  "date_published_raw": "2023-09-19T20:00:48+03:00",
+  "date_source": "article.time.datePublished",
+  "date_modified": null,
+  "author": "О! Редакция",
+  "category": "unusual",
+  "category_label": "Необычные места",
+  "summary": "Знакомство с небольшими тематическими музеями и необычными коллекциями. Материал пригодится для культурной программы за пределами самых известных музейных залов.",
+  "tags": [
+    "необычные музеи",
+    "культура"
+  ],
+  "selection": {
+    "url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+    "category": "unusual",
+    "summary": "Знакомство с небольшими тематическими музеями и необычными коллекциями. Материал пригодится для культурной программы за пределами самых известных музейных залов.",
+    "tags": [
+      "необычные музеи",
+      "культура"
+    ],
+    "discovered_from": "https://blog.ostrovok.ru/?s=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3&page=3"
+  },
+  "collected_at": "2026-10-28T10:03:19.881412+00:00",
+  "available_images": 9,
+  "requested_max_photos": 6,
+  "content_format": "curated_summary_with_source_link",
+  "images": [
+    {
+      "sha256": "bc65dad0fe4178419811db8b174f8bc80aa90662ed39498ff3288ec8fd6a601a",
+      "bytes": 36504,
+      "width": 1600,
+      "height": 651,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/01_bc65dad0fe417841.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/Музеи-Питера@3x.png",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Обложка материала",
+      "caption_origin": "article_section_context",
+      "credit": "",
+      "role": "cover",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "e2113add4070223e5654b04ae6b942bd598195cec66a3502ae9ae800ff96c11c",
+      "bytes": 524534,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/02_e2113add4070223e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/2копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Учебный музей академии Штиглица",
+      "caption_origin": "article_section_context",
+      "credit": "SSV.Photo / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "6d05817bd02bb1ae46c0bde1dfc704468799f4cf0fc90614424174de3e7becd5",
+      "bytes": 451404,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/03_6d05817bd02bb1ae.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/3копия-4.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: «Вселенная воды»",
+      "caption_origin": "article_section_context",
+      "credit": "Gala_Kan / Shutterstock.com",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "74f1d1072a6c6b8f8f8dcc06d08698f3f4499fd5a7ad2899665daf5eed05f2f9",
+      "bytes": 154586,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/04_74f1d1072a6c6b8f.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/6копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Музей сновидений Фрейда",
+      "caption_origin": "article_section_context",
+      "credit": "Музей сновидений Фрейда",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "33999f09152b549516f3642fa21acb7c1d87fe22cf328086c64616ae65a80725",
+      "bytes": 113652,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/05_33999f09152b5495.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/7копия-3.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Музей нонконформистского искусства",
+      "caption_origin": "article_section_context",
+      "credit": "Музей нонконформистского искусства",
+      "role": "illustration",
+      "rights_status": "unknown"
+    },
+    {
+      "sha256": "01717828a17c1a0ebc1314994e1b1bf9ac2b7d0de0b7fd1a9eda1c14a5acbe06",
+      "bytes": 153542,
+      "width": 1600,
+      "height": 947,
+      "path": "articles/10-neobychnyx-muzeev-sankt-peterburga/images/06_01717828a17c1a0e.webp",
+      "original_url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/8копия-2.jpg",
+      "source_url": "https://blog.ostrovok.ru/10-neobychnyx-muzeev-sankt-peterburga/",
+      "caption": "Иллюстрация раздела: Котельная «Камчатка»",
+      "caption_origin": "article_section_context",
+      "credit": "КЛУБ-МУЗЕЙ «КОТЕЛЬНАЯ КАМЧАТКА»",
+      "role": "illustration",
+      "rights_status": "unknown"
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://blog.ostrovok.ru/wp-content/uploads/2023/09/5копия-4.jpg",
+      "error": "The read operation timed out"
+    }
+  ]
+}
