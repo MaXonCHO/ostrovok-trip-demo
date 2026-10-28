@@ -18,13 +18,13 @@ import {
   invitePreview,
   joinWorkspace,
   listWorkspaces,
-  mutateWorkspace,
+  mutateWorkspaceForRequest as mutateWorkspace,
   tripRow,
-  workspace,
+  workspaceForRequest as workspace,
 } from "@/server/workspaces";
 import { emptyTripChatProfile } from "@/features/ostrovok/trip-chat-contract";
 import { emptyExpectations } from "@/features/planner/types";
-import { rankHotels } from "@/server/recommendations";
+import { rankHotelsForRequest as rankHotels } from "@/server/semantic-recommendations";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const result = (data: unknown) =>
@@ -53,8 +53,21 @@ export async function GET(
         sourceHash: catalogVersion,
         hasPrices: false,
       });
-    if (path.join("/") === "catalog/search")
-      return result(rankHotels(emptyTripChatProfile(), emptyExpectations()));
+    if (path.join("/") === "catalog/search") {
+      const q = req.nextUrl.searchParams.get("q") || "";
+      if (q.length > 4000) throw new HttpError(400, "Запрос слишком длинный.");
+      return result(
+        await rankHotels(
+          emptyTripChatProfile(),
+          {
+            ...emptyExpectations(),
+            purpose: q.trim(),
+          },
+          1,
+          req.nextUrl.searchParams.get("all") === "1" ? 300 : 8,
+        ),
+      );
+    }
     if (path[0] === "catalog" && path[1]) {
       const h = catalogRecords().find((h) => h.hotel_id === path[1]);
       if (!h) throw new HttpError(404, "Отель не найден.");
@@ -67,7 +80,7 @@ export async function GET(
       return result({ trips: listWorkspaces(user) });
     if (path[0] === "trips" && path[1])
       return result(
-        workspace(tripRow(path[1], user), user, new URL(req.url).origin),
+        await workspace(tripRow(path[1], user), user, new URL(req.url).origin),
       );
     throw new HttpError(404, "Страница API не найдена.");
   } catch (e) {
@@ -114,7 +127,7 @@ export async function POST(
       return result(joinWorkspace(path[1], user));
     if (path[0] === "trips" && path[1])
       return result(
-        mutateWorkspace(path[1], user, body, new URL(req.url).origin),
+        await mutateWorkspace(path[1], user, body, new URL(req.url).origin),
       );
     throw new HttpError(404, "Действие не найдено.");
   } catch (e) {

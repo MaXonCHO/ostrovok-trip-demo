@@ -1,7 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { database, transaction } from "./database";
 import { createWorkspace, tripRow } from "./workspaces";
-import { rankHotels } from "./recommendations";
+import { rankHotelsForRequest as rankHotels } from "./semantic-recommendations";
 import { plannerAgent } from "./planner-agent";
 import { HttpError } from "./http";
 import { inferredReadingExpectations } from "./reading-interests";
@@ -84,7 +84,7 @@ export async function chatCommand(
       messages,
       profile,
       expectations,
-      rankHotels(
+      await rankHotels(
         profile,
         inferredReadingExpectations(user, expectations),
         row.revision,
@@ -99,7 +99,7 @@ export async function chatCommand(
       ...result,
       tripId: row.id,
       tripVersion: row.version + 1,
-      selection: rankHotels(
+      selection: await rankHotels(
         result.reply.profile,
         inferredReadingExpectations(user, result.expectations),
         revision,
