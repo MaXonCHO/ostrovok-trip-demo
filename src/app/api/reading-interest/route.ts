@@ -1,3 +1,4 @@
+import { durableRoute } from "@/server/durable-database";
 import { NextResponse } from "next/server";
 import { account } from "@/server/auth";
 import { failure, jsonBody } from "@/server/http";
@@ -11,7 +12,7 @@ import {
 } from "@/server/reading-interests";
 import { emptyExpectations } from "@/features/planner/types";
 export const runtime = "nodejs";
-export async function GET(req: Request) {
+async function handleGET(req: Request) {
   try {
     const user = await account(true);
     const slug = new URL(req.url).searchParams.get("slug");
@@ -31,7 +32,7 @@ export async function GET(req: Request) {
     return failure(error);
   }
 }
-export async function POST(req: Request) {
+async function handlePOST(req: Request) {
   try {
     const input = await jsonBody(req);
     const user = await account(true);
@@ -48,3 +49,9 @@ export async function POST(req: Request) {
     return failure(error);
   }
 }
+
+export const GET = durableRoute(handleGET, true);
+
+export const POST = durableRoute(handlePOST, true);
+
+export const maxDuration = 60;

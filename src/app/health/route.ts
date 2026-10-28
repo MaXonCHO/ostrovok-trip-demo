@@ -1,8 +1,9 @@
+import { durableRoute } from "@/server/durable-database";
 import { NextResponse } from "next/server";
 import { database, catalogVersion } from "@/server/database";
 import { finalCatalogImport } from "@/server/final-catalog";
 export const dynamic = "force-dynamic";
-export function GET() {
+function handleGET() {
   try {
     const row = database()
       .prepare("SELECT count(*) AS n FROM hotels")
@@ -10,7 +11,9 @@ export function GET() {
     return NextResponse.json({
       status: "ok",
       mode: "demo-auth",
-      database: "sqlite",
+      database: process.env.BLOB_READ_WRITE_TOKEN
+        ? "sqlite-private-blob"
+        : "sqlite",
       hotels: row.n,
       catalogVersion,
       hasCurrentPrices: false,
@@ -23,3 +26,5 @@ export function GET() {
     return NextResponse.json({ status: "error" }, { status: 503 });
   }
 }
+
+export const GET = durableRoute(handleGET, false);

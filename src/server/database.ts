@@ -1,3 +1,5 @@
+import { AsyncLocalStorage } from "node:async_hooks";
+import { tmpdir } from "node:os";
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync, chmodSync } from "node:fs";
 import { dirname, resolve } from "node:path";
@@ -23,15 +25,30 @@ export const catalogVersion = createHash("sha256")
     }),
   )
   .digest("hex");
+export const databaseScope = new AsyncLocalStorage<{ file: string }>();
+
+export function closeScopedDatabase(file: string) {
+  const connections = shared.__plannerDatabases;
+  const db = connections?.get(file);
+  if (db) {
+    db.close();
+    connections!.delete(file);
+  }
+}
+
 export function database() {
   const file =
-    process.env.DATABASE_PATH ||
-    resolve(process.cwd(), ".data", "ostrovok.sqlite");
+    databaseScope.getStore()?.file ??
+    (process.env.VERCEL
+      ? resolve(tmpdir(), `ostrovok-catalog-${catalogVersion}.sqlite`)
+      : process.env.DATABASE_PATH ||
+        resolve(process.cwd(), ".data", "ostrovok.sqlite"));
   const connections = (shared.__plannerDatabases ??= new Map());
   const existing = connections.get(file);
   if (existing) return existing;
   if (file !== ":memory:") mkdirSync(dirname(file), { recursive: true });
   const db = new DatabaseSync(file);
+  if (file !== ":memory:") chmodSync(file, 0o600);
   db.exec(`PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;
  CREATE TABLE IF NOT EXISTS migrations(version INTEGER PRIMARY KEY,applied_at TEXT NOT NULL);
  CREATE TABLE IF NOT EXISTS catalog_meta(key TEXT PRIMARY KEY,value TEXT NOT NULL);

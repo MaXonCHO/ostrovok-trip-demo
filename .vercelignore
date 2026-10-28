@@ -1,0 +1,10 @@
+.git
+node_modules
+.data
+.next
+.env*
+!.env.example
+test-results
+playwright-report
+ostrovok_blog_parser
+Брендбук Островка

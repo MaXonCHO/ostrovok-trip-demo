@@ -1,3 +1,4 @@
+import { durableRoute } from "@/server/durable-database";
 import { NextResponse } from "next/server";
 import { account } from "@/server/auth";
 import { chatCommand } from "@/server/chat";
@@ -7,8 +8,8 @@ import {
   parseTripChatRequest,
 } from "@/features/ostrovok/trip-chat-contract";
 export const runtime = "nodejs";
-export const maxDuration = 30;
-export async function POST(req: Request) {
+export const maxDuration = 60;
+async function handlePOST(req: Request) {
   try {
     const input = await jsonBody(req);
     const core = { messages: input.messages, context: input.context };
@@ -34,3 +35,5 @@ export async function POST(req: Request) {
     return failure(e);
   }
 }
+
+export const POST = durableRoute(handlePOST, true);
