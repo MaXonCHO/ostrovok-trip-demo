@@ -1,4 +1,4 @@
-/** Native archive fallback: character TF-IDF + OSM facts, never E5 vectors.
+/** Archive ranking: supplied E5 cosines, or explicit character TF-IDF fallback.
  * Mirrors search_engine.py's sklearn analyzer='char', ngram_range=(3,5),
  * sublinear_tf=True, smooth_idf=True, norm='l2' and percentile metric mix.
  */
@@ -198,10 +198,19 @@ export function finalRankingScores(
   query: string,
   records: CatalogRecord[],
   explicitCriteria: Criterion[] = [],
-  options?: { hardQuery?: string },
+  options?: {
+    hardQuery?: string;
+    semanticScores?: ReadonlyMap<string, number>;
+  },
 ): Map<string, FinalRankingScore> {
   if (!records.length) return new Map();
-  const rawText = cosineScores(query, corpusFor(records));
+  const rawText = options?.semanticScores
+    ? records.map((record) => {
+        const score = options.semanticScores!.get(record.hotel_id);
+        if (score === undefined) throw Error("Missing E5 hotel ID");
+        return score;
+      })
+    : cosineScores(query, corpusFor(records));
   const prefs = preferences(query, explicitCriteria);
   if (options?.hardQuery !== undefined)
     prefs.maxNightlife = preferences(options.hardQuery, []).maxNightlife;

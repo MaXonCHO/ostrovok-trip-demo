@@ -186,24 +186,21 @@ export function rankHotels(
   expectations: Expectations,
   revision = 1,
   records = catalogRecords(),
+  semanticScores?: ReadonlyMap<string, number>,
+  limit = 8,
 ): Selection {
   const criteria = expectations.criteria;
-  const query = [
-    expectations.purpose,
-    ...criteria
-      .filter((c) => c.value)
-      .map((c) => `${c.label} ${c.detail ?? ""}`),
-  ]
-    .filter(Boolean)
-    .join(" ");
-  const native = query.trim()
-    ? finalRankingScores(query, records, criteria, {
-        hardQuery: criteria
-          .filter((c) => c.importance === "required")
-          .map((c) => c.detail ?? "")
-          .join(" "),
-      })
-    : new Map();
+  const query = rankingQuery(expectations);
+  const native =
+    query.trim() || semanticScores
+      ? finalRankingScores(query, records, criteria, {
+          semanticScores,
+          hardQuery: criteria
+            .filter((c) => c.importance === "required")
+            .map((c) => c.detail ?? "")
+            .join(" "),
+        })
+      : new Map();
   const wanted = terms(
     [
       expectations.purpose,
@@ -301,15 +298,15 @@ export function rankHotels(
     .filter((s) => s.impact > 0)
     .slice(0, 3);
   return {
-    results: matches.slice(0, 8),
-    needsCheck: needs.slice(0, 8),
+    results: matches.slice(0, limit),
+    needsCheck: needs.slice(0, limit),
     excludedCount: evaluated.filter((x) => x.excluded).length,
     total: records.length,
     matchingCount: matches.length,
     unverifiedCount: needs.length,
     applied: criteria,
     suggestions,
-    engine: "tfidf+facts",
+    engine: semanticScores ? "e5" : "tfidf+facts",
     revision,
   };
 }
@@ -324,4 +321,16 @@ export function questionHints(expectations: Expectations) {
         amenities[key]!.some((a) => h.amenities_snapshot.includes(a)),
       ).length,
     }));
+}
+
+export function rankingQuery(expectations: Expectations): string {
+  const criteria = expectations.criteria;
+  return [
+    expectations.purpose,
+    ...criteria
+      .filter((c) => c.value)
+      .map((c) => `${c.label} ${c.detail ?? ""}`),
+  ]
+    .filter(Boolean)
+    .join(" ");
 }

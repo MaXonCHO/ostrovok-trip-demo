@@ -1,3 +1,4 @@
+import { rankHotelsForRequest } from "./semantic-recommendations";
 import { randomUUID, randomBytes, createHash } from "node:crypto";
 import { database, transaction } from "./database";
 import { rankHotels, labels } from "./recommendations";
@@ -160,6 +161,7 @@ export function mutateWorkspace(
   user: Account,
   command: Record<string, unknown>,
   origin: string,
+  selection?: Selection,
 ) {
   return transaction((db) => {
     const row = tripRow(id, user);
@@ -211,7 +213,9 @@ export function mutateWorkspace(
         throw new HttpError(401, "Войдите для совместного выбора.");
       if (
         typeof command.hotelId !== "string" ||
-        !selectedOptions(row).some((h) => h.hotel.id === command.hotelId)
+        !selectedOptions(row, selection).some(
+          (h) => h.hotel.id === command.hotelId,
+        )
       )
         throw new HttpError(400, "Отель не входит в текущий список поездки.");
       if (
@@ -427,4 +431,38 @@ export function joinWorkspace(token: string, user: Account) {
       );
     return { id: invite.id };
   });
+}
+
+export async function workspaceForRequest(
+  row: TripRow,
+  user: Account,
+  origin: string,
+) {
+  const result = workspace(row, user, origin);
+  result.selection = await rankHotelsForRequest(
+    result.profile,
+    row.status === "draft"
+      ? inferredReadingExpectations(
+          { ...user, id: row.owner_id },
+          result.expectations,
+        )
+      : result.expectations,
+    row.revision,
+  );
+  return result;
+}
+export async function mutateWorkspaceForRequest(
+  id: string,
+  user: Account,
+  command: Record<string, unknown>,
+  origin: string,
+) {
+  const before = tripRow(id, user);
+  const selection = ["vote", "comment", "pin"].includes(String(command.type))
+    ? (await workspaceForRequest(before, user, origin)).selection
+    : undefined;
+  if (selection && tripRow(id, user).revision !== before.revision)
+    throw new HttpError(409, "Подбор изменился. Обновите список.");
+  mutateWorkspace(id, user, command, origin, selection);
+  return workspaceForRequest(tripRow(id, user), user, origin);
 }

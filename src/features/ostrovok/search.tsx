@@ -44,9 +44,11 @@ const amenities = [
 export function OstrovokSearch({
   query = {},
   favoritesOnly = false,
+  recommendationIds,
 }: {
   query?: Query;
   favoritesOnly?: boolean;
+  recommendationIds?: string[];
 }) {
   const router = useRouter();
   const catalog = useCatalog();
@@ -93,6 +95,14 @@ export function OstrovokSearch({
         },
         catalog,
       );
+  if (sort === "recommended" && recommendationIds) {
+    const order = new Map(recommendationIds.map((id, index) => [id, index]));
+    filtered.sort(
+      (a, b) =>
+        (order.get(a.id) ?? Number.MAX_SAFE_INTEGER) -
+        (order.get(b.id) ?? Number.MAX_SAFE_INTEGER),
+    );
+  }
   const params = searchParams(state);
   if (wish) params.set("wish", wish);
   if (apartmentsOnly) params.set("property", "apartments");
